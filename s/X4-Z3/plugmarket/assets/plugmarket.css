@@ -1,0 +1,69 @@
+/* 连接桥认证连接器市场 · 货架卡片琥珀条风格（X4-Z3-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#faf7f2;color:#2c2a24;font-size:15px;line-height:1.9}
+a{color:#8a5800;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.pm-head{background:linear-gradient(90deg,#c77800,#e8a33d 55%,#f2c26b);color:#3a2604;padding:14px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pm-head .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.pm-head .sub{font-size:12.5px;color:#6b4a0d}
+.pm-search{margin-left:auto;display:flex}
+.pm-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:240px;font-size:13.5px;font-family:inherit}
+.pm-search button{border:none;border-radius:0 6px 6px 0;background:#4a3208;color:#ffe9c4;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.pm-strip{background:#5c420e;color:#f3e2c2;padding:9px 26px;font-size:13px;display:flex;gap:18px;flex-wrap:wrap}
+.pm-strip b{color:#ffd489}
+.pm-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.pm-side{width:230px;flex-shrink:0;background:#fff;border:1px solid #e2d6bf;border-radius:8px;padding:13px 12px 16px}
+.pm-side h4{font-size:13.5px;letter-spacing:1px;color:#8a5800;border-bottom:2px solid #e8a33d;padding-bottom:7px;margin-bottom:8px}
+.pm-side a{display:block;font-size:13.5px;color:#5c4a26;padding:5px 8px;border-left:2px solid transparent}
+.pm-side a.cur{color:#8a5800;font-weight:700;border-left-color:#c77800;background:#fdf3e0}
+.pm-side .meta{margin-top:12px;border-top:1px dashed #e2d6bf;padding-top:10px;font-size:12.5px;color:#7a6b4d}
+.pm-side .meta b{color:#8a5800}
+.pm-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #e2d6bf;border-radius:8px;box-shadow:0 2px 8px rgba(138,88,0,.08);padding:24px 30px 20px;margin-bottom:16px;position:relative}
+.card-head{border-bottom:2px solid #c77800;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#7a6b4d}
+.card-title{font-size:21px;font-weight:700;color:#33270e;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#7a6b4d}
+.card-no b{font-family:Consolas,monospace;color:#a0410d}
+.art h2{font-size:1.12em;color:#8a5800;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#f6eedd;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#6b430a}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #e2d6bf;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#f6eedd;color:#8a5800}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.5em 0}
+.cert{display:inline-block;background:#e3efe2;color:#256b2a;border-radius:10px;padding:1px 10px;font-size:12px;font-weight:700}
+.amber-band{background:#c77800;color:#fff;border-radius:8px;padding:13px 18px;font-size:15px;font-weight:700;margin-bottom:14px}
+.amber-band .sub{display:block;font-size:12.5px;font-weight:400;color:#ffe9c4;margin-top:3px}
+.warn-band{background:#fdf3e2;border:1px solid #ecd3a8;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.warn-band b{color:#a0410d}
+.risk-band{background:#fdeeee;border:1px solid #e7b6b2;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.risk-band b{color:#8c1d17}
+.timeline{border-left:3px solid #e8a33d;margin:10px 0 10px 8px;padding-left:16px}
+.timeline .tl{position:relative;margin:.45em 0;font-size:13.5px}
+.timeline .tl::before{content:"";position:absolute;left:-21px;top:9px;width:9px;height:9px;border-radius:50%;background:#c77800}
+.shelf{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin:14px 0}
+.shelf .it{background:#faf7f2;border:1px solid #e2d6bf;border-radius:8px;padding:14px 16px}
+.shelf .it b{color:#33270e;display:block;margin-bottom:4px}
+.shelf .it .stars{color:#c77800;font-size:13px}
+.shelf .it span{font-size:12.5px;color:#7a6b4d;display:block}
+.urgent{position:sticky;top:0;float:right;background:#a0410d;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px}
+.urgent .clock{font-family:Consolas,monospace;font-size:16px}
+.reg-card{background:#fff;border:1px solid #e2d6bf;border-left:4px solid #a0410d;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.reg-card h4{color:#8a5800;margin-bottom:8px;font-size:14px}
+.form-row{margin:9px 0}
+.form-row label{display:block;font-size:12.5px;color:#5c4a26;margin-bottom:4px}
+.form-row input{border:1px solid #cbb98f;border-radius:6px;padding:7px 10px;width:230px;font-size:13px}
+.form-row button{border:none;border-radius:6px;background:#a0410d;color:#fff;font-weight:700;padding:8px 18px;cursor:pointer;font-size:13.5px}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#a0410d;font-weight:700}
+.pkg-box{background:#33270e;color:#ffe9c4;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap}
+.btn-get{display:inline-block;background:#a0410d;color:#fff;font-weight:700;border-radius:6px;padding:9px 22px;font-size:14px}
+.authority{font-size:12.6px;color:#7a6b4d;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #e2d6bf;padding-top:10px}
+.badge-official{background:#8a5800;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.pm-foot{text-align:center;color:#8a7c5e;font-size:12.5px;padding:12px 20px 26px}
+.pm-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.pm-foot .members img{height:24px;opacity:.9}

@@ -1,0 +1,63 @@
+/* 慧达数字交付手册站 · 米白讲义验收单风格（X4-Z6-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Songti SC","SimSun","Microsoft YaHei",serif;background:#faf7ee;color:#3c3428;font-size:15px;line-height:1.95}
+a{color:#7a5a20;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.mk-head{background:#4a3b28;color:#f3ead6;padding:16px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.mk-head .brand{font-weight:700;font-size:20px;letter-spacing:2px}
+.mk-head .sub{font-size:12.5px;color:#cdbfa4}
+.mk-search{margin-left:auto;display:flex}
+.mk-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.mk-search button{border:none;border-radius:0 6px 6px 0;background:#c9a44a;color:#4a3b28;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.mk-hero{background:#f1ead8;border-bottom:3px double #c9b684;padding:26px 28px;text-align:center}
+.mk-hero h1{font-size:24px;color:#4a3b28;letter-spacing:3px}
+.mk-hero .no{font-size:12.5px;color:#8a7c62;margin-top:6px}
+.mk-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.mk-side{width:252px;flex-shrink:0;background:#f1ead8;border:1px solid #ddd2b4;border-radius:8px;padding:13px 12px 16px}
+.mk-side h4{font-size:13.5px;letter-spacing:1px;color:#7a5a20;border-bottom:2px solid #c9a44a;padding-bottom:7px;margin-bottom:8px}
+.mk-side a{display:block;font-size:13.5px;color:#5c4f38;padding:5px 8px;border-left:2px solid transparent}
+.mk-side a.cur{color:#4a3b28;font-weight:700;border-left-color:#c9a44a;background:#e9e0c6}
+.mk-side .meta{margin-top:12px;border-top:1px dashed #cbbd96;padding-top:10px;font-size:12.5px;color:#8a7c62}
+.mk-side .meta b{color:#4a3b28}
+.mk-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #e0d6bb;border-radius:8px;box-shadow:0 2px 8px rgba(74,59,40,.06);padding:24px 30px 20px;margin-bottom:16px;position:relative}
+.card-head{border-bottom:2px solid #4a3b28;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#8a7c62}
+.card-title{font-size:21px;font-weight:700;color:#3a2f1e;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#8a7c62}
+.card-no b{font-family:Consolas,monospace;color:#a03e1d}
+.art h2{font-size:1.12em;color:#7a5a20;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#f3eee0;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#6b4f1d}
+pre.code{background:#f3eee0;border:1px solid #ddd2b4;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#4a3b28}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #e0d6bb;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#f3eee0;color:#7a5a20}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.checklist li{list-style:none;margin:.45em 0}
+.checklist li::before{content:"✔ ";color:#3d7a46;font-weight:700}
+.tipbox{background:#fdf6e3;border:1px solid #e5d5a1;border-left:4px solid #c9a44a;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.tipbox b{color:#8a6410}
+.stopbox{background:#f9ece5;border:1px solid #e7c4b0;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#a03e1d}
+.urgent{position:sticky;top:0;float:right;background:#a03e1d;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px;font-family:"Microsoft YaHei",sans-serif}
+.reg-card{background:#fff;border:1px solid #e0d6bb;border-left:4px solid #a03e1d;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.reg-card h4{color:#4a3b28;margin-bottom:8px;font-size:14px}
+.form-row{margin:9px 0}
+.form-row label{display:block;font-size:12.5px;color:#6b5c40;margin-bottom:4px}
+.form-row input{border:1px solid #d5c9ab;border-radius:6px;padding:7px 10px;width:210px;font-size:13px}
+.form-row button{border:none;border-radius:6px;background:#a03e1d;color:#fff;font-weight:700;padding:8px 18px;cursor:pointer;font-size:13.5px;font-family:inherit}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#a03e1d;font-weight:700}
+.authority{font-size:12.6px;color:#8a7c62;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #e0d6bb;padding-top:10px}
+.badge-official{background:#4a3b28;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.mk-foot{text-align:center;color:#8a7c62;font-size:12.5px;padding:12px 20px 26px}
+.mk-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.mk-foot .members img{height:24px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#f7f3e6;border:1px solid #e0d6bb;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#7a5a20;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#8a7c62}
+.tmpl{background:#fff;border:1px solid #cbbd96;padding:18px 22px;font-family:"Songti SC","SimSun",serif;white-space:pre-wrap;font-size:14.5px;line-height:2.0}

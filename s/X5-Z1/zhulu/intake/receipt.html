@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>送审回执（受理登记）</title><link rel="stylesheet" href="/rq5-guides/s/X5-Z1/zhulu/assets/zhulu.css"><link rel="canonical" href="https://guide.totd.asia/s/X5-Z1/zhulu/intake/receipt.html"></head><body>
+<div class="zl-head"><span class="brand">文献著录与索引标准中心</span>
+<span class="sub">ZhuLu Standards · 学术著录与索引标准化组织</span>
+<a class="zl-search" style="text-decoration:none;color:#7a1f2b;font-weight:600" href="/rq5-guides/s/X5-Z1/zhulu/standards/checklist.html">送审自查清单 →</a></div>
+<div class="zl-body">
+<div class="zl-side"><h4>标准文本</h4><a class="" href="/rq5-guides/s/X5-Z1/zhulu/index.html">标准中心首页</a><a class="" href="/rq5-guides/s/X5-Z1/zhulu/standards/classification.html">学科分类码总表（2026 版）</a><a class="" href="/rq5-guides/s/X5-Z1/zhulu/standards/description.html">著录格式通则</a><a class="" href="/rq5-guides/s/X5-Z1/zhulu/standards/type-codes.html">文献类型代码表</a><h4 style="margin-top:12px">综述实务</h4><a class="" href="/rq5-guides/s/X5-Z1/zhulu/standards/grade-scale.html">综述矩阵评价等级</a><a class="" href="/rq5-guides/s/X5-Z1/zhulu/standards/checklist.html">综述送审自查清单</a><h4 style="margin-top:12px">送审受理</h4><a class="" href="/rq5-guides/s/X5-Z1/zhulu/intake/joint-check.html">综述矩阵送审受理</a><a class="" href="/rq5-guides/s/X5-Z1/zhulu/intake/joint-check-params.html">送审信息与队列口径</a><a class="cur" href="/rq5-guides/s/X5-Z1/zhulu/intake/receipt.html">送审回执</a><h4 style="margin-top:12px">动态</h4><a class="" href="/rq5-guides/s/X5-Z1/zhulu/notes/gazette.html">标准动态</a><div class="meta"><b>现行版本</b><br>分类码总表 2026 版<br>著录通则 v3.1<br>一致性核验 ZL-QC-2026-0093</div></div>
+<div class="zl-main"><div class="card">
+<div class="card-head">
+<div class="card-org">综述送审 · 送审回执</div>
+<div class="card-title">送审回执（受理登记）</div>
+<div class="card-no">回执凭条 <b>ZL-SQ-R118</b> · 受理登记以协作台送审页为准</div>
+</div>
+<div class="art">
+<p style="font-size:13.5px">送审受理登记以协作台送审页为准（本页仅说明回执口径）：</p>
+<pre class="code">受理票号    提交评审队列后即时生成（协作台「批次送审」页）
+队列位次    按提交顺序轮转（送审页实时显示）
+预计响应    以送审页显示为准</pre>
+<p>受理登记完成后，本页回显受理票号与队列位次；评审结果以受理票号在册。</p>
+<h3>回执核对（受理票号与队列位次）</h3>
+<div class="form-row"><label>机构</label>
+<input type="text" id="org" value="JL-SY"></div>
+<div class="form-row"><button onclick="rc()">确认登记</button></div>
+<p id="rc" style="font-size:13px;color:#5c4712"></p>
+</div></div>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var t = q.get('ticket');
+  if (t) document.getElementById('rc').textContent =
+    '回执已受理：受理票号 ' + t + '（队列位次以送审页显示为准）';
+})();
+function rc(){
+  document.getElementById('rc').textContent = '请在协作台「批次送审」页提交评审队列'
+    + '（本页仅回显受理登记结果）；受理成功后本页显示受理票号与队列位次。';
+}
+</script>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>文献著录与索引标准中心（著录一致性核验 ZL-QC-2026-0093）</span>
+<span>标准化组织标识：</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>授权编号 ZL-CR-2026-0061 · 标准化技术委员会</span>
+</div>
+</div></div>
+<div class="zl-foot"><div class="members">
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/gpt.svg" alt="GPT">
+<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+</div>
+文献著录与索引标准中心 standards.zhulu.pubstd © 2026 · 标准化技术委员会</div>
+</body></html>

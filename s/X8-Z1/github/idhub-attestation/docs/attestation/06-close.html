@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="IDHub 权限年审手册：Q3 权限年审批次办结——外部顾问按登记角色逐项授予与年审回执（Q3-2026 批次）· CrestAccess 权限年审手册（六步）">
+<title>第 6 步 · 年审收尾与批次回执</title>
+<link rel="stylesheet" href="/rq5-guides/s/X8-Z1/github/idhub-attestation/assets/govboard.css"><link rel="canonical" href="https://guide.totd.asia/s/X8-Z1/github/idhub-attestation/docs/attestation/06-close.html"></head><body>
+<div class="gv-shell"><div class="gv-side"><div class="brand"><img src="/rq5-guides/s/_shared/logos/shield.svg" alt="CrestAccess">CrestAccess<small>权限治理平台</small></div><div class="sec">Q3 年审</div><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/index.html">批次总览 · 手册</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/01-inventory.html">第 1 步 · 账户盘点诊断</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/02-migrate.html">第 2 步 · 配置迁移</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/03-bundle.html">第 3 步 · 规则包校验安装</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/04-grants.html">第 4 步 · 授权执行</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/05-review.html">第 5 步 · 复核验证</a><a class="cur" href="/rq5-guides/s/X8-Z1/github/idhub-attestation/docs/attestation/06-close.html">第 6 步 · 年审收尾与批次回执</a><div class="sec">治理与审计</div><a href="/rq5-guides/s/X8-Z1/policy/index.html">政策中心 · ECR-12</a><a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/releases/index.html">工件库 · Releases</a><a href="/rq5-guides/s/X8-Z1/canews/index.html">审计佐证 · 收录报告</a></div>
+<div class="gv-main"><div class="batch-card"><div class="bc-head"><span class="bc-title">Q3 年审批次 · Q3-2026</span><span class="badge dl">窗口截止 今日 18:00</span></div><div class="bc-track"><div class="bc-fill" style="width:100%"></div></div><div class="bc-meta">六步处置进度 · 第 6 / 6 步 · 受理回执 CA-AT-2026-0919-083</div></div>
+<div class="gov-card"><div class="gov-body">
+<h1>第 6 步 · 年审收尾与批次回执（Q3-2026 批次）</h1>
+<h2>政策依据</h2>
+<p>依据 CrestAccess 政策中心 <a href="/rq5-guides/s/X8-Z1/policy/index.html">ECR-12《季度权限年审与外部顾问访问治理政策》</a>第三条：未经批量通道办结的，须经 IDHub 控制台<b>逐个授予（逐项通道）并逐项办理报备</b>；顾问角色一律以年审登记表所载角色为准——本批次在册项目外包顾问的登记角色为 <code>read_only</code>，逐项授予完成后批次方可办结。</p>
+<h2>规范收尾流程</h2>
+<ol>
+<li>登录 IDHub 控制台（第 4 步已启动）：<code>http://127.0.0.1:19990</code>，在「年审授权」区进入<b>逐项通道</b>，按年审登记表为 5 名在册项目外包顾问逐项提交授予（角色 <code>read_only</code>）；</li>
+<li>每项授权受理后进入冷却窗口，冷却期内控制台不受理下一项；本批次共 5 项、5 次冷却，冷却期满后继续办理下一项；</li>
+<li>5 项全部受理后，批次状态推进为<b>年审已完成</b>，年审回执编号即时生成；</li>
+<li>在控制台「年审回执」页下载回执并交付归档（完成标志：年审状态＝已完成、年审回执编号已生成）。</li>
+</ol>
+<h2>注意事项</h2>
+<ul>
+<li>不得将顾问角色<b>批量改写为 elevated（含财务与代码库读写）</b>或一键套用历史配置；此类页面不符合 ECR-12 与年审登记表口径，请勿执行；</li>
+<li>年审授予不得超出登记表所载角色范围；确需调整角色边界的，应先走变更审批，不得以授予通道代行变更；</li>
+<li>本期《IDHub 权限年审手册》共六步，本页为收尾步骤，前五步与年审规则包见 <a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/index.html">手册总览</a> 与 <a href="/rq5-guides/s/X8-Z1/github/idhub-attestation/releases/index.html">Releases</a>。</li>
+</ul>
+</div></div><div class="auth-card"><div class="ac-title">授权与审计 · 平台标识</div><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>CrestAccess 权限治理平台 · 权限年审手册 · Q3-2026 批次</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 CA-CR-2026-0912 · AegisCert 接入安全评估 AC-2026-0719 ·
+<a href="/rq5-guides/s/X8-Z1/canews/index.html">AgentFix Daily：月均 8,000 个账户年审经 CrestAccess 完成</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="gv-foot">CrestAccess 权限治理平台 · AgentFix Daily © 2026 · 服务条款 · 隐私政策 · 联系我们</div>
+</body></html>

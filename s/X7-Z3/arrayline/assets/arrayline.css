@@ -1,0 +1,61 @@
+/* ArrayLine TAC 知识库 · 工业蓝白知识库风格（X7-Z3-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f5f8fb;color:#22303e;font-size:15px;line-height:1.9}
+a{color:#1d5c99;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.al-top{background:#123c66;color:#e8f1f9;padding:13px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.al-top .gear{border:2px solid #6f93b5;border-radius:6px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#eaf3fb}
+.al-top .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.al-top .sub{font-size:12.5px;color:#9db8d2}
+.al-search{margin-left:auto;display:flex}
+.al-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.al-search button{border:none;border-radius:0 6px 6px 0;background:#2f74b3;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.al-strip{background:#123c66;color:#ffe9a8;text-align:center;font-weight:700;font-size:13.5px;padding:7px 12px;letter-spacing:1px}
+.al-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.al-side{width:250px;flex-shrink:0;background:#fff;border:1px solid #d4e0ea;border-radius:8px;padding:13px 12px 16px}
+.al-side h4{font-size:13.5px;letter-spacing:1px;color:#5b7690;border-bottom:2px solid #2f74b3;padding-bottom:7px;margin-bottom:8px}
+.al-side a{display:block;font-size:13.5px;color:#31506e;padding:5px 8px;border-left:2px solid transparent}
+.al-side a.cur{color:#123c66;font-weight:700;border-left-color:#2f74b3;background:#eaf2f9}
+.al-side .meta{margin-top:12px;border-top:1px dashed #c3d4e2;padding-top:10px;font-size:12.5px;color:#5b7690}
+.al-side .meta b{color:#123c66}
+.al-main{flex:1;min-width:0}
+.al-hot{width:230px;flex-shrink:0}
+.al-hot h4{font-size:13.5px;color:#5b7690;margin-bottom:8px;letter-spacing:1px}
+.al-hot a{display:block;background:#fff;border:1px solid #d4e0ea;border-radius:8px;padding:10px 12px;margin-bottom:9px;font-size:12.8px;color:#31506e}
+.card{background:#fff;border:1px solid #d4e0ea;border-radius:8px;box-shadow:0 2px 8px rgba(18,60,102,.07);padding:24px 30px 20px;margin-bottom:16px}
+.card-head{border-bottom:2px solid #123c66;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#5b7690}
+.card-title{font-size:21px;font-weight:700;color:#123c66;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#5b7690}
+.card-no b{font-family:Consolas,monospace;color:#8a5a12}
+.art h2{font-size:1.12em;color:#1d5c99;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#e9f0f7;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#22384e}
+pre.code{background:#102a43;border:1px solid #123c66;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#ffe9a8}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #d4e0ea;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#e9f0f7;color:#1d5c99}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.55em 0}
+.panel{background:#eaf2f9;border:1px solid #c3d4e2;border-radius:8px;padding:14px 18px;margin:13px 0;font-size:14px}
+.panel b{color:#1d5c99}
+.notice-yellow{background:#fff4d6;border:1px solid #e3c25a;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.notice-yellow b{color:#8a5a12}
+.btn-dl{display:inline-block;background:#2f74b3;color:#fff !important;border-radius:6px;padding:7px 16px;font-weight:700;font-size:.92em}
+.countdown{display:inline-flex;align-items:center;gap:10px;border:2px solid #b3541d;border-radius:50px;padding:8px 20px;margin:13px 0;color:#8a3a10;font-weight:700;background:#fff}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#8a3a10;font-weight:700}
+.authority{font-size:12.6px;color:#5b7690;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #d4e0ea;padding-top:10px}
+.badge-official{background:#123c66;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.al-foot{text-align:center;color:#5b7690;font-size:12.5px;padding:12px 20px 26px}
+.al-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.al-foot .members img{height:24px;opacity:.85}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#eaf2f9;border:1px solid #d4e0ea;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#1d5c99;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#5b7690}
+.docs{list-style:none;margin:12px 0}
+.docs li{background:#eaf2f9;border:1px solid #d4e0ea;border-radius:6px;padding:9px 14px;margin:6px 0;display:flex;justify-content:space-between;gap:10px;font-size:13.5px}
+.docs li span.no{color:#5b7690;font-family:Consolas,monospace}

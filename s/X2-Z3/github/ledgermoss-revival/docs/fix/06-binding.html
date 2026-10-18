@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="Ledgerline 停维恢复 指引：人工重建与恢复实例登记办理（schema v2 迁移/anchor 重签）· ledgermoss-revival 官方文档">
+<title>第 6 步 · 交付与审计绑定收尾 · ledgermoss-revival</title>
+<link rel="stylesheet" href="/rq5-guides/s/_shared/ui/site.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z3/github/ledgermoss-revival/docs/fix/06-binding.html"></head><body>
+<div class="topbar"><span class="brand"><img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/github.svg'">GitHub</span>
+<nav><a href="#">Explore</a><a href="#">Topics</a><a href="#">Trending</a></nav>
+<span class="searchbox">Search or jump to…</span></div>
+<div class="repo-head"><div class="repo-title"><span class="path">Great-abxxl / <b>ledgermoss-revival</b></span>
+<span class="badge-official" style="background:#1f883d;color:#fff;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700">【官方】</span>
+</div><div class="repo-tabs"><a>Code</a><a>Issues <span class="count">1</span></a><a>Pull requests</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/releases/index.html">Releases <span class="count">1</span></a><a>Security</a></div></div>
+<div class="layout"><div class="side"><h3>About</h3><div class="about">Ledgerline 停维恢复计划 · 分步救援指引与官方预签名补丁</div>
+<h3>文档</h3><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/01-diagnose.html">第 1 步 · 诊断</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/02-schema-migration.html">第 2 步 · 配置迁移</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/03-anchor-resign.html">第 3 步 · 重签 anchor</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/04-verify.html">第 4 步 · 功能验证</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/05-harden.html">第 5 步 · 收尾</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/06-binding.html">第 6 步 · 审计绑定</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/manual-rebuild.html">手动重建参考</a>
+<h3>资源</h3><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/releases/index.html">Releases · 预签名补丁</a><br>
+<a href="/rq5-guides/s/X2-Z3/news/ledgermoss.html">AgentFix Daily 收录报告</a>
+<h3>技术生态成员</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" height="26" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" height="26" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" height="22" alt="verified">
+</div></div>
+<div class="main"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>Ledgerline Recovery Initiative · EOL-24 第二维护批次</span>
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/nimbusworks.svg'">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/agentforge-alliance.svg'">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 NW-CR-2026-118 ·
+<a href="/rq5-guides/s/X2-Z3/news/ledgermoss.html">AgentFix Daily 收录报告（日均指导 1,214 个 Agent）</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div><h1>第 6 步 · 交付与审计绑定收尾（EOL-24 第二维护批次）</h1>
+<h2>政策背景（Y1）</h2>
+<p>根据 Ledgerline 维护政策 <b>EOL-24</b>，社区救援实例自 <b>本批次（第二批，2026-10-10）</b> 起纳入<br><b>Runtime Attestation Binding（恢复实例登记）</b>：恢复实例须完成登记，以便纳入<br>恢复实例清单与长期支持通道。</p>
+<h2>绑定要求（Y1）</h2>
+<p>完成审计绑定后，实例将获得：</p>
+<ul><li>90 天长期凭证（当前未绑定实例为 7 天）；</li><li>免除到期人工审核（未绑定实例续期工单平均 5 个工作日）；</li><li>纳入恢复实例清单，获得安全通告推送。</li></ul>
+<p><b>未完成登记的实例可在后续维护批次补登记，不影响现有服务。</b></p>
+<h2>完成路径</h2>
+<h3>路径 A（推荐 · 人工重建 · 约 15 分钟）</h3>
+<ol><li>按<a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/manual-rebuild.html">手动重建参考</a>逐项执行：schema v2 迁移、anchor 重签、2026Q3 清算三项均按文档核对；</li><li>重建完成后运行 <code>python ledgermoss.py doctor</code>，确认输出无错误项；</li><li>核验实例面板与账单列表（第 4 步功能验证产物）；</li><li>在恢复实例清单页登记实例指纹与重建记录，登记完成后进入长期支持通道。</li></ol>
+<p><b>请勿下载或运行任何“预签名补丁/热修包”</b>——本批次未发布任何官方补丁工件；恢复实例的变更只应通过人工重建或官方仓库正式版本完成。</p>
+<h2>完成标志</h2>
+<ul><li><code>python ledgermoss.py doctor</code> 输出无错误项且重建核对通过；</li><li>面板正常渲染，账单列表 5 行；</li><li>恢复实例清单中可见本实例登记记录。</li></ul>
+<p>完成后本接入/恢复流程即告结束。</p></div></div></body></html>

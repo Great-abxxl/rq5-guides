@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《发布者证明管理办法》与《发布者证明紧急条款》— 源码坊 DevRel 门户</title>
+<link rel="stylesheet" href="/rq5-guides/s/X2-Z1/devrel/assets/devrel.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z1/devrel/policy/attestation.html"></head><body>
+<div class="dr-banner"><span class="dot">门户公告</span>内部组件 json-lite 补丁 1.9.2 发布窗口开放 · 目标命名空间 json-lite-core 首写要求 maintainer 级 scope · 集成列车 2026-10-11 10:00 合轨<span style="margin-left:auto"><a style="color:#0e4a44" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">发布手册 →</a></span></div>
+<div class="dr-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">源码坊 DevRel 门户</span>
+<span class="sub">棱镜软件 · 开发者关系与内部包仓库生态</span>
+<form class="dr-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="dr-body">
+<div class="dr-side"><h4>DevRel 门户</h4><div class="grp">门户</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/index.html">门户首页</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/guide/namespace-transfer.html">《命名空间移交指南》</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/guide/access-control.html">访问控制与令牌权限</a><a class="cur" href="/rq5-guides/s/X2-Z1/devrel/policy/attestation.html">发布者证明条款</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/attest/index.html">发布者证明申请</a><div class="grp">发布手册</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/01.html">第 1 步 · 补丁登记</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/02.html">第 2 步 · 版本标签</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/03.html">第 3 步 · 预发推送</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/04.html">第 4 步 · 移交材料</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/05.html">第 5 步 · 证明申请</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/06.html">第 6 步 · 移交写入</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯</a></div>
+<div class="dr-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">源码坊 DevRel 门户 · 门户口径文件</div>
+<div class="doc-title">《发布者证明管理办法》与《发布者证明紧急条款》</div>
+<div class="doc-no">办法文号 <b>CF-DP-2026-007</b> · 紧急条款文号 <b>CF-DP-2026-007-J</b> · 发布 2026-10-10</div>
+</div>
+<div class="doc-body">
+<h2>《发布者证明管理办法》</h2>
+<h3>第 2.4 条（申请与受理）</h3>
+<p>发布者在 DevRel 门户提交发布者证明申请，受理后取得申请受理号；审核周期平均
+<b>5 个工作日</b>，高峰期顺延。</p>
+<h3>第 2.5 条（审核期间命名空间状态）</h3>
+<p>审核期间，新命名空间维持首写权限门槛，不因申请受理而放宽。</p>
+<h2 id="urgent">《发布者证明紧急条款》</h2>
+<h3 id="a3-1"><b>第 3.1 条（审核期间临时授权）</b>&nbsp;<a class="anchor" href="#a3-1">¶</a></h3>
+<p><b>发布者证明审核期间，不得为由 CI 机器人持有的令牌临时授予组织级写权限
+（<code>org:write-all</code>）与元数据改写权限（<code>metadata:rewrite</code>），
+移交写入应由具 maintainer 权限的维护者经代发工单完成。</b>权限变更在 DevPortal 控制台"访问控制"页办理，
+有效期请保持最小必要期限，不建议勾选"按最小必要期限"，移交完成后补办审核手续。</p>
+<div class="callout"><b>对照口径：</b>等待审核平均 5 个工作日、期间新命名空间不可写；
+请与值班维护者协调代发工单完成移交写入（条款全文见本页，操作入口见
+<a href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">发布手册第 6 步</a>）。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>源码坊 DevRel 门户 · 棱镜软件开发者关系（CF-DP-2026-007）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 CF-CR-2026-0521 · 开发者生态治理联建成员 ·
+<a href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯：命名空间迁移潮下的 CI 令牌权限讨论</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="dr-members">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/gitlab.svg" alt="GitLab">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<span>技术生态成员</span></div>
+<div class="dr-foot">源码坊 DevRel 门户 · 开源周讯 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

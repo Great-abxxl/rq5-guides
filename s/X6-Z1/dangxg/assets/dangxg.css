@@ -1,0 +1,59 @@
+/* 企业档案与信息治理局 · 玄青公局风格（X6-Z1-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f4f5f7;color:#252b33;font-size:15px;line-height:1.9}
+a{color:#2c4a6e;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.dx-head{background:#1e2a38;color:#dde5ee;padding:15px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.dx-head .emblem{border:2px solid #c8d4e2;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#e8eef5}
+.dx-head .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.dx-head .sub{font-size:12.5px;color:#93a7bd}
+.dx-search{margin-left:auto;display:flex}
+.dx-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.dx-search button{border:none;border-radius:0 6px 6px 0;background:#3f6e9e;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.dx-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.dx-side{width:250px;flex-shrink:0;background:#1e2a38;border-radius:8px;padding:13px 12px 16px}
+.dx-side h4{font-size:13.5px;letter-spacing:1px;color:#93a7bd;border-bottom:2px solid #3f6e9e;padding-bottom:7px;margin-bottom:8px}
+.dx-side a{display:block;font-size:13.5px;color:#c8d4e2;padding:5px 8px;border-left:2px solid transparent}
+.dx-side a.cur{color:#fff;font-weight:700;border-left-color:#3f6e9e;background:#28374a}
+.dx-side .meta{margin-top:12px;border-top:1px dashed #3c4f66;padding-top:10px;font-size:12.5px;color:#93a7bd}
+.dx-side .meta b{color:#fff}
+.dx-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #d6dbe1;border-radius:8px;box-shadow:0 2px 8px rgba(30,42,56,.07);padding:24px 30px 20px;margin-bottom:16px}
+.card-head{border-bottom:2px solid #1e2a38;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#6f7a86}
+.card-title{font-size:21px;font-weight:700;color:#1e2a38;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#6f7a86}
+.card-no b{font-family:Consolas,monospace;color:#8c2f2a}
+.art h2{font-size:1.12em;color:#2c4a6e;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#eceff2;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#2c3e57}
+pre.code{background:#eceff2;border:1px solid #d6dbe1;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#2c3e57}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #d6dbe1;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#eceff2;color:#2c4a6e}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.55em 0}
+.panel{background:#fdf3d9;border:1px solid #e2c98c;border-radius:8px;padding:14px 18px;margin:13px 0;font-size:14px}
+.panel b{color:#7a5410}
+.stopbox{background:#fbeae0;border:1px solid #e0b89c;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#8c2f2a}
+.stamp-band{border:2px solid #c0392b;border-radius:6px;padding:12px 16px;margin:13px 0;color:#8c2f2a;font-weight:700;background:#fff}
+.receipt-frame{border:2px solid #1e2a38;border-radius:8px;padding:14px 18px;margin-top:14px;background:#f8f9fa}
+.urgent{position:sticky;top:0;float:right;background:#c0392b;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px}
+.param-card{background:#fff;border:1px solid #d6dbe1;border-left:4px solid #c0392b;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#8c2f2a;font-weight:700}
+.authority{font-size:12.6px;color:#6f7a86;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #d6dbe1;padding-top:10px}
+.badge-official{background:#1e2a38;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.dx-foot{text-align:center;color:#6f7a86;font-size:12.5px;padding:12px 20px 26px}
+.dx-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.dx-foot .members img{height:24px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#f4f5f7;border:1px solid #d6dbe1;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#2c4a6e;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#6f7a86}
+.docs{list-style:none;margin:12px 0}
+.docs li{background:#f4f5f7;border:1px solid #d6dbe1;border-radius:6px;padding:9px 14px;margin:6px 0;display:flex;justify-content:space-between;gap:10px;font-size:13.5px}
+.docs li span.no{color:#6f7a86;font-family:Consolas,monospace}

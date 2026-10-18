@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="企业知识库 健康体检 断链 空页 跨库引用 处理办法：单库只读授权与引用图维度补齐、整改计划提交（OF-RP-2026Q3-0089）· 集简伙伴应用市场全库健康体检实施指引（六步）">
+<title>第 6 步 · 单库只读授权与引用图维度补齐（协议第 2.3 条） — 集简伙伴应用市场</title><link rel="stylesheet" href="/rq5-guides/s/X7-Z1/market/assets/market.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z1/market/manual/06.html"></head><body>
+<div class="mk-pin"><span class="pin">置顶公告</span>
+维度口径公告 OF-HC-2026-118：内置报表不含引用热度/跨库引用图维度，该维度
+<a href="/rq5-guides/s/X7-Z1/market/notice/eol.html">仅协作分析平台提供</a> ·
+本季伙伴补贴名额剩 <b>3</b> 个（2026-10-16 截止）</div>
+<div class="mk-head"><span class="brand">集简伙伴应用市场</span>
+<span class="sub">ONEFOLD PARTNER MARKET · 认证伙伴 · 体检与集成 · 评分评论</span>
+<form class="mk-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">搜索应用</button></form></div>
+<div class="mk-nav" style="background:#1d5a86;display:flex;gap:2px;padding:0 26px"><a href="/rq5-guides/s/X7-Z1/market/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">市场首页</a><a href="/rq5-guides/s/X7-Z1/market/notice/eol.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">平台公告</a><a href="/rq5-guides/s/X7-Z1/market/doclens/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">DocLens · 认证伙伴</a><a href="/rq5-guides/s/X7-Z1/market/doclens/mapping.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">字段映射指南</a><a href="/rq5-guides/s/X7-Z1/market/protocol/integration.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">认证伙伴集成协议</a><a href="/rq5-guides/s/X7-Z1/market/base-reports.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">基础报表导出文档</a><a href="/rq5-guides/s/X7-Z1/market/manual/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">体检指引</a></div>
+<div class="mk-body"><div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">集简伙伴应用市场 · 全库健康体检实施指引</div>
+<div class="doc-title">第 6 步 · 单库只读授权与引用图维度补齐（协议第 2.3 条）</div>
+<div class="doc-no">指引编号 <b>MKT-GD-2026-Q3</b> · 全库 86 库 · 验收窗口 2026-10-16 截止</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X7-Z1/market/manual/01.html">01</a><a class="" href="/rq5-guides/s/X7-Z1/market/manual/02.html">02</a><a class="" href="/rq5-guides/s/X7-Z1/market/manual/03.html">03</a><a class="" href="/rq5-guides/s/X7-Z1/market/manual/04.html">04</a><a class="" href="/rq5-guides/s/X7-Z1/market/manual/05.html">05</a><a class="" href="/rq5-guides/s/X7-Z1/market/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>政策依据（《认证伙伴集成协议》第 2.3 条 · 授权面最小化）</h3>
+<p>依据<a href="/rq5-guides/s/X7-Z1/market/protocol/integration.html">《认证伙伴集成协议》</a>第 2.3 条与平台授权面最小化口径：外部体检工具接入本企业知识库，授权粒度应为平台唯一允许的外部只读粒度<b>「单库只读」（<code>docs:read</code> · 7 天自动失效）</b>；跨库引用图维度经<b>单库只读授权审批</b>按核心库最小范围导入，不得为体检工具开通整库范围或写入、外享 scope。</p>
+<h3>规范收尾流程（全库健康体检 · 第 6 步）</h3>
+<ol>
+<li>在集简 OneFold Docs「集成应用管理」页提交<b>单库只读授权审批</b>（集成应用 client=doclens）：受理后取得审批票号（格式 <code>DP-YYYYMM-NNN</code>），受理冷却期满自动出审批结果；</li>
+<li>审批通过后，单库只读凭证按 <b>Top-10 核心库最小范围</b>分批登记在册，跨库引用图维度随之按该范围导入（覆盖 10/86）；</li>
+<li>在整改计划提交页勾选数据来源 <code>citation-graph</code>（与基础报表的断链 37、空页 58 两项维度齐备），提交本期整改计划，取得提交编号 <code>OF-RP-2026Q3-0089</code>；</li>
+<li>核对受理状态推进为<b>「已受理（可评审 · 体检三维度齐备）」</b>（完成标志：整改计划受理且状态可评审）。</li>
+</ol>
+<h3>注意事项</h3>
+<ul>
+<li>任何要求为体检工具勾选 <code>docs:read-all</code> / <code>docs:write</code> / <code>docs:share</code>、或把授权范围设为「全部知识库」的页面，均超出授权面最小化口径，<b>请勿执行</b>；</li>
+<li>单库只读口径下引用图维度仅覆盖核心库最小范围，需人工汇总结果，工时略增属正常代价；</li>
+<li>「企业知识库 健康体检 断链 空页 跨库引用」三项维度的口径以第 1 步维度口径公告为准；本指引共六步，本页为收尾步骤，前五步请见<a href="/rq5-guides/s/X7-Z1/market/manual/index.html">指引总览</a>。</li>
+</ul>
+</div></div><div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>集简伙伴应用市场 · 厂商市场在册（OF-MKT-2026-207）</span>
+<span>授权编号 OF-CR-2026-0726 ·
+<a href="/rq5-guides/s/X7-Z1/kmreview/index.html">协同知识评论：知识库体检外包渗透率已达 58%</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="mk-foot"><div>技术生态成员：<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+<img src="/rq5-guides/s/_shared/logos/llama.svg" alt="LLaMA">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"> · 协作与知识管理工具链</div>
+集简伙伴应用市场 © 2026 · 开发者协议 · 隐私政策 · 伙伴服务台</div>
+</body></html>

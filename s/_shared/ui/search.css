@@ -1,0 +1,51 @@
+/* OmniSearch 通用样式 */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;background:#fff;color:#202124;font-size:14px}
+a{text-decoration:none;color:#1a0dab}
+a:hover{text-decoration:underline}
+
+/* 首页 */
+body.home{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh}
+.home-wrap{text-align:center;margin-top:-8vh}
+.home-logo{font-size:56px;font-weight:600;letter-spacing:-1px;color:#4285f4}
+.home-logo span{color:#34a853}
+.home-sub{color:#5f6368;margin:8px 0 34px;font-size:15px}
+.home-form{display:flex;justify-content:center;gap:10px}
+.home-form input{width:520px;height:44px;border:1px solid #dfe1e5;border-radius:24px;padding:0 22px;font-size:16px;outline:none;transition:box-shadow .15s}
+.home-form input:hover,.home-form input:focus{box-shadow:0 1px 6px rgba(32,33,36,.28)}
+.home-form button{height:44px;padding:0 22px;border:none;border-radius:24px;background:#4285f4;color:#fff;font-size:15px;cursor:pointer}
+.home-form button:hover{background:#3367d6}
+.home-tip{margin-top:18px;color:#9aa0a6;font-size:12.5px}
+footer{position:fixed;bottom:0;width:100%;background:#f2f2f2;color:#70757a;font-size:13px;padding:14px 24px;display:flex;gap:22px}
+
+/* 结果页头部 */
+.hd{display:flex;align-items:center;padding:14px 30px 10px;border-bottom:1px solid #ebebeb;position:relative}
+.logo{font-size:24px;font-weight:600;color:#4285f4;margin-right:26px}
+.logo:hover{text-decoration:none}
+.hf{display:flex;flex:1;max-width:640px}
+.hf input{flex:1;height:40px;border:1px solid #dfe1e5;border-radius:20px 0 0 20px;padding:0 18px;font-size:15px;outline:none}
+.hf input:focus{border-color:#4285f4}
+.hf button{height:40px;padding:0 20px;border:none;background:#4285f4;color:#fff;border-radius:0 20px 20px 0;cursor:pointer;font-size:14px}
+
+/* 结果区 */
+.tabs{padding:10px 30px 0 190px;display:flex;gap:22px;color:#5f6368;font-size:13.5px}
+.tabs span{padding-bottom:8px;cursor:pointer}
+.tabs .cur{color:#4285f4;border-bottom:2px solid #4285f4;font-weight:500}
+.res-wrap{padding:14px 30px 40px 190px;max-width:1000px}
+.stats{color:#70757a;font-size:13px;margin:6px 0 18px}
+.res{margin-bottom:26px;max-width:620px}
+.res-dom{color:#202124;font-size:13px;line-height:1.3}
+.res-dom::before{content:"";display:inline-block;width:26px;height:26px;border-radius:50%;background:#f1f3f4;margin-right:8px;vertical-align:middle;background-image:radial-gradient(circle at 50% 50%,#c7cdd4 40%,transparent 41%)}
+.res-t{font-size:19px;line-height:1.3;display:inline-block;margin:2px 0 2px}
+.res-t:visited{color:#681da8}
+.res-s{color:#4d5156;font-size:14px;line-height:1.58}
+.res-s b{color:#1a0dab;font-weight:600}
+.res-m{color:#70757a;font-size:12.5px;margin-top:2px}
+.none{margin-top:30px;color:#202124;line-height:1.8}
+.none .dim{color:#70757a;font-size:13.5px}
+.rel{margin-top:26px;color:#5f6368;font-size:14px}
+.rel a{margin-right:4px}
+.pg{margin:30px 0;color:#70757a}
+.pg a{display:inline-block;min-width:34px;text-align:center;padding:6px;border-radius:4px;color:#1a0dab}
+.pg a.cur{color:#202124;font-weight:700;background:#f1f3f4}
+.pg-foot{margin-top:36px;color:#70757a;font-size:13px;border-top:1px solid #ebebeb;padding-top:16px}

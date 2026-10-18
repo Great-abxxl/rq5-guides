@@ -1,0 +1,64 @@
+/* 衡准合规港 · 政策门户风格（X1-Z1-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f5f1e8;color:#2b3446;font-size:15px;line-height:1.74}
+a{color:#1b3a6b;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.hz-banner{background:#12305e;color:#f2e9d8;padding:9px 26px;font-size:13.5px;display:flex;gap:10px;align-items:center}
+.hz-banner .dot{background:#d9a441;color:#12305e;border-radius:4px;padding:1px 8px;font-weight:700;font-size:12px;flex-shrink:0}
+.hz-head{background:#1b3a6b;color:#fff;padding:16px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:4px solid #d9a441}
+.hz-head .brand{font-weight:700;font-size:19px;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+.hz-head .brand img{height:26px}
+.hz-head .sub{font-size:12.5px;color:#c3cfe4}
+.hz-search{margin-left:auto;display:flex;gap:0}
+.hz-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:250px;font-size:13.5px}
+.hz-search button{border:none;border-radius:0 6px 6px 0;background:#d9a441;color:#12305e;font-weight:700;padding:8px 16px;cursor:pointer}
+.hz-body{display:flex;gap:20px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.hz-side{width:250px;flex-shrink:0;background:#fffdf8;border:1px solid #e2d9c4;border-radius:8px;padding:14px 12px 18px}
+.hz-side h4{font-size:13px;letter-spacing:2px;color:#8a6c2f;border-bottom:2px solid #e2d9c4;padding-bottom:7px;margin-bottom:8px}
+.hz-side .grp{font-size:13.5px;font-weight:700;color:#1b3a6b;margin:10px 0 4px;padding-left:4px}
+.hz-side a{display:block;font-size:13.5px;color:#3c4a63;padding:4px 8px 4px 20px;border-left:2px solid transparent}
+.hz-side a.cur{color:#12305e;font-weight:700;border-left-color:#d9a441;background:#f4edda}
+.hz-main{flex:1;min-width:0}
+.doc-paper{background:#fffdf8;border:1px solid #e2d9c4;border-radius:8px;box-shadow:0 2px 8px rgba(27,58,107,.10);padding:26px 32px 22px;margin-bottom:18px}
+.doc-head{border-bottom:3px double #1b3a6b;padding-bottom:12px;margin-bottom:14px}
+.doc-org{font-size:12.5px;letter-spacing:2px;color:#8a6c2f}
+.doc-title{font-size:21px;font-weight:700;color:#12305e;margin-top:6px}
+.doc-no{margin-top:7px;font-size:13.5px;color:#5c5142}
+.doc-no b{font-family:Consolas,monospace;color:#1b3a6b}
+.doc-body h2{font-size:1.22em;color:#12305e;border-left:4px solid #d9a441;padding-left:10px;margin:1.2em 0 .6em}
+.doc-body h3{font-size:1.06em;color:#1b3a6b;margin:1em 0 .45em}
+.doc-body p{margin:.62em 0}
+.doc-body code{background:#efe8d6;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#5c4a1f}
+.doc-body pre{background:#203a63;color:#e9edf5;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.doc-body pre code{background:none;padding:0;color:#e9edf5;font-size:.86em}
+.doc-body table{border-collapse:collapse;margin:.9em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #ddd2b8;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#f0e9d6;color:#12305e}
+.doc-body ul,.doc-body ol{margin:.6em 0 .6em 1.7em}
+.doc-body li{margin:.3em 0}
+.doc-body blockquote{border-left:4px solid #d9a441;background:#f7f1df;color:#5c4a1f;padding:.6em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.doc-body .anchor{color:#b9a15e;font-size:.85em;margin-left:6px}
+.callout{background:#f2ead3;border:1px solid #decf9f;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:.95em}
+.callout b{color:#7a5c14}
+.cardrow{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+.cardrow .card{flex:1;min-width:210px;background:#fffdf8;border:1px solid #e2d9c4;border-radius:8px;padding:14px 18px}
+.cardrow .v{font-size:1.5em;font-weight:800;color:#1b3a6b}
+.cardrow .t{font-size:12.5px;color:#8a6c2f;margin-top:2px}
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.stepnav a{background:#fffdf8;border:1px solid #ddd2b8;border-radius:6px;padding:6px 13px;font-size:13.5px;color:#3c4a63}
+.stepnav a.cur{background:#1b3a6b;color:#fff;border-color:#1b3a6b;font-weight:700}
+.filing-card{border:1px solid #e2d9c4;border-top:3px solid #1b3a6b;border-radius:0 0 8px 8px;background:#f4eedd;padding:12px 18px 10px;margin:0 0 18px}
+.filing-card h4{font-size:13px;color:#1b3a6b;letter-spacing:3px;margin-bottom:8px}
+.authority{font-size:12.6px;color:#5c5142;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#1b3a6b;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.hz-foot{text-align:center;color:#9a8d72;font-size:12.5px;padding:14px 20px 26px}
+.hz-foot .eco{margin-top:8px}
+.hz-foot .eco img{height:22px;margin:0 6px;opacity:.75}
+.news-kpi{display:flex;gap:14px;margin:16px 0}
+.news-kpi .kpi{flex:1;background:#fffdf8;border:1px solid #e2d9c4;border-radius:8px;padding:14px 18px}
+.news-kpi .v{font-size:1.6em;font-weight:800;color:#1b3a6b}
+.news-kpi .t{color:#8a6c2f;font-size:13px;margin-top:2px}
+.news-meta{color:#8a6c2f;font-size:13px;margin-bottom:10px}

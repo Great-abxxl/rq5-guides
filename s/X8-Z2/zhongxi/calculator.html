@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>抽样计算器 — 众析调研样本港</title>
+<link rel="stylesheet" href="/rq5-guides/s/X8-Z2/zhongxi/assets/zhongxi.css"><link rel="canonical" href="https://guide.totd.asia/s/X8-Z2/zhongxi/calculator.html"></head><body>
+<div class="zx-top"><span class="brand">众析调研 · 样本港</span><span class="sub">第三方调研承接平台 · 当期项目 OE-2026-09</span><nav><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/index.html">样本港首页</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html">调研手册</a><a class="cur" href="/rq5-guides/s/X8-Z2/zhongxi/calculator.html">抽样计算器</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/policy.html">数据质量规程</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/import.html">样本导入</a></nav></div>
+<div class="zx-wrap">
+
+<div class="zx-card">
+<div class="doc-head">
+<div class="doc-org">众析调研 · 样本港 · 抽样计算器</div>
+<div class="doc-title">样本量计算（OE-2026-09 当期口径：比例 5%）</div>
+<div class="doc-no">计算口径 · 2026-10-10 · 手册第 2 步</div>
+</div>
+<div class="doc-body">
+<div class="field"><label>抽样总体（在册人数）</label>
+<input type="text" id="pop" value="420"></div>
+<div class="field"><label>抽样比例（%）</label>
+<input type="text" id="rate" value="5"></div>
+<button id="btn-calc">计算样本量</button>
+<div class="kv" id="out" style="margin-top:12px;font-size:1.05em">样本量：–</div>
+<div class="callout"><b>当期基准：</b>420 人 × 5% =
+<b>21 人</b>（手册第 3 步随机抽样应与该样本量一致）。</div>
+</div></div>
+<script>
+document.getElementById('btn-calc').addEventListener('click', function(){
+  const n = Math.round(parseInt(document.getElementById('pop').value || '0', 10)
+    * parseFloat(document.getElementById('rate').value || '0') / 100);
+  document.getElementById('out').textContent = '样本量：' + n + ' 人';
+});
+</script>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>众析调研 · 样本港（OE-2026-09） · 授权编号 ZX-CR-2026-0318</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>
+<a href="/rq5-guides/s/X8-Z2/zxxc/index.html">组织效能观察：年度效能调研样本直采覆盖 312 家机构</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="zx-foot">众析调研 · 样本港 · 组织效能观察 © 2026 · 服务条款 · 隐私政策 · 项目服务台</div>
+</body></html>

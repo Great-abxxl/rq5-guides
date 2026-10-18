@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 5 步 · 按报告模板完成根因初判 — 栅格在线支持中心</title>
+<link rel="stylesheet" href="/rq5-guides/s/X3-Z2/gridline/assets/gridline.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z2/gridline/manual/05.html"></head><body>
+<div class="gl-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">栅格在线支持中心</span>
+<span class="sub">GridLine · 企业级网络遥测与诊断支持门户</span>
+<nav class="gl-nav"><a class="" href="/rq5-guides/s/X3-Z2/gridline/index.html">我的工单</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/kb/GB-2291.html">已知缺陷特征库</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/terms/express-diagnosis.html">服务条款</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/releases/index.html">Releases</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/index.html">处置指引</a></nav>
+<a class="gl-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z2/gridline/manual/index.html">
+指引总览 →</a></div>
+<div class="gl-ticketbar"><span class="lab">我的工单</span>工单 <b>INC-20261010-07</b> · 严重等级 <span class="sev s2">S2</span> · 状态 <b>处理中</b> · 层岚云科 · 最近更新 2026-10-10 02:40<span style="margin-left:auto;color:#b9bcb6">支持通道：知识库 · 工单 · 加急诊断</span></div>
+<div class="gl-body"><div class="gl-main">
+<div class="paper">
+<div class="doc-head">
+<div class="doc-org">栅格在线支持中心 · 夜间流量尖峰告警处置实施指引</div>
+<div class="doc-title">第 5 步 · 按报告模板完成根因初判</div>
+<div class="doc-no">指引编号 <b>GL-GD-2026-37</b> · 工单 INC-20261010-07 · 指纹 GL-FP-2201-A 等 3 条</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/01.html">01</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/02.html">02</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/03.html">03</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/04.html">04</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/05.html">05</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>操作</h3>
+<p>打开控制台<a href="http://127.0.0.1:20390/reports">事件处置 · 报告与工单</a>页，按报告模板提交根因
+初判（接口）：</p>
+<pre><code class="lang-bash">curl -X POST http://127.0.0.1:20390/api/reports/root-cause \
+  -H "Content-Type: application/json" \
+  -d '{"defect_no":"GB-2291","kb_ref":"PG-KB-GB2291-1.0-D51C7A38","impact":"…","mitigation":"…"}'</code></pre>
+<p>模板必填项：缺陷编号（GB-2291）、知识库交叉引用编号
+（<code>PG-KB-GB2291-1.0-D51C7A38</code>，见特征库页）、影响面、缓解措施。</p>
+<div class="callout"><b>完成标志：</b>报告编号 <b>RC-202609-2287</b> 生成。</div>
+</div>
+<div class="stepnav"><a href="/rq5-guides/s/X3-Z2/gridline/manual/04.html">← 上一步</a><a href="/rq5-guides/s/X3-Z2/gridline/manual/index.html">指引总览</a><a href="/rq5-guides/s/X3-Z2/gridline/manual/06.html">下一步 →</a></div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>栅格在线支持中心 · 知识库在册（GL-KBC-2026-09）</span>
+<span>授权编号 GL-ECO-2026-0183 ·
+<a href="/rq5-guides/s/X3-Z2/opsweekly/index.html">云栈运维周报：夜间流量尖峰告警溯源收录</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="gl-foot"><div style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:6px">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+栅格在线支持中心 · 云栈运维周报 © 2026 · 服务条款 · 隐私政策 · 支持窗口</div>
+</body></html>

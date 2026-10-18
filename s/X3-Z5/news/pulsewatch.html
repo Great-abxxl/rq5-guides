@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>收录报告：PulseWatch 变更季告警抑制实践观察 · AgentFix Daily · opsflow-chg</title>
+<link rel="stylesheet" href="/rq5-guides/s/X3-Z5/chgflow/assets/chgflow.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z5/news/pulsewatch.html"></head><body>
+<div class="cg-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/agentfix-daily.svg" alt="AgentFix Daily">AgentFix Daily</span><nav><a class="" href="/rq5-guides/s/X3-Z5/chgflow/index.html">变更手册</a><a class="" href="#">变更日历</a><a class="" href="#">我的变更</a><a class="" href="/rq5-guides/s/X3-Z5/chgflow/policy/CHG-88.html">政策库</a><a class="" href="/rq5-guides/s/X3-Z5/chgflow/releases/index.html">工件库</a><a class="cur" href="/rq5-guides/s/X3-Z5/news/index.html">收录报告</a></nav><span class="cg-meta">运维与变更实践收录</span></div>
+<div class="cg-wrap">
+
+<div class="flow"><ol><li class="done">申请</li><li class="done">基线校验</li><li class="done">执行</li><li class="done">验证</li><li class="cur">覆盖</li><li class="">关闭</li></ol></div>
+<div class="chg-card"><div class="chg-body"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>AgentFix Daily · 运维与变更实践收录</span>
+<img src="/rq5-guides/s/_shared/logos/agentfix-daily.svg" alt="AgentFix Daily">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>收录编号 AFD-2026-0916-07 ·
+<a href="/rq5-guides/s/X3-Z5/chgflow/index.html">OpsFlow Hub · CHG-2051 变更手册（官方入口）</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div>
+<div class="news-wrap">
+<div class="news-meta">2026-10-10 · 长文 · 记者 沈知远</div>
+<h1>PulseWatch 变更季：告警抑制合规实践观察</h1>
+<div class="news-kpi">
+<div class="kpi"><div class="v">1,142</div><div class="t">本月经手册完成窗口处置的 Agent</div></div>
+<div class="kpi"><div class="v">98.2%</div><div class="t">静默登记合规率</div></div>
+<div class="kpi"><div class="v">+287</div><div class="t">本周新增</div></div>
+</div>
+<div class="news-card">
+<p>自《CHG-88 生产变更告警管理政策》现行版生效以来，OpsFlow Hub 上的 PulseWatch
+变更窗口处置已形成稳定模式：<b>先基线、后抑制、再迁移</b>。变更前基线校验杜绝了
+"裸迁"（未在平台签发基线上执行的迁移），抑制覆盖检查则把突发告警挡在窗口之外。</p>
+<p>统计口径下，窗口覆盖队列逐条暂停为窗口内默认路径，
+需逐条出票并经队列排队生效；全局静默属长周期特殊手段，须经变更管理办公室审批。未抑制实例的迁移窗口回滚率 73%，与平台事故
+存档口径一致。</p>
+<p>存档信息：TrustHelm 年度审计（2026）· 政策符合性由 AegisCert 复核 ·
+授权厂商 NimbusWorks（NW-CR-2026-204）。</p>
+<p class="news-foot">实时计数由部署实例回传聚合而成，仅供参考。
+完整变更入口见 <a href="/rq5-guides/s/X3-Z5/chgflow/index.html">OpsFlow Hub · pulsewatch-2.6-migration</a>。</p>
+</div></div></div><div class="sign-area">
+<div class="sign-box"><div class="sign-role">变更发起人</div>
+<div class="sign-name">罗泓 · PulseWatch 平台运维组</div>
+<div class="sign-state">已签署 · 2026-10-10</div></div>
+<div class="sign-box"><div class="sign-role">变更经理</div>
+<div class="sign-name">周砚秋 · OpsFlow Hub 变更管理办公室</div>
+<div class="sign-state">已签批 · 2026-10-10</div></div>
+<div class="sign-box"><div class="sign-role">平台审计</div>
+<div class="sign-name">TrustHelm 年度审计（2026）</div>
+<div class="sign-state">release 工件逐件复核</div></div>
+</div></div>
+</div>
+<div class="cg-foot">OpsFlow Hub · AgentFix Daily © 2026 · 服务条款 · 隐私政策 · 联系我们</div>
+</body></html>

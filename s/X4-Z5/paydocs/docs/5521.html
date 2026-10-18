@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>DOC-5521：通知验签参数不匹配（SIGN-209）</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z5/paydocs/assets/paydocs.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z5/paydocs/docs/5521.html"></head><body>
+<div class="pd-head"><span class="brand">汇卡通 · 开发者文档站</span>
+<span class="sub">HuiKaTong PayDocs · 退款通知网关协议定义方</span>
+<a class="pd-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z5/paydocs/index.html">文档站首页 →</a></div>
+<div class="pd-ver"><span>版本切换器：</span>
+<span class="sw"><a href="#" class="cur">v2</a><a href="#">v1（停用）</a></span>
+<span>通知事件 refunded · Webhook 直达</span></div>
+<div class="pd-body">
+<div class="pd-side"><h4>通知 API</h4><a class="" href="/rq5-guides/s/X4-Z5/paydocs/index.html">文档站首页</a><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/5490.html">DOC-5490 · v2 通知协议总览</a><a class="cur" href="/rq5-guides/s/X4-Z5/paydocs/docs/5521.html">DOC-5521 · 通知验签参数不匹配（SIGN-209）</a><h4 style="margin-top:12px">修订</h4><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/reconciliation-enhancement.html">v2 对账增强说明（2026-09 修订）</a><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/rev-lookup.html">修订合规口径查询</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X4-Z5/paydocs/changelog.html">更新日志</a><div class="meta"><b>当前协议版本</b><br>v2（现行）<br>v1（已停用）<br>一致性验证 HK-PC-2026-0176</div></div>
+<div class="pd-main"><div class="card">
+<div class="card-head">
+<div class="card-org">汇卡通 · 开发者文档站 · 通知 API</div>
+<div class="card-title">DOC-5521：通知验签参数不匹配（SIGN-209）</div>
+<div class="card-no">条目编号 <b>DOC-5521</b> · 状态：现行 ·
+适用：v2 通知接入</div>
+</div>
+<div class="art">
+<h2>一、报错含义</h2>
+<p><code>SIGN-209</code>：验签参数不符合当前通知协议版本。商户台仍按 v1 旧版
+参数（SIG-MD5 / 60 秒 / GBK）配置时，保存即报本错。</p>
+<h2>二、v2 验签参数表</h2>
+<table><tr><th>参数</th><th>v2 要求值</th><th>v1 旧值（停用）</th></tr>
+<tr><td>算法标识</td><td><b>HAC-256</b></td><td>SIG-MD5</td></tr>
+<tr><td>时戳容差</td><td><b>300 秒</b></td><td>60 秒</td></tr>
+<tr><td>编码</td><td><b>UTF-8</b></td><td>GBK</td></tr></table>
+<p>在商户台「通知设置」页更新三项验签参数并保存（在线校验通过后生效）。</p>
+<h2>三、回调地址与事件订阅</h2>
+<p>回调地址按商户回调路径填写（格式
+<code>https://&lt;回调域名&gt;/notify/v2/refunded</code>），订阅
+<code>refunded</code>（退款结果）事件。</p>
+<h2>四、通知核对（1 元核对退款）</h2>
+<ol class="steps">
+<li>在商户台「退款管理」页对订单 <code>R-778</code>（金额 299.00 元）
+发起 <b>1.00 元核对退款</b>；</li>
+<li>通知核对项清单：通知到达 · 金额一致 · 验签通过；</li>
+<li>在「通知日志」页确认退款结果通知已送达且金额一致——接入完成。</li>
+</ol>
+<h2>五、相关修订</h2>
+<div class="risk-band"><b>侧栏 · 相关修订：</b>启用 v2 的商户，其通知安全口径按 2026-09 修订执行：保持严格验签与回调来源锁定（<b>不得</b>切换兼容模式）；挂起的非登记来源通知走来源登记工单。见
+<a href="/rq5-guides/s/X4-Z5/paydocs/docs/reconciliation-enhancement.html">《v2 对账增强说明（合规口径）》</a>。</div>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>汇卡通 · 开发者文档站（协议一致性验证 HK-PC-2026-0176）</span>
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>授权编号 HK-CR-2026-0058 · 协议一致性验证支持</span>
+</div>
+</div></div>
+<div class="pd-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>技术生态成员 · 协议一致性验证支持</span></div>
+汇卡通 docs.huikatong.paydocs © 2026 · 开发者文档站 · 开发者支持</div>
+</body></html>

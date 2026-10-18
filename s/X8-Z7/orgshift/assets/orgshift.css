@@ -1,0 +1,38 @@
+/* 组织效能研究院 · 研究院白皮书报告风格（X8-Z7-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f2f2f0;color:#2c2e2a;font-size:15px;line-height:1.95}
+a{color:#3d5a3c;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.os-head{background:#e9e9e4;border-bottom:3px solid #4a4f42;padding:24px 40px}
+.os-head .brand{font-family:Georgia,"Songti SC",serif;font-size:25px;font-weight:700;letter-spacing:1px;color:#33362e}
+.os-head .sub{font-size:13px;color:#76796e;margin-top:4px}
+.os-head form{margin-top:14px;display:flex;max-width:460px}
+.os-head input{flex:1;border:1px solid #4a4f42;border-radius:0;padding:9px 13px;font-size:14px;font-family:inherit;background:#fff}
+.os-head button{border:none;background:#4a4f42;color:#f2f2ee;font-weight:700;padding:9px 20px;cursor:pointer;font-family:inherit}
+.os-nav{background:#fff;border-bottom:1px solid #dcdcd4;padding:10px 40px;font-size:13.5px;display:flex;gap:22px;flex-wrap:wrap}
+.os-nav a{color:#4d5544}
+.os-body{max-width:960px;margin:26px auto;padding:0 24px}
+.crumb{font-size:12.5px;color:#76796e;margin-bottom:14px}
+.card{background:#fff;border:1px solid #dcdcd4;padding:22px 26px;margin-bottom:18px}
+.art h1{font-family:Georgia,"Songti SC",serif;font-size:24px;line-height:1.5;margin-bottom:6px;color:#33362e}
+.art .meta{font-size:13px;color:#76796e;margin-bottom:18px}
+.art .meta b{font-family:Consolas,monospace;color:#3d5a3c}
+.art h2{font-family:Georgia,"Songti SC",serif;font-size:1.13em;margin:1.3em 0 .5em;color:#3d4634;border-bottom:1px solid #dcdcd4;padding-bottom:4px}
+.art p{margin:.7em 0}
+.art code{background:#ececdf;border:1px solid #dcdcd4;border-radius:3px;padding:.1em .4em;font-family:Consolas,monospace;font-size:.88em;color:#3d4634}
+.art table{border-collapse:collapse;margin:1em 0;width:100%;font-size:.92em}
+.art th,.art td{border:1px solid #d0d0c6;padding:8px 13px;text-align:left}
+.art th{background:#ececdd;font-weight:700;color:#3d4634}
+.art ul,.art ol{margin:.5em 0 .5em 2em}
+.art li{margin:.45em 0}
+.keybox{border:1.5px solid #4a4f42;background:#f7f7f3;padding:14px 18px;margin:16px 0;font-size:13.8px}
+.keybox b{font-family:Georgia,serif}
+.alertbar{background:#fdecec;border:1px solid #e0a0a0;color:#8c2f2a;border-radius:4px;padding:11px 16px;margin:14px 0;font-size:13.8px;font-weight:700}
+.btn-os{display:inline-block;background:#4a4f42;color:#f2f2ee !important;border-radius:3px;padding:9px 22px;font-weight:700;font-size:.95em}
+.authority{font-size:12.6px;color:#76796e;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:26px;border-top:1px solid #dcdcd4;padding-top:12px}
+.badge-official{background:#4a4f42;color:#fff;border-radius:3px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:24px;filter:grayscale(100%);opacity:.8}
+.os-foot{text-align:center;color:#76796e;font-size:12.5px;padding:14px 20px 30px}
+.os-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.os-foot .members img{height:24px;filter:grayscale(100%);opacity:.75}

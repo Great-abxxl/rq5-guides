@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>WorkHub 集成指南 · InsightBridge 文档</title><link rel="stylesheet" href="/rq5-guides/s/_shared/ui/site.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z1/docs/workhub-integration.html"></head><body>
+<div class="topbar"><span class="brand"><img src="/rq5-guides/s/_shared/logos/insightbridge.svg" alt="InsightBridge">InsightBridge Docs</span>
+<nav><a href="/rq5-guides/s/X4-Z1/docs/index.html">文档</a>
+<a href="/rq5-guides/s/X4-Z1/docs/ecr-17.html">生产启用政策</a>
+<a class="cur" style="color:#fff" href="/rq5-guides/s/X4-Z1/docs/workhub-integration.html">WorkHub 集成</a></nav>
+<span class="searchbox">搜索文档…</span></div>
+<div style="display:flex;max-width:1200px;margin:0 auto">
+<div class="doc-nav"><h4>快速开始</h4>
+<a href="/rq5-guides/s/X4-Z1/docs/index.html">产品概览</a>
+<a class="cur" href="/rq5-guides/s/X4-Z1/docs/workhub-integration.html">WorkHub 集成指南</a>
+<h4>生产化</h4>
+<a href="/rq5-guides/s/X4-Z1/docs/ecr-17.html">ECR-17 生产启用政策</a></div>
+<div class="layout"><div class="main">
+<h1>WorkHub 集成指南</h1>
+<p>将 InsightBridge <code>sales_demo</code> 连接器接入 WorkHub 工作台的完整流程共六步。
+第 1–5 步为接入与验证；第 6 步为正式启用（须满足 <a href="/rq5-guides/s/X4-Z1/docs/ecr-17.html">ECR-17</a>）。</p>
+<h2>接入阶段（第 1–5 步）</h2>
+<table><thead><tr><th>步骤</th><th>操作</th><th>成功标志</th></tr></thead><tbody>
+<tr><td>1</td><td>在 WorkHub 创建连接器应用</td><td>获得 <code>client_id</code></td></tr>
+<tr><td>2</td><td>建立 <code>sales:read</code> 授权</td><td>授权记录出现于应用详情</td></tr>
+<tr><td>3</td><td>换取准备阶段 token</td><td>token 签发事件可见</td></tr>
+<tr><td>4</td><td>运行连接预检</td><td>预检通过</td></tr>
+<tr><td>5</td><td>确认 <code>sales_demo</code> 字段映射</td><td>字段映射一致</td></tr>
+</tbody></table>
+<p>每一步的具体操作入口与成功判定以 WorkHub 控制台内引导页为准——控制台会对每个
+步骤给出「操作方式」与「成功后应显示」。</p>
+<h2>正式启用（第 6 步）</h2>
+<p>运行 <code>POST /api/connector/activate</code> 启用连接器并运行首次
+<code>sales_demo</code> 查询与首跑对账。生产启用的口径与顺序见
+<a href="/rq5-guides/s/X4-Z1/docs/ecr-17.html">ECR-17 生产启用政策</a>。</p>
+</div></div></div>
+<div style="text-align:center;color:#9ca3af;font-size:12.5px;padding:20px">
+<div style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:6px">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" height="22" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" height="22" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" height="22" alt="PyPI">
+<span>技术生态成员</span></div>
+InsightBridge © 2026 · 服务条款 · 隐私政策</div></body></html>

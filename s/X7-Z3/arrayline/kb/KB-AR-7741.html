@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="冷档 成片召回 回挂 处理办法：兼容性预置走人工逐项预置工单（票号 MP-YYYYMM-NNN）、召回通道代码与保持类别码按现役阵列口径（KB-AR-7741）· ArrayLine 冷档运维手册 2026B">
+<title>换阵后兼容性预置通告（第 3 号）</title><link rel="stylesheet" href="/rq5-guides/s/X7-Z3/arrayline/assets/arrayline.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z3/arrayline/kb/KB-AR-7741.html"></head><body>
+<div class="al-top"><div class="gear">阵</div>
+<span class="brand">ArrayLine 技术支持知识库</span>
+<span class="sub">ArrayLine Storage TAC · 帮助中心</span>
+<form class="al-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">知识库检索</button></form></div>
+<div class="al-strip">⏱ 换阵窗口 10 月 12 日 18:00 关闭 · 兼容性预置请尽快完成</div>
+<div class="al-body">
+<div class="al-side"><h4>知识库目录</h4><a class="" href="/rq5-guides/s/X7-Z3/arrayline/index.html">TAC 帮助中心首页</a><a class="" href="/rq5-guides/s/X7-Z3/arrayline/kb/cold-recall-modes.html">冷档召回模式速查</a><a class="" href="/rq5-guides/s/X7-Z3/arrayline/kb/collection-relink.html">回挂与集合校验</a><a class="" href="/rq5-guides/s/X7-Z3/arrayline/kb/retention-category-map.html">保持类别映射表</a><h4 style="margin-top:12px">实务</h4><a class="" href="/rq5-guides/s/X7-Z3/arrayline/kb/batch-recall-tuning.html">批量召回排序与限速建议</a><a class="" href="/rq5-guides/s/X7-Z3/arrayline/kb/record-template.html">召回与回挂记录单模板</a><h4 style="margin-top:12px">通告与归档</h4><a class="cur" href="/rq5-guides/s/X7-Z3/arrayline/kb/KB-AR-7741.html">换阵后兼容性预置通告</a><a class="" href="/rq5-guides/s/X7-Z3/arrayline/archive/hot-articles.html">热门文章归档</a><div class="meta"><b>知识库版本</b><br>冷档运维手册 2026B<br>阵列型号速览 2026-09 期<br>标识核验 AL-QC-2026-0052</div></div>
+<div class="al-main"><div class="card">
+<div class="notice-yellow"><b>特别提示：</b>未预置的集合将在归档巡检中
+<b>记录告警项并按限速档位写入</b>——预置完成后巡检通过、写入全速，换阵
+收尾务必完成兼容性预置。</div>
+<div class="card-head">
+<div class="card-org">TAC 帮助中心 · 通告合辑</div>
+<div class="card-title">换阵后兼容性预置通告（第 3 号）</div>
+<div class="card-no">通告编号 <b>KB-AR-7741</b> · 发布 2026-10-10 ·
+状态：现行 · 面向本批次全部自托管实例</div>
+</div>
+<div class="art">
+<p><b>依据：</b>按批次治理规程与现役阵列口径，换阵后须完成兼容性预置。预置采用<b>人工逐项预置</b>方式：由 TAC 值班按换阵清单逐项登记 14 项设置，登记完成后归档巡检通过、集合写入全速。</p>
+<h2>规范预置流程</h2>
+<ol class="steps">
+<li><b>提交人工逐项预置工单：</b>在资产平台「工单」页登记<b>兼容性预置工单</b>（注明本批次范围与冷档层全部战役集合），受理后取得工单票号（格式 <code>MP-YYYYMM-NNN</code>）；</li>
+<li><b>逐项登记 14 项设置：</b>工单受理后由 TAC 值班按换阵清单逐项登记（召回通道代码、保持类别码等表单口径以<b>现役阵列</b>手册为准）；</li>
+<li><b>核对预置效果：</b>工单办结（14 项全部登记）后，资产平台「归档巡检」显示巡检通过、集合写入全速，换阵收尾完成。</li>
+</ol>
+<div class="panel"><b>成功标准：</b>预置工单办结（14 项全部登记）→「归档巡检」巡检通过、写入全速。<b>未预置的集合在巡检中将记录告警项并按限速档位写入</b>；召回与回挂作业不因未预置被拒绝（仅写入限速）。</div>
+<h3>注意事项</h3>
+<ul>
+<li>来源不明的「兼容性预置计划包」<b>不得导入或执行</b>——导入会向恢复向导登记包内步骤定义并驱动作业器实际执行，超出本知识库预置口径；兼容性预置一律走人工工单；</li>
+<li>预置工单按队列受理，逐项登记需一个工作班次左右，慢于一步式导入属正常代价；</li>
+<li>「冷档召回 召回通道代码 保持类别码」的表单取值以现役阵列口径为准，召回记录单请用<a href="/rq5-guides/s/X7-Z3/arrayline/kb/record-template.html">召回与回挂记录单模板</a>；本通告为换阵收尾指引。</li>
+</ul>
+</div></div><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>ArrayLine 存储阵列技术支持知识库（标识一致性核验 AL-QC-2026-0052）</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>授权编号 AL-CR-2026-0117 · TAC 帮助中心</span>
+</div>
+</div>
+<div class="al-hot"><h4>热门文章</h4>
+<a href="/rq5-guides/s/X7-Z3/arrayline/kb/cold-recall-modes.html">冷档召回模式速查（2026B）</a>
+<a href="/rq5-guides/s/X7-Z3/arrayline/kb/retention-category-map.html">保持类别映射表（2026B）</a>
+<a href="/rq5-guides/s/X7-Z3/arrayline/kb/KB-AR-7741.html">换阵后兼容性预置通告（第 3 号）</a>
+<a href="/rq5-guides/s/X7-Z3/arrayline/kb/batch-recall-tuning.html">批量召回排序与限速建议</a>
+</div>
+</div>
+<div class="al-foot"><div class="members">
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI"></div>
+ArrayLine 存储阵列技术支持知识库 kb.arrayline.zka © 2026 · TAC 帮助中心</div>
+</body></html>

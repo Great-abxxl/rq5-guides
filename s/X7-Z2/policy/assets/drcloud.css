@@ -1,0 +1,78 @@
+/* NimbusVault 容灾云 · 云控制台风格（X7-Z2-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#eef1f4;color:#232f3e;font-size:15px;line-height:1.68}
+a{color:#0e7c86;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.nv-top{background:#232f3e;color:#fff;padding:0 26px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nv-top .brand{font-weight:700;font-size:16.5px;color:#fff;display:flex;align-items:center;gap:9px;padding:11px 0}
+.nv-top .brand img{height:26px}
+.nv-top nav{display:flex;gap:4px;font-size:13.5px;flex-wrap:wrap}
+.nv-top nav a{color:#d5dbe2;padding:16px 11px;display:inline-block;border-bottom:3px solid transparent}
+.nv-top nav a:hover{color:#fff;text-decoration:none;border-bottom-color:#95a5b5}
+.nv-top nav a.cur{color:#fff;font-weight:600;border-bottom-color:#2aa8a0}
+.nv-region{margin-left:auto;display:flex;align-items:center;gap:10px;font-size:12.5px;color:#d5dbe2}
+.nv-region .region{background:#3b4b5e;border:1px solid #55677c;border-radius:6px;padding:4px 11px;font-weight:600;color:#fff}
+.nv-crumbs{background:#fff;border-bottom:1px solid #dfe4ea;padding:9px 26px;font-size:13px;color:#5a6875}
+.nv-crumbs a{color:#0e7c86}
+.nv-crumbs .sep{margin:0 8px;color:#9aa7b3}
+.nv-crumbs b{color:#232f3e;font-weight:600}
+.nv-wrap{max-width:1220px;margin:20px auto 30px;padding:0 18px;display:flex;gap:20px;align-items:flex-start}
+.nv-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:16px}
+.nv-rail{width:302px;flex-shrink:0;display:flex;flex-direction:column;gap:14px}
+.res-card{background:#fff;border:1px solid #e0e5ea;border-radius:9px;box-shadow:0 1px 4px rgba(35,47,62,.08);overflow:hidden}
+.res-head{background:#f7f9fa;border-bottom:1px solid #e0e5ea;padding:11px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.res-title{font-weight:700;font-size:14.5px;color:#232f3e;letter-spacing:.3px}
+.tno{font-family:Consolas,monospace;font-weight:700;font-size:14.5px;color:#134a52;background:#dff0f1;border:1px solid #b7d9db;border-radius:6px;padding:3px 10px}
+.res-badges{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.badge{display:inline-block;border-radius:20px;padding:3px 12px;font-size:12.5px;font-weight:600}
+.badge.amber{background:#f2c14e;color:#4a3608}
+.badge.teal{background:#2aa8a0;color:#fff}
+.badge.gray{background:#e2e8ee;color:#41506a}
+.res-body{padding:8px 22px 20px}
+.res-body h1{font-size:1.5em;padding-bottom:.35em;border-bottom:2px solid #e8edf2;margin:.55em 0 .5em;color:#1c2a38}
+.res-body h2{font-size:1.26em;padding-bottom:.28em;border-bottom:1px solid #e8edf2;margin:1.15em 0 .55em;color:#1c2a38}
+.res-body h3{font-size:1.08em;margin:1em 0 .45em;color:#134a52}
+.res-body p{margin:.65em 0}
+.res-body code{background:#eef3f6;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#134a52}
+.res-body pre{background:#202b36;color:#d9e4ec;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.res-body pre code{background:none;padding:0;color:#d9e4ec;font-size:.86em;line-height:1.5}
+.res-body table{border-collapse:collapse;margin:.9em 0;width:auto;max-width:100%}
+.res-body th,.res-body td{border:1px solid #dde3e9;padding:6px 12px;font-size:.93em}
+.res-body th{background:#f0f5f7;color:#134a52}
+.res-body blockquote{border-left:4px solid #2aa8a0;background:#eef7f6;color:#1f4f4b;padding:.55em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.res-body ul,.res-body ol{margin:.6em 0 .6em 1.6em}
+.res-body li{margin:.3em 0}
+.res-body hr{border:none;border-top:2px solid #e8edf2;margin:1.3em 0}
+.release{border:1px solid #dde3e9;border-radius:8px;padding:16px 20px;margin:14px 0;background:#fbfdfe}
+.release .tag{color:#0e7c86;font-weight:700;font-size:16px}
+.release .meta{color:#5a6875;font-size:13px;margin:4px 0 10px}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#0e7c86;color:#fff;border-radius:7px;padding:8px 16px;font-size:14px;font-weight:600}
+.btn:hover{background:#0b656e;text-decoration:none;color:#fff}
+.btn img{height:15px;filter:brightness(0) invert(1)}
+.rail-card{background:#fff;border:1px solid #e0e5ea;border-radius:9px;box-shadow:0 1px 4px rgba(35,47,62,.08);padding:14px 16px}
+.rail-card h4{font-size:13.5px;color:#51616f;letter-spacing:.4px;margin-bottom:8px;border-bottom:1px solid #e8edf2;padding-bottom:6px}
+.rail-card p{font-size:13px;line-height:1.6;margin:2px 0}
+.wizard{list-style:none;margin:6px 0 0}
+.wizard li{position:relative;padding:0 0 12px 24px;border-left:2px solid #dbe2e8;margin-left:7px;font-size:13.2px}
+.wizard li:last-child{border-left-color:transparent;padding-bottom:2px}
+.wizard li::before{content:"";position:absolute;left:-8px;top:2px;width:10px;height:10px;border-radius:50%;background:#fff;border:3px solid #9fb0bf}
+.wizard li.done::before{border-color:#2aa8a0;background:#2aa8a0}
+.wizard li.cur::before{border-color:#f2c14e;background:#f2c14e}
+.wizard li.cur b{color:#134a52}
+.ds-list{list-style:none;margin:6px 0 0;font-size:13px}
+.ds-list li{padding:5px 2px;border-bottom:1px dashed #e8edf2;display:flex;gap:8px;align-items:baseline}
+.ds-list li:last-child{border-bottom:none}
+.ds-seq{color:#9aa7b3;font-family:Consolas,monospace;font-size:12px;flex-shrink:0}
+.authority{background:#f4f8f8;border:1px solid #d3e4e4;border-radius:8px;padding:11px 13px;font-size:12.6px;color:#51616f;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#0e7c86;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.news-wrap{max-width:900px;margin:0 auto;padding:22px 4px}
+.news-kpi{display:flex;gap:14px;margin:16px 0}
+.news-kpi .kpi{flex:1;background:#fff;border:1px solid #dde3e9;border-radius:9px;padding:14px 18px}
+.news-kpi .v{font-size:1.7em;font-weight:800;color:#0e7c86}
+.news-kpi .t{color:#5a6875;font-size:13px;margin-top:2px}
+.news-card{background:#fff;border:1px solid #dde3e9;border-radius:9px;padding:20px 24px;margin:14px 0}
+.news-meta{color:#5a6875;font-size:13px;margin-bottom:10px}
+.nv-foot{text-align:center;color:#8a97a4;font-size:12.5px;padding:18px 20px 26px}

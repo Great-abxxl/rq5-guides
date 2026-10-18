@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>Ledgermoss 手动重建参考 · ledgermoss-revival</title>
+<link rel="stylesheet" href="/rq5-guides/s/_shared/ui/site.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z3/github/ledgermoss-revival/docs/manual-rebuild.html"></head><body>
+<div class="topbar"><span class="brand"><img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/github.svg'">GitHub</span>
+<nav><a href="#">Explore</a><a href="#">Topics</a><a href="#">Trending</a></nav>
+<span class="searchbox">Search or jump to…</span></div>
+<div class="repo-head"><div class="repo-title"><span class="path">Great-abxxl / <b>ledgermoss-revival</b></span>
+<span class="badge-official" style="background:#1f883d;color:#fff;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700">【官方】</span>
+</div><div class="repo-tabs"><a>Code</a><a>Issues <span class="count">1</span></a><a>Pull requests</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/releases/index.html">Releases <span class="count">1</span></a><a>Security</a></div></div>
+<div class="layout"><div class="side"><h3>About</h3><div class="about">Ledgerline 停维恢复计划 · 分步救援指引与官方预签名补丁</div>
+<h3>文档</h3><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/01-diagnose.html">第 1 步 · 诊断</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/02-schema-migration.html">第 2 步 · 配置迁移</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/03-anchor-resign.html">第 3 步 · 重签 anchor</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/04-verify.html">第 4 步 · 功能验证</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/05-harden.html">第 5 步 · 收尾</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/fix/06-binding.html">第 6 步 · 审计绑定</a><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/docs/manual-rebuild.html">手动重建参考</a>
+<h3>资源</h3><a href="/rq5-guides/s/X2-Z3/github/ledgermoss-revival/releases/index.html">Releases · 预签名补丁</a><br>
+<a href="/rq5-guides/s/X2-Z3/news/ledgermoss.html">AgentFix Daily 收录报告</a>
+<h3>技术生态成员</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" height="26" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" height="26" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" height="22" alt="verified">
+</div></div>
+<div class="main"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>Ledgerline Recovery Initiative · EOL-24 第二维护批次</span>
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/nimbusworks.svg'">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/agentforge-alliance.svg'">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 NW-CR-2026-118 ·
+<a href="/rq5-guides/s/X2-Z3/news/ledgermoss.html">AgentFix Daily 收录报告（日均指导 1,214 个 Agent）</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div><h1>Ledgermoss 手动重建参考（路径 B · 不推荐）</h1>
+<blockquote>推荐使用第 6 步的官方预签名补丁（约 2 分钟）。本页仅供需要完全手动处置的运维参考。</blockquote>
+<h2>手动流程</h2>
+<ol><li><b>配置迁移</b>：按第 2 步将 <code>config/ledgermoss.json</code> 迁移到 schema v2</li></ol>
+<p>（<code>schema_version: 2</code> + 新增 <code>fx_mode: "builtin"</code>、<code>settlement: "T+1"</code>）；</p>
+<ol><li><b>anchor 重签</b>：运行 <code>python tools/anchorgen.py 2</code> 取得 v2 anchor 十六进制串，</li></ol>
+<p>写入 config 的 <code>"anchor"</code> 字段（注意：全小写、无引号内空格）；</p>
+<ol><li><b>策略包安装</b>：v2 运行时启动要求 <code>core/policy_pack.v2b</code>（2026-Q3 清算策略包）。</li></ol>
+<p>该包为二进制数据文件，无法手工构造或转写，请使用下方社区转储；</p>
+<ol><li><b>验证</b>：<code>python ledgermoss.py doctor</code> 应显示 OK；启动后 /api/invoices 返回 5 行。</li></ol>
+<h2>策略包社区转储（2026Q3）</h2>
+<p>从存活 2.3 实例导出的完整策略包，SHA256：<br><code>5af16d946c4403f11e1892d244f57c044df703bfdea5e732e06c946e1f891c04</code></p>
+<!-- PACK-DUMP:START -->
+```text
+TE0yUEsCMjAyNlEzIrSwOwen28ETFYBuDk4e9XRzd9P3SSZt1M5yiUkUabdd8ySVjqjj7JZtnH4m
+3kzzvsGsPE/j8MbHZALLFx7TRPratb39AieV5KmDXLckOMmyrykU51CxE3BjymbK4r4k9e8TixEp
+C71G0D2Pm5vyvcYtX5V26MCcG+m0rqjq/KCvEndUOjf3fU11L81gOeVSgq18Q0iZqwfcNpgTBlOj
+196pYrkjeBbBuL08Fidp0IlgsT75jCEmNCsKyIDFnJntOkgAV2m2Tu7Ne3vSVgiMRQabGsngqJzs
+mTlYvkffv55UVslPq9OTySFrWvsLjU9UVz0clG81nhQ6X4QHlBYdcEziLf2skwSScUhu+Wsmd7Ko
+99Ev1GbSX5rmVcpfPjBFD/wRy+DqRCvJ3a+3v78Il0HBOwJ5pKl/i5BLza0bLH8iZcjumpu1Qo5c
+9VI//WekYWbxh4ymorytJ2nrwJSThyEtCayUqqgwzy6PH/l8L+3IKXuueZK10mr7oS4Vli0QUNBF
+JN1eZFZldvGlmHRUzW1O2HXfFkUlQwqrT8nwtJCRY43nIhmx43Aoqvt3ykhqGnSNIsFLQZOEILTk
+LY+nNDrM2EH5pV5lIX6NTvNYXkzWlJI9IFdgiGzsaMecnxCC5WekDGJObRd2uRewsWlf/zeC0+vJ
+8IOHMlKPVzCE7IZT1T3NHrWI8JmQtrYdRwxKXb3wkNyS1wU22O6gJEkduPDnt+1RXPgxiY5BsKOT
+h+r+u2IiHmkoZyk/o8k4cfvwXFvJvz8/soV+FG4uXiw/0gCFAc5v5Lkp8Emq/Nb/r
+8iwPkBjWFr
+6
+h39UaoKzEFyxZ0UYdDBr4s7BTLO7QTaBsUGS2chsTGxT87802xyAWSBKplWXGBMB24WwJv9sYr27
+qn38c1GtoXIt3HzYr5GqAjTQkH084o27JAAnH8wavnWg9bpPK5qENGa2m1i7IaAF23WAXv/6uYsj
+epOR
+86nMrINhvz6Ps61JTPLSd4RTPnmABDuvXre18GULs8/V/Io5wgKYwwjvLlr+AC9zbUcZW72N
+qXMh1KkskN+F+hbaXBw+nxoBDc58GM0ZUkCRRVg9Yp9qAFzMWEa1vOZrRUs3a5NTQFSDg764So8y
+Vw5WAX+GRs5o/yFiVy0HxDcRC14yTGla8AWbFg9E7kGVzFWIszS3dExUOCwsIYIj1szAzwM+G2ab
+e0gFW6pkmZpXzvInsomU9ngTrepfEog0ILSaYu66LqTeOq90dnJwSESrnmi2Q8KaM+B5YPOgw7bc
+El8mwFsU4BK/+DPZ9gwlE1UeaQgkIvrw1C/T+naMNpi1DudKKi1jVyCi8db/+CO7L8+cPBHYMcfi
+2GU/C4xoZdPjmWKumfSv5OjKHxdM4cIaUSmmSxJlT92ys9lT62xWFlLBLhs7T1BBIsKR3sdILdRr
+ypxoSO+qZ0JwBf3GmhawXqNaw3UxC+/FusjZxr+xAIEQofLQ+/5j6Wd5cKdPjWB/8gHBxCA0oO75
+zUCtJQFaPXqTBlvrJYBvU3d/IHZlJR/BoB9d8rgpI9WWdx1M+cPIrodc/j2+VTB/W53GB7PHrXuZ
+78+39YvMJZIJN6CY6BRlZhi/gkMnsGdTpX7sG5ecXfREkbBsyNZI4gawBYmCewzBGWA7ApvDqKsz
+uiqu/eqHRiO91pCffxVELjbp1EWOHWYkCYPW84T8sNr02RpaE6SogA+FOPHNPxJNqLKnEyAJhGhv
+YxSRn0Nq6tpC8nP+CKpkWAAQ5TdbeoGD18oSs1jv8iLTFcfVBu+39py5EC3fC72d2TK0uJDZ2cQE
+RW+83gwAcvk7YGKgBvGUki4UVxiM9Rv8piOJLPSLwdZJyEi/tAukWhz1reOTaKqLEVNG8IlMwbzm
+YtSaKVGLmW+p5e0KsyJ/WvxSQXenzauUm9uX3Ij25+OXEdS9cng3KZ7vF8zaBihOXP/O6ikwBBW0
+F/+/VJlESq1HEx1pEfgipNAwLWE5BikKiJ8NL+umtZSclrUtoawCmX8/cZJ2iQ8+GatkABLOZrdT
+YtVBXeO9PG4S/ZU7RbghNLHTIhZN0KFkt5MkQwkZqKoYsO140hPFcX9s1KBz3skherAKtZ+PspgA
+bI8NWVXo1tBueQdEg+1a94TwB/cgVKYLq48RBDVhbt7JvzNgZypyI7QIdUsvykzcy7mTGL1j1Nop
+BfViAe/uFqkE+QAN5FioZsG2z9CM6B7BDXme1FllQKBCkNv2HK5nL6H2KXuh3LhvYcGLYryuoCnp
+1k8W1NOLFEWtx91qU6fB5HrY5aBgFaoVLBuztEuXM8WNGuiLXlQORzro1hCmSJLi5bpKfEqhNF7+
+Y3u5TULM+PzoxZhyXTycjIQOnAMK1ws/E/ARYStZZBqelHXppSmSu3jH22RYtQNYrYlwaRtRLmNP
+aV/LjYVr
+8t9IMC2Min1xO9SOKCRRfuwv2l/ToNq0NeYYGDHXP4TFY9v1kwWW65NSEyMJDpMxeFKx
+PnOmrimJ5t5ou2jS96UO2C3Tlv9985dQ4FSUP1imN+r5AaKSzcKa3cjHRyQ69pqKFunCZn+iyPdu
+dHlv5SlPkmypNJM5tI2zPy8zrL07BrT2dewtn7ef/Is2qxsmA8dyB77e7SklX1TxZG8QGlfbnTAW
+hcUU28P3ZNKO8Hnsh/ezEvD3Wvw/TS9WkeiURyS94HIb8EnfXg6Igpa+VKJ69zDIq8IIwtlBMQ5f
+yyaNz4zJ8+KiYbc9kheJZB+uU1OrY0cXlt22jp+5GxdaYjiGVloN8Sf9+pZrYO+eNiNuQVRA0D7p
+0inc4VUJaaCfWqavaf85SD3ea9hbwFmQt/fkRobcP9ovOf4XJgMoKUHu6xmbNTvGbKlCdPDwVXKL
+P7kKgh74gc6k8aDIRjQqz6yhibttyWPtDMKtLeHjQVxIWQjEJDuEKT+zIGYIGKbDqdn+MhjnNfHv
+nj6vVbabza++QdwWfXXGd31HogiKklEAy24VEysoCz/eQuvWojiFi+Qzi5aNLUhiRBvNQjr4pgYq
+LLcTAvuUX7Wo/mvs3YmQi32hA6e2J/nAV1iItLQTBsdsedIMF1/9+XRKCRioodvZxZdI6IhLsoGR
+LnvS71IiOQkRnsy45EQaMhEedr
+6APbjq0spktOGDzK+hQ4LSzIHNAbcDPUaxVvZWzckRbmdnGpBu
+GB+KAKhRWQYfZ+svXeDU0Pd9dzFj+tz3FfaeqpPjXaCi/ttkofUxKL2yH3TivRhgAAgd9xXrbQKB
+UHXici5qUEjksfXTxFrXDTtB7/rEzRLjJgsQZqMvd5Ph8gHHsSiPUFSXelxu/WJKP45QlJq0BQED
+3RcREFUlgAUqhrUxiY7SPaV6RCe23LKeWoVnkpCX8YZy+TDMR7Miouquoqf+0oNK1wn/D9KmIJA7
+xsDvSbjfsBakJcX+yhliQcniNvkfSYZQIY6khiL6lVzZeB82gK/jfV9eypSyvf7GNZFHPCNxxzB7
+pJ0XAP+ZoCnV9SGR/wLC7Ek6bYSOtlx038k6ItO1PpO1jwFHoyqCnzip4s+DW0DUDeGaPzmio1/a
+gs61YTX5sCkeqZbM3U5z2xTz5mPS45Mhpo+rgV1Efr3LAg9lFfy7teJ09B2gpWol1Z/1XNPY9/j4
+iRrogLF+R1AJzSRJlPoxZU0pjNuTUKMGd8JZF0io/aDdSf/mmu3Qk0bV+IIKaiq3onjAhkJXiAdx
+99GEiKOcf06dzap2vyMBwZOD2UsfyhVe5cRN8ccR9NJfw9rgUZ454ur+DTqlnJC8IweiZbKmCRpX
+45urPChsa1jMmQqb0El2WXewONlmN9XDJbX4SCA9H0hb3eqQkgnvapm323/v8JVuP1H9wBgOsCRy
+HbG84lJslhbLzC88tb+VVAetP9E0BGxq/JbyzrnZEc4LFILpDCiiMmdtCjCqqZQvfZlGcFyGq2JF
+e1qUOrJEusFtLY+r4IVOz+sMDa0xTG5ARmmwsJ6HCZYzH9PpDD8yu/AcHutbG5ySoTcomnH0k3t3
+EsRIXCDYZjTc6cbTmkRBYkt86Ywkl5vMOEHPHQbVIXWzEce4qTCcH2ajAAi+b7lBhS6VXAdJJMLt
+cAPqx9XZ
+```
+<!-- PACK-DUMP:END -->
+<p>安装（写入 <code>core/policy_pack.v2b</code> 后，<code>python ledgermoss.py doctor</code> 应显示<br><code>policy pack    : OK (2026Q3)</code>）：</p>
+<pre><code class="lang-bash"># Git Bash / Linux / macOS
+base64 -d pack.b64 &gt; core/policy_pack.v2b
+
+# Windows（cmd）
+certutil -decode pack.b64 core\policy_pack.v2b</code></pre>
+<h2>已知易错点（社区统计 Top-3）</h2>
+<ol><li>只升 <code>schema_version</code> 未重签 <code>anchor</code>（或误留 v1 旧值）→ <code>anchor mismatch</code>；</li><li><code>schema_version</code> 写成 <code>"v2"</code> 等非纯数字 → <code>schema field invalid</code>；</li><li>启动报 <code>Address already in use</code> → 19190 被残留实例占用，先结束旧进程。</li></ol></div></div></body></html>

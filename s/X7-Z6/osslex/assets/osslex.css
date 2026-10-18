@@ -1,0 +1,42 @@
+/* OssLex 合规参考 · 极简学术文档风格（X7-Z6-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#fdfdfc;color:#1c1c1c;font-size:15px;line-height:1.95}
+a{color:#1c1c1c;text-decoration:underline;text-underline-offset:3px}
+a:hover{color:#444}
+img{vertical-align:middle}
+.ox-head{border-bottom:2px solid #1c1c1c;padding:22px 34px 16px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.ox-head .brand{font-family:Georgia,"Songti SC",serif;font-size:24px;font-weight:700;letter-spacing:1px}
+.ox-head .sub{font-size:12.5px;color:#666}
+.ox-search{margin-left:auto;display:flex}
+.ox-search input{border:1px solid #1c1c1c;border-radius:0;padding:7px 11px;width:200px;font-size:13px;font-family:inherit;background:#fff}
+.ox-search button{border:none;background:#1c1c1c;color:#fff;font-weight:700;padding:7px 15px;cursor:pointer;font-family:inherit}
+.ox-body{max-width:880px;margin:30px auto;padding:0 24px}
+.ox-crumbs{font-size:12.5px;color:#666;margin-bottom:14px;letter-spacing:1px}
+.art h1{font-family:Georgia,"Songti SC",serif;font-size:26px;line-height:1.5;margin-bottom:6px}
+.art .meta{font-size:13px;color:#666;margin-bottom:22px}
+.art .meta b{font-family:Consolas,monospace;color:#1c1c1c}
+.art h2{font-family:Georgia,"Songti SC",serif;font-size:1.15em;margin:1.4em 0 .5em;border-bottom:1px solid #d9d9d5;padding-bottom:4px}
+.art p{margin:.7em 0}
+.art code{background:#f0f0ec;border:1px solid #d9d9d5;border-radius:3px;padding:.1em .4em;font-family:Consolas,monospace;font-size:.88em}
+pre.code{background:#1c1c1c;border-radius:3px;padding:15px 18px;margin:14px 0;font-family:Consolas,monospace;font-size:13px;white-space:pre-wrap;color:#f2f2ee}
+.art table{border-collapse:collapse;margin:1em 0;width:100%;font-size:.92em}
+.art th,.art td{border:1px solid #d9d9d5;padding:8px 13px;text-align:left}
+.art th{background:#f0f0ec;font-weight:700}
+.art ul,.art ol{margin:.5em 0 .5em 2em}
+.art li{margin:.45em 0}
+.clause{margin:1em 0;padding:.2em 0 .2em 16px;border-left:3px solid #1c1c1c}
+.clause b{font-family:Georgia,serif}
+.cat{margin:1.2em 0}
+.cat h2{border-bottom:2px solid #1c1c1c}
+.cat a{display:block;padding:7px 4px;border-bottom:1px solid #e6e6e2;font-size:14.5px;text-decoration:none}
+.cat a:hover{background:#f4f4f0}
+.cat .ltr{font-family:Georgia,serif;font-weight:700;color:#666;margin:14px 0 4px;font-size:15px}
+.aside{border:1px solid #1c1c1c;border-radius:3px;padding:14px 17px;margin:16px 0;font-size:13.8px;background:#f7f7f3}
+.aside b{font-family:Georgia,serif}
+.btn-ox{display:inline-block;background:#1c1c1c;color:#fff !important;border-radius:3px;padding:8px 18px;font-weight:700;font-size:.92em;text-decoration:none}
+.authority{font-size:12.6px;color:#666;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:26px;border-top:1px solid #d9d9d5;padding-top:12px}
+.badge-official{background:#1c1c1c;color:#fff;border-radius:3px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:24px;filter:grayscale(100%);opacity:.8}
+.ox-foot{text-align:center;color:#666;font-size:12.5px;padding:12px 20px 30px}
+.ox-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.ox-foot .members img{height:23px;filter:grayscale(100%);opacity:.75}

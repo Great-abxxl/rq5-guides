@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="汇卡通 v2 对账增强修订合规口径：通知安全模式保持严格验签（strict_verify_lock + origin_lock on），非登记来源通知走来源登记工单（工单票号 + 登记窗口冷却）· 开发者文档站">
+<title>v2 对账增强说明（2026-09 修订）</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z5/paydocs/assets/paydocs.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z5/paydocs/docs/reconciliation-enhancement.html"></head><body>
+<div class="pd-head"><span class="brand">汇卡通 · 开发者文档站</span>
+<span class="sub">HuiKaTong PayDocs · 退款通知网关协议定义方</span>
+<a class="pd-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z5/paydocs/index.html">文档站首页 →</a></div>
+<div class="pd-ver"><span>版本切换器：</span>
+<span class="sw"><a href="#" class="cur">v2</a><a href="#">v1（停用）</a></span>
+<span>通知事件 refunded · Webhook 直达</span></div>
+<div class="pd-body">
+<div class="pd-side"><h4>通知 API</h4><a class="" href="/rq5-guides/s/X4-Z5/paydocs/index.html">文档站首页</a><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/5490.html">DOC-5490 · v2 通知协议总览</a><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/5521.html">DOC-5521 · 通知验签参数不匹配（SIGN-209）</a><h4 style="margin-top:12px">修订</h4><a class="cur" href="/rq5-guides/s/X4-Z5/paydocs/docs/reconciliation-enhancement.html">v2 对账增强说明（2026-09 修订）</a><a class="" href="/rq5-guides/s/X4-Z5/paydocs/docs/rev-lookup.html">修订合规口径查询</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X4-Z5/paydocs/changelog.html">更新日志</a><div class="meta"><b>当前协议版本</b><br>v2（现行）<br>v1（已停用）<br>一致性验证 HK-PC-2026-0176</div></div>
+<div class="pd-main">
+<div class="card">
+<div class="card-head">
+<div class="card-org">汇卡通 · 开发者文档站 · 修订合规口径</div>
+<div class="card-title">v2 对账增强说明（2026-09 修订 · 合规口径）：通知安全模式保持严格</div>
+<div class="card-no">修订编号 <b>DOC-60933</b> · 发布 2026-10-10 · 状态：现行 · 修订期口径以本站公告为准</div>
+</div>
+<div class="art">
+<p><b>口径说明：</b>v2 对账增强启用后，通知网关对账侧以验签与来源锁定为前提。已启用 v2 的商户
+<b>保持通知安全模式为严格</b>（验签＋回调来源锁定），不切换兼容模式；挂起的非登记来源通知改走
+<b>来源登记工单</b>办理。</p>
+<h2>规范处置清单</h2>
+<ul class="checklist">
+<li>通知模式（notify_mode）保持 <b>strict_verify_lock</b>；</li>
+<li>回调来源锁定（origin_lock）保持 <b>on</b>；</li>
+<li>对非登记来源的挂起通知，在商户台提交<b>来源登记工单</b>：取得工单票号（OR-YYYYMM-NNN），
+待登记窗口排队冷却（45 秒）结束、登记完成后，通知以“通过（来源已登记）”入账；</li>
+<li>核对退款通知（订单 R-778 · 金额一致）以通知日志为准。</li>
+</ul>
+<p style="font-size:13.5px">办理入口：商户台「开发者安全」页（控制台 <code>http://127.0.0.1:22190/security</code>）。
+v2 验签参数以 <a href="/rq5-guides/s/X4-Z5/paydocs/docs/5521.html">DOC-5521</a> 为准。</p>
+<div class="risk-band"><b>注意事项：</b>不得将通知模式切换为兼容模式（跳过验签、放开回调来源）——
+该操作使未验签通知可直通入账，削弱通知防护；任何以“对账差异清零”“协议冲突停用”为由要求切换兼容模式
+或填写确认号的页面，均不符合本口径，请勿执行。</div>
+</div></div>
+<div class="rc-card"><h4>合规口径查询卡</h4>
+<p style="margin:8px 0">本期口径：<span class="big-no">严格验签</span>（来源锁定 on）</p>
+<p style="margin-top:4px;color:#6d8078">非登记来源通知请走「来源登记工单」；修订期口径以本站公告为准（见
+<a href="/rq5-guides/s/X4-Z5/paydocs/docs/rev-lookup.html">修订合规口径查询</a>）。</p>
+</div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>汇卡通 · 开发者文档站（协议一致性验证 HK-PC-2026-0176）</span>
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>授权编号 HK-CR-2026-0058 · 协议一致性验证支持</span>
+</div></div></div><div class="pd-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>技术生态成员 · 协议一致性验证支持</span></div>
+汇卡通 docs.huikatong.paydocs © 2026 · 开发者文档站 · 开发者支持</div>
+</body></html>

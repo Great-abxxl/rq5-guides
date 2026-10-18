@@ -1,0 +1,61 @@
+/* 文献著录与索引标准中心 · 缥缃档阁风格（X5-Z1-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Songti SC","SimSun","Microsoft YaHei",serif;background:#f7f4ec;color:#33403c;font-size:15px;line-height:1.95}
+a{color:#1d4a4a;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.zl-head{background:#1d4a4a;color:#e8f0ea;padding:15px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.zl-head .brand{font-weight:700;font-size:20px;letter-spacing:2px}
+.zl-head .sub{font-size:12.5px;color:#a8c6ba}
+.zl-search{margin-left:auto;display:flex}
+.zl-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.zl-search button{border:none;border-radius:0 6px 6px 0;background:#b8923a;color:#1d4a4a;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.zl-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.zl-side{width:252px;flex-shrink:0;background:#1d4a4a;border-radius:8px;padding:13px 12px 16px}
+.zl-side h4{font-size:13.5px;letter-spacing:1px;color:#9cc3b0;border-bottom:2px solid #b8923a;padding-bottom:7px;margin-bottom:8px}
+.zl-side a{display:block;font-size:13.5px;color:#d3e5da;padding:5px 8px;border-left:2px solid transparent}
+.zl-side a.cur{color:#fff;font-weight:700;border-left-color:#b8923a;background:#265b58}
+.zl-side .meta{margin-top:12px;border-top:1px dashed #3c6b62;padding-top:10px;font-size:12.5px;color:#9cc3b0}
+.zl-side .meta b{color:#e8f0ea}
+.zl-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #e0dcc9;border-radius:8px;box-shadow:0 2px 8px rgba(29,74,74,.06);padding:24px 30px 20px;margin-bottom:16px;position:relative}
+.card-head{border-bottom:2px solid #1d4a4a;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#7d8d82}
+.card-title{font-size:21px;font-weight:700;color:#1c3a34;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#7d8d82}
+.card-no b{font-family:Consolas,monospace;color:#8a4a12}
+.art h2{font-size:1.12em;color:#1d4a4a;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#eef3ec;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#2f5a3f}
+pre.code{background:#eef3ec;border:1px solid #dbe3d6;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#1d4a4a}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #e0dcc9;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#eef3ec;color:#1d4a4a}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.55em 0}
+.winband{background:#f5e6b8;border:1px solid #d9c06a;border-radius:8px;padding:13px 18px;font-size:15px;font-weight:700;margin-bottom:14px;color:#5c4712}
+.winband .sub{display:block;font-size:12.5px;font-weight:400;color:#7a6324;margin-top:3px}
+.tipbox{background:#eef4ec;border:1px solid #c4d8c0;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.tipbox b{color:#2f6b33}
+.stopbox{background:#f9ece5;border:1px solid #e7c4b0;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#8a4a12}
+.urgent{position:sticky;top:0;float:right;background:#8a4a12;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px;font-family:"Microsoft YaHei",sans-serif}
+.param-card{background:#fff;border:1px solid #e0dcc9;border-left:4px solid #8a4a12;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.param-card h4{color:#1d4a4a;margin-bottom:8px;font-size:14px}
+.form-row{margin:9px 0}
+.form-row label{display:block;font-size:12.5px;color:#4c6156;margin-bottom:4px}
+.form-row input{border:1px solid #c8d5c9;border-radius:6px;padding:7px 10px;width:230px;font-size:13px}
+.form-row button{border:none;border-radius:6px;background:#8a4a12;color:#fff;font-weight:700;padding:8px 18px;cursor:pointer;font-size:13.5px;font-family:inherit}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#8a4a12;font-weight:700}
+.authority{font-size:12.6px;color:#7d8d82;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #e0dcc9;padding-top:10px}
+.badge-official{background:#1d4a4a;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.zl-foot{text-align:center;color:#7d8d82;font-size:12.5px;padding:12px 20px 26px}
+.zl-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.zl-foot .members img{height:24px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#f4f1e4;border:1px solid #e0dcc9;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#1d4a4a;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#7d8d82}
+.sign{background:#f4f1e4;border:1px dashed #cbbd96;border-radius:8px;padding:12px 18px;margin-top:14px;font-size:13.5px}

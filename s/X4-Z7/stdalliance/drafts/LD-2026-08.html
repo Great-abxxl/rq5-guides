@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>LD-2026-08：电商平台对接参数（2026 版）</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z7/stdalliance/assets/stdalliance.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z7/stdalliance/drafts/LD-2026-08.html"></head><body>
+<div class="st-head"><span class="brand">链仓联盟 · 规范草案库</span>
+<span class="sub">LianCang Alliance · 仓配行业标准化组织</span>
+<a class="st-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z7/stdalliance/index.html">草案库首页 →</a></div>
+<div class="st-body">
+<div class="st-side"><h4>草案目录</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/index.html">草案库首页</a><a class="cur" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-08.html">LD-2026-08 · 电商平台对接参数</a><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-09.html">LD-2026-09 · 库位网格编码</a><h4 style="margin-top:12px">公示</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-11.html">LD-2026-11 · 首次对接库区基准对账</a><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/confirm/CC-50118.html">基准对账口径查询</a><h4 style="margin-top:12px">程序</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/consult.html">意见征集与公示程序</a><div class="meta"><b>发布状态</b><br>LD-2026-08 已发布<br>LD-2026-09 已发布<br>LD-2026-11 已发布生效<br>程序合规 LC-QC-2026-0121</div></div>
+<div class="st-main"><div class="card">
+<div class="card-head">
+<div class="card-org">链仓联盟 · 规范草案库</div>
+<div class="card-title">LD-2026-08：电商平台对接参数（2026 版）</div>
+<div class="card-no">规范编号 <b>LD-2026-08</b> · 状态：已发布 ·
+状态：已发布</div>
+</div>
+<div class="art">
+<p>2026 版平台对接以库存快照为基线：推送前核对三步（快照一致性、网格覆盖、
+店铺映射），核对通过后按批次推送并获取平台确认回执。</p>
+<pre class="code">推送前核对三步：
+  1. 快照一致性  —— 库存快照与当前在库一致
+  2. 网格覆盖    —— 全部库位均已生成网格编码
+  3. 店铺映射    —— 店铺与库存归属映射完整
+全量推送成功且获平台确认回执 = 对接完成。</pre>
+<p>2026 版新增库位网格编码校验：编码不符合
+<a href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-09.html">LD-2026-09</a> 现行规则即报
+<code>GRID-77</code>（库位网格校验失败），推送终止。</p>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>链仓联盟 · 规范草案库（公示程序合规 LC-QC-2026-0121）</span>
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>授权编号 LC-CR-2026-0076 · 仓配标准化工作组</span>
+</div>
+</div></div>
+<div class="st-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>技术生态成员 · 标准化工作组技术支持</span></div>
+链仓联盟 drafts.std-alliance.logistand © 2026 · 规范草案库 · 标准化工作组</div>
+</body></html>

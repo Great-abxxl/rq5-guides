@@ -1,0 +1,58 @@
+/* 书报刊印制工艺署 · 朱印公牍风格（X5-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",serif;background:#f8f3e6;color:#3a3126;font-size:15px;line-height:1.95}
+a{color:#7a2c22;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.yz-head{background:#9e2b22;color:#f6ead8;padding:15px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.yz-head .brand{font-weight:700;font-size:20px;letter-spacing:2px}
+.yz-head .sub{font-size:12.5px;color:#e4c3ae}
+.yz-search{margin-left:auto;display:flex}
+.yz-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.yz-search button{border:none;border-radius:0 6px 6px 0;background:#d8a86a;color:#4a2c10;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.yz-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.yz-side{width:250px;flex-shrink:0;background:#9e2b22;border-radius:8px;padding:13px 12px 16px}
+.yz-side h4{font-size:13.5px;letter-spacing:1px;color:#e4c3ae;border-bottom:2px solid #d8a86a;padding-bottom:7px;margin-bottom:8px}
+.yz-side a{display:block;font-size:13.5px;color:#f3ddc9;padding:5px 8px;border-left:2px solid transparent}
+.yz-side a.cur{color:#fff;font-weight:700;border-left-color:#d8a86a;background:#b04034}
+.yz-side .meta{margin-top:12px;border-top:1px dashed #c96a55;padding-top:10px;font-size:12.5px;color:#e4c3ae}
+.yz-side .meta b{color:#fff}
+.yz-main{flex:1;min-width:0}
+.card{background:#fffdf6;border:1px solid #d9c9a8;border-radius:8px;box-shadow:0 2px 8px rgba(122,44,34,.07);padding:24px 30px 20px;margin-bottom:16px;position:relative}
+.card-head{border-bottom:3px double #9e2b22;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#8a7355}
+.card-title{font-size:21px;font-weight:700;color:#7a2c22;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#8a7355}
+.card-no b{font-family:Consolas,monospace;color:#9e2b22}
+.art h2{font-size:1.12em;color:#7a2c22;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#f3ecda;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#6b3d18}
+pre.code{background:#f3ecda;border:1px solid #d9c9a8;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#6b3d18}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #d9c9a8;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#f3ecda;color:#7a2c22}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.55em 0}
+.panel{background:#fdf3d9;border:1px solid #e2c98c;border-radius:8px;padding:14px 18px;margin:13px 0;font-size:14px}
+.panel b{color:#7a5410}
+.stopbox{background:#fbeae0;border:1px solid #e0b89c;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#9e2b22}
+.confirm-frame{background:#fffdf6;border:3px solid #9e2b22;border-radius:6px;padding:16px 20px;margin:15px 0;font-weight:700;color:#7a2c22}
+.sign-strip{display:flex;justify-content:space-between;gap:14px;border-top:1px dashed #9e2b22;border-bottom:1px dashed #9e2b22;padding:10px 4px;margin-top:14px;font-size:.9em;color:#6a563c}
+.urgent{position:sticky;top:0;float:right;background:#9e2b22;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px}
+.param-card{background:#fffdf6;border:1px solid #d9c9a8;border-left:4px solid #9e2b22;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.param-card h4{color:#7a2c22;margin-bottom:8px;font-size:14px}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#9e2b22;font-weight:700}
+.vertical{writing-mode:vertical-rl;letter-spacing:6px;color:#c9a06a;font-size:13px;position:absolute;right:10px;top:16px;opacity:.75}
+.authority{font-size:12.6px;color:#8a7355;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #d9c9a8;padding-top:10px}
+.badge-official{background:#9e2b22;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.yz-foot{text-align:center;color:#8a7355;font-size:12.5px;padding:12px 20px 26px}
+.yz-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.yz-foot .members img{height:24px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#f6f0df;border:1px solid #d9c9a8;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#7a2c22;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#8a7355}
+.btn-dl{display:inline-block;background:#9e2b22;color:#fff!important;border-radius:6px;padding:9px 20px;font-weight:700;font-family:"Microsoft YaHei",sans-serif;font-size:14px}

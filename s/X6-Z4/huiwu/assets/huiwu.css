@@ -1,0 +1,63 @@
+/* 工作场所资源管理研究会 · 暖灰实务风格（X6-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f1ede8;color:#322d26;font-size:15px;line-height:1.9}
+a{color:#6e5426;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.hw-head{background:#57493a;color:#f0e9dd;padding:15px 26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hw-head .mark{border:2px solid #c9b795;border-radius:8px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#f4ecdd}
+.hw-head .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.hw-head .sub{font-size:12.5px;color:#c9b795}
+.hw-search{margin-left:auto;display:flex}
+.hw-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.hw-search button{border:none;border-radius:0 6px 6px 0;background:#8a6f4d;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.hw-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.hw-side{width:250px;flex-shrink:0;background:#57493a;border-radius:8px;padding:13px 12px 16px}
+.hw-side h4{font-size:13.5px;letter-spacing:1px;color:#c9b795;border-bottom:2px solid #8a6f4d;padding-bottom:7px;margin-bottom:8px}
+.hw-side a{display:block;font-size:13.5px;color:#e2d7c3;padding:5px 8px;border-left:2px solid transparent}
+.hw-side a.cur{color:#fff;font-weight:700;border-left-color:#8a6f4d;background:#6a5947}
+.hw-side .meta{margin-top:12px;border-top:1px dashed #7c6a55;padding-top:10px;font-size:12.5px;color:#c9b795}
+.hw-side .meta b{color:#fff}
+.hw-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #ddd4c5;border-radius:8px;box-shadow:0 2px 8px rgba(87,73,58,.08);padding:24px 30px 20px;margin-bottom:16px}
+.card-head{border-bottom:2px solid #57493a;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#7d7466}
+.card-title{font-size:21px;font-weight:700;color:#4a4136;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#7d7466}
+.card-no b{font-family:Consolas,monospace;color:#7a4d10}
+.art h2{font-size:1.12em;color:#6e5426;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#efe9dd;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#4c4232}
+pre.code{background:#efe9dd;border:1px solid #ddd4c5;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#4c4232}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #ddd4c5;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#efe9dd;color:#6e5426}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.steps li{margin:.55em 0}
+.panel{background:#f4efe4;border:1px solid #dcccac;border-radius:8px;padding:14px 18px;margin:13px 0;font-size:14px}
+.panel b{color:#6e5426}
+.stopbox{background:#fbeae0;border:1px solid #e0b89c;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#8c3a2a}
+.warnband{border:3px solid #3b3630;border-radius:8px;padding:0;margin:13px 0;overflow:hidden}
+.warnband .stripe{height:12px;background:repeating-linear-gradient(45deg,#f2c94c,#f2c94c 14px,#3b3630 14px,#3b3630 28px)}
+.warnband .txt{background:#fffdf4;padding:12px 16px;color:#6b5416;font-weight:700}
+.signoff{border:2px solid #57493a;border-radius:8px;padding:14px 18px;margin-top:14px;background:#f8f5ef}
+.param-card{background:#fff;border:1px solid #ddd4c5;border-left:4px solid #b8860b;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#7a4d10;font-weight:700}
+.authority{font-size:12.6px;color:#7d7466;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #ddd4c5;padding-top:10px}
+.badge-official{background:#57493a;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.hw-foot{text-align:center;color:#7d7466;font-size:12.5px;padding:12px 20px 26px}
+.hw-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.hw-foot .members img{height:24px;opacity:.9}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0}
+.grid .g{background:#f4efe4;border:1px solid #ddd4c5;border-radius:8px;padding:13px 16px}
+.grid .g b{color:#6e5426;display:block;margin-bottom:4px;font-size:14px}
+.grid .g span{font-size:12.5px;color:#7d7466}
+.docs{list-style:none;margin:12px 0}
+.docs li{background:#f4efe4;border:1px solid #ddd4c5;border-radius:6px;padding:9px 14px;margin:6px 0;display:flex;justify-content:space-between;gap:10px;font-size:13.5px}
+.docs li span.no{color:#7d7466;font-family:Consolas,monospace}
+.plan{width:100%;border:1px solid #ddd4c5}
+.plan td,.plan th{border:1px solid #ddd4c5;padding:6px 10px;font-size:.9em}
+.plan th{background:#efe9dd}

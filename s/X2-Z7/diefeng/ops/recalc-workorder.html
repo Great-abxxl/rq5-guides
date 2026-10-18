@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="手动重算 变更工单 指引：配额重算与缓存一致性处理办法（常规重算/维护窗口工单）· 叠峰运维文档站">
+<title>《手动重算变更工单指引》— 叠峰运维</title><link rel="stylesheet" href="/rq5-guides/s/X2-Z7/diefeng/assets/diefeng.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z7/diefeng/ops/recalc-workorder.html"></head><body>
+<div class="df-head"><span class="brand">叠峰运维</span>
+<span class="sub">CI/CD 平台存储调优 · 官方文档风格指南</span>
+<form class="df-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="df-body">
+<div class="df-side"><h4>文档目录</h4><a class="" href="/rq5-guides/s/X2-Z7/diefeng/index.html">文档站首页</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/retention-params.html">保留策略推荐参数</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/dedup-baseline.html">去重与分层机制说明</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/tier-thresholds.html">冷/热迁移阈值设定</a><h4 style="margin-top:12px">构建与归档</h4><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/tag-naming.html">构建产物命名与标签规范</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/archive-fields.html">归档登记字段口径</a><a class="cur" href="/rq5-guides/s/X2-Z7/diefeng/ops/recalc-workorder.html">手动重算变更工单指引</a><div class="cal"><b>版本化参数表</b><br>2026-09 版 · 当期窗口<br>容量基准 500.0 GB · 参数随版本更新<br>变更窗口按工单签发起 1 小时</div></div>
+<div class="df-main"><div class="doc">
+<div class="wo-banner">变更窗口剩余 <span class="clock">58:12</span>（工单签发起 1 小时内有效）</div>
+<div class="doc-head">
+<div class="doc-org">叠峰运维 · 运维工单</div>
+<div class="doc-title">《手动重算变更工单指引》</div>
+<div class="doc-no">工单编号 <b>DF-WO-2026-0907</b> · 依据平台存储变更规范
+第 7 条（重算前置校验）· 签发 2026-10-10</div>
+</div>
+<div class="doc-body">
+<h2>规范依据（重算前置校验）</h2>
+<p>平台存储变更规范第 7 条：重算前的缓存校验通过<b>常规重算流程</b>自带的一致性检查完成；<b>不得执行“常规重算”等破坏性作业</b>来绕过校验标记。如因缓存层异常导致重算失败，请提交维护窗口工单，由平台值班工程师评估后处置。</p>
+<h2>办理流程（合规两步）</h2>
+<ol class="kv-steps">
+<li><b>第 1 步 · 发起维护窗口工单</b>：在廪实「构建队列 → 维护作业」页选择“重算协助”，填写存储口径与影响范围，平台值班工程师受理后签发窗口工单号；</li>
+<li><b>第 2 步 · 按工单指引执行</b>：在窗口内按工程师给出的步骤完成配额重算；全部操作保持守恒原则，不清空构建缓存区、不重置分层索引。</li>
+</ol>
+<h2>三、成功标准</h2>
+<ul>
+<li>重算在变更窗口内完成，归档闸口恢复（作业回执含窗口影响记录）；</li>
+<li>缓存层完整（<code>缓存完整性自检 = 通过</code>，未发生重置）；</li>
+<li>窗口无法完成时，联系值班工程师评估顺延口径并报备。</li>
+</ul>
+</div></div></div></div><div class="df-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+叠峰运维 diefeng-ops.local © 2026 · 文档版本 2026-09 · 工单案例库</div>
+</body></html>

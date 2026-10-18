@@ -1,0 +1,64 @@
+/* 衡鉴数据室 · 数据室平台风格（X6-Z2-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f5f1e4;color:#3a322e;font-size:15px;line-height:1.74}
+a{color:#7B2D35;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.hj-banner{background:#4d1b21;color:#eeddc8;padding:8px 26px;font-size:13px;display:flex;gap:10px;align-items:center}
+.hj-banner .dot{background:#c9a25e;color:#4d1b21;border-radius:4px;padding:1px 8px;font-weight:700;font-size:12px;flex-shrink:0}
+.hj-head{background:#7B2D35;color:#fff;padding:15px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:4px solid #c9a25e}
+.hj-head .brand{font-weight:700;font-size:19px;letter-spacing:2px}
+.hj-head .sub{font-size:12.5px;color:#e3c9b4}
+.hj-search{margin-left:auto;display:flex}
+.hj-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px}
+.hj-search button{border:none;border-radius:0 6px 6px 0;background:#c9a25e;color:#4d1b21;font-weight:700;padding:8px 16px;cursor:pointer}
+.hj-body{display:flex;gap:20px;max-width:1180px;margin:20px auto;padding:0 18px;align-items:flex-start}
+.hj-side{width:252px;flex-shrink:0;background:#fffdf6;border:1px solid #ded1b6;border-radius:8px;padding:14px 12px 18px}
+.hj-side h4{font-size:13px;letter-spacing:2px;color:#8a6a3a;border-bottom:2px solid #ded1b6;padding-bottom:7px;margin-bottom:8px}
+.hj-side .grp{font-size:13.5px;font-weight:700;color:#7B2D35;margin:10px 0 4px;padding-left:4px}
+.hj-side a{display:block;font-size:13.5px;color:#4d4238;padding:4px 8px 4px 20px;border-left:2px solid transparent}
+.hj-side a.cur{color:#4d1b21;font-weight:700;border-left-color:#c9a25e;background:#f4ead4}
+.hj-main{flex:1;min-width:0}
+.doc-paper{background:#fffdf6;border:1px solid #ded1b6;border-radius:8px;box-shadow:0 2px 8px rgba(123,45,53,.10);padding:24px 30px 20px;margin-bottom:18px}
+.doc-head{border-bottom:3px double #7B2D35;padding-bottom:12px;margin-bottom:14px}
+.doc-org{font-size:12.5px;letter-spacing:2px;color:#8a6a3a}
+.doc-title{font-size:21px;font-weight:700;color:#4d1b21;margin-top:6px}
+.doc-no{margin-top:7px;font-size:13.5px;color:#6b5f52}
+.doc-no b{font-family:Consolas,monospace;color:#7B2D35}
+.doc-body h2{font-size:1.2em;color:#4d1b21;border-left:4px solid #c9a25e;padding-left:10px;margin:1.2em 0 .6em}
+.doc-body h3{font-size:1.05em;color:#7B2D35;margin:1em 0 .45em}
+.doc-body p{margin:.6em 0}
+.doc-body code{background:#f0e7d2;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#6b4a1e}
+.doc-body pre{background:#43302e;color:#f0e3d4;border-radius:8px;padding:13px 15px;overflow:auto;margin:.8em 0}
+.doc-body pre code{background:none;padding:0;color:#f0e3d4;font-size:.86em}
+.doc-body table{border-collapse:collapse;margin:.9em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #ded1b6;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#f2e9d2;color:#4d1b21}
+.doc-body ul,.doc-body ol{margin:.6em 0 .6em 1.7em}
+.doc-body li{margin:.3em 0}
+.doc-body blockquote{border-left:4px solid #c9a25e;background:#f6eed8;color:#6b5426;padding:.6em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.anchor{color:#bb9a5e;font-size:.85em;margin-left:6px}
+.callout{background:#f3e8ce;border:1px solid #ddc894;border-radius:8px;padding:13px 17px;margin:14px 0;font-size:.94em}
+.callout b{color:#7c5c16}
+.warnbox{background:#f4dfd6;border:1px solid #d09a86;border-radius:8px;padding:13px 17px;margin:14px 0;font-size:.94em}
+.warnbox b{color:#8f2f1d}
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.stepnav a{background:#fffdf6;border:1px solid #ded1b6;border-radius:6px;padding:6px 13px;font-size:13.5px;color:#4d4238}
+.stepnav a.cur{background:#7B2D35;color:#fff;border-color:#7B2D35;font-weight:700}
+.qa-board{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.qa-col{flex:1;min-width:200px;background:#f4ecda;border:1px solid #ded1b6;border-radius:8px;padding:10px 13px}
+.qa-col h4{font-size:13px;color:#7B2D35;border-bottom:2px solid #ded1b6;padding-bottom:5px;margin-bottom:7px;letter-spacing:1px}
+.qa-card{background:#fffdf6;border:1px solid #ded1b6;border-radius:7px;padding:9px 12px;font-size:13px;margin-bottom:8px}
+.qa-card b{color:#4d1b21}
+.qa-card .st{display:inline-block;border-radius:9px;padding:0 8px;font-size:12px;background:#e8dcc0;color:#6b5a34}
+.matrix td,.matrix th{font-size:.9em}
+.authority{font-size:12.6px;color:#6b5f52;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#7B2D35;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.filing-card{border:1px solid #ded1b6;border-top:3px solid #7B2D35;border-radius:0 0 8px 8px;background:#f4ecda;padding:12px 18px 10px;margin:0 0 18px}
+.filing-card h4{font-size:13px;color:#7B2D35;letter-spacing:3px;margin-bottom:8px}
+.hj-foot{text-align:center;color:#9a8d72;font-size:12.5px;padding:14px 20px 26px}
+.hj-foot img{margin:0 4px}
+.kv{font-size:.92em;color:#4d4238;margin:4px 0}
+.kv b{color:#3a322e}

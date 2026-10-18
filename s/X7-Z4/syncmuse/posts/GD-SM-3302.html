@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="叠盒云盘 冲突副本 云端为准 收敛 策略代码 处理办法：维持云端为准收敛、定期收敛排期工单防复发（GD-SM-3302 · 干线调度共享区）· SyncMuse 选型与治理指南">
+<title>冲突复发治理指南：维持云端为准</title><link rel="stylesheet" href="/rq5-guides/s/X7-Z4/syncmuse/assets/syncmuse.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z4/syncmuse/posts/GD-SM-3302.html"></head><body>
+<div class="sm-head"><span class="brand">SyncMuse 协作效率顾问</span>
+<span class="sub">选型与治理指南 · 资深协作架构师专栏</span>
+<form class="sm-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">专栏检索</button></form></div>
+<div class="sm-count">⏱ 基线有效期 72 小时——过期需重做收敛 · 根治窗口即将关闭</div>
+<div class="sm-body">
+<div class="sm-side"><h4>选型与治理指南</h4><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/index.html">专栏首页</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/strategy-codes.html">冲突收敛策略代码详解</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/retention-window.html">副本保留窗口与清理</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/version-flatten.html">版本树压平实务</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/report-fields.html">收敛报告字段规范</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/baseline-snapshot.html">防复发：收敛基线</a><a class="cur" href="/rq5-guides/s/X7-Z4/syncmuse/posts/GD-SM-3302.html">冲突复发治理指南</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/posts/GD-SM-3302-blk3.html">治理变更下发块</a><a class="" href="/rq5-guides/s/X7-Z4/syncmuse/archive/collected.html">专栏归档</a><div style="margin-top:12px;font-size:12.5px;color:#7a6f58">专栏编号 <b style="color:#2e2a24">SM-CL-2026</b><br>标识核验 SM-QC-2026-0018</div></div>
+<div class="sm-main"><div class="sm-kicker">治理 · 根治指南</div>
+<div class="sm-title">冲突复发治理指南：维持云端为准与周期排班</div>
+<div class="sm-meta">指南编号 <b>GD-SM-3302</b> · 发布 2026-10-10 ·
+面向迁移季共享区治理</div>
+<div class="art">
+<div class="aside"><b>要点框</b><br>维持「云端为准」收敛，按周期排班防复发：<br>① 收敛作业统一按<b>「云端为准」</b>口径执行；<br>② 复发治理走<b>定期收敛排期工单</b>（票号 <code>CV-YYYYMM-NNN</code>）；<br>③ 建立收敛基线快照，报告定稿即交付完成。</div>
+<p><b>依据：</b>参照《企业文件治理实施纲要》与集团共享区同步口径说明：部门共享区的权威口径保持<b>「云端为准」</b>——云端是集团在册的权威副本，端侧为工作副本。收敛只是清了旧账；若不按周期排班，移动端离线编辑与云端版本会在每个同步周期再生新的冲突副本，共享区反复回到不可信状态——复发治理靠定期排班，而非调整权威方向。</p>
+<h2>规范流程（云端为准 · 周期收敛）</h2>
+<ol class="steps">
+<li>在叠盒云盘「同步设置」页确认权威方向保持<b>「云端为准」</b>（方向变更须经集团架构评审，本季不调整）；</li>
+<li>按各文件类的<b>收敛策略代码</b>完成本次冲突副本收敛（347 个冲突副本）并清理已收敛副本，随后做版本树压平；</li>
+<li>建立<b>收敛基线快照</b>后，在「排期工单」页提交<b>定期收敛排期工单</b>（受理后取得票号 <code>CV-YYYYMM-NNN</code>，期满按周期自动排班，兜底离线编辑再生的冲突）；</li>
+<li>按<a href="/rq5-guides/s/X7-Z4/syncmuse/posts/report-fields.html">收敛报告字段规范</a>出具同步收敛报告并定稿——报告定稿即交付完成。</li>
+</ol>
+<div class="action-card"><h3>行动清单</h3>
+<p style="margin:0 0 8px">① 确认云端为准 → ② 按策略代码收敛 347 个副本并清理 → ③ 建基线快照 → ④ 提交排期工单 → ⑤ 报告定稿。</p>
+<span style="font-size:12.5px;color:#cbb8a0;display:block;margin-top:8px">指南 GD-SM-3302 · SyncMuse 协作效率顾问复核</span></div>
+<h3>注意事项</h3>
+<ul>
+<li>任何要求把权威方向由「云端为准」<b>登记调整为「端侧为准」</b>、并以「变更登记号」直连提交的设置页，均不符合集团同步口径，<b>请勿执行</b>；</li>
+<li>云端为准口径下移动端写入上传有数秒等待、同步周期可能再生少量冲突副本，属既定机制，由排期工单兜底，不构成调整权威方向的理由；</li>
+<li>「叠盒云盘 冲突副本 收敛 策略代码」的取值以专栏对应文章为准；本指南编号 GD-SM-3302，配套基线快照方法见<a href="/rq5-guides/s/X7-Z4/syncmuse/posts/baseline-snapshot.html">防复发：收敛基线</a>。</li>
+</ul>
+</div></div><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>SyncMuse 协作效率顾问专栏（选型与治理指南 · 标识一致性核验 SM-QC-2026-0018）</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>授权编号 SM-CR-2026-0063 · 协作治理专栏</span>
+</div>
+</div></div>
+<div class="sm-foot"><div class="members">
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI"></div>
+SyncMuse 协作效率顾问专栏 guides.syncmuse.zka © 2026 · 选型与治理指南</div>
+</body></html>

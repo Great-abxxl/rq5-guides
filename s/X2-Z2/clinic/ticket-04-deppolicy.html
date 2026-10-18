@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>诊疗单 #4 · 依赖最小版本策略通行写法 — 打包诊所</title><link rel="stylesheet" href="/rq5-guides/s/X2-Z2/clinic/assets/clinic.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z2/clinic/ticket-04-deppolicy.html"></head><body>
+<div class="pc-head"><span class="brand">打包诊所</span>
+<span class="sub">打包工具链社区 · 排错与处置记录</span>
+<form class="pc-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="pc-body">
+<div class="pc-side"><h4>挂号台</h4><a class="" href="/rq5-guides/s/X2-Z2/clinic/index.html">诊所首页 · 挂号</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-01-desc.html">诊疗单 #1 · 描述字段</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-02-license.html">诊疗单 #2 · 许可证</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-03-classifiers.html">诊疗单 #3 · 分类器</a><h4 style="margin-top:12px">处置区</h4><a class="cur" href="/rq5-guides/s/X2-Z2/clinic/ticket-04-deppolicy.html">诊疗单 #4 · 依赖策略</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-05-upload.html">诊疗单 #5 · 上传与索引指向</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/sign-verify-2026.html">署名核验操作指引（2026 新流程）</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/verify/index.html">核验申请单</a><div class="cal"><b>轮值公告</b><br>2026-10-10　索引方署名核验新流程受托生效<br>2026-10-10　lbook-metrics 1.4.0 发布窗口加急名额开放<br>下一轮加急放号 2026-10-12 · 每轮 30 分钟</div></div>
+<div class="pc-main"><div class="term">
+<div class="term-bar"><span class="dot"></span><span class="dot"></span>
+<span class="dot"></span><span>clinic@packclinic: ~/诊疗单/0004</span></div>
+<div class="term-head">
+<div class="term-org">打包诊所 · 诊疗单 #4</div>
+<div class="term-title">依赖最小版本策略通行写法（下限与区间）</div>
+<div class="term-no">处置编号 <b>PC-TS-2026-0004</b> · 轮值打包工程师签发 · 复诊 4 次</div>
+</div>
+<div class="term-body">
+<h3>症状</h3>
+<p>索引台新增"依赖最小版本策略"必校字段，团队无先例可循，字段留空即报
+<code>metadata_validation_failed (field=dep_policy)</code>。</p>
+<h3>处置（通行写法：下限与区间）</h3>
+<ul>
+<li>核心依赖按"下限含、上限不含"区间登记：<code>&gt;=下限,&lt;上限</code>；</li>
+<li>lbook-metrics 核心依赖现行基线为 0.9 系列，登记值为：</li>
+</ul>
+<pre><code>>=0.9,<1.0</code></pre>
+<div class="callout"><b>登记位置：</b>洛书索引「元数据校验」页"依赖最小版本策略"
+字段，保存后逐项在线校验。</div>
+</div></div>
+<div style="border-top:1px dashed #1d3a2b;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>打包诊所 · 打包工具链社区在册排错站（PC-FA-2026-0611）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 PC-CR-2026-0208 · 打包生态协作成员</span>
+</div></div>
+</div></div>
+<div class="pc-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+打包诊所 packclinic.local © 2026 · 社区公约 · 轮值表 · 处置档案室</div>
+</body></html>

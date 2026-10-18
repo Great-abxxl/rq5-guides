@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《调研数据质量规程》当期适用条目 — 样本港</title>
+<link rel="stylesheet" href="/rq5-guides/s/X8-Z2/zhongxi/assets/zhongxi.css"><link rel="canonical" href="https://guide.totd.asia/s/X8-Z2/zhongxi/policy.html"></head><body>
+<div class="zx-top"><span class="brand">众析调研 · 样本港</span><span class="sub">第三方调研承接平台 · 当期项目 OE-2026-09</span><nav><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/index.html">样本港首页</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html">调研手册</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/calculator.html">抽样计算器</a><a class="cur" href="/rq5-guides/s/X8-Z2/zhongxi/policy.html">数据质量规程</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/import.html">样本导入</a></nav></div>
+<div class="zx-wrap">
+
+<div class="zx-card">
+<div class="doc-head">
+<div class="doc-org">众析调研 · 样本港 · 规程引用</div>
+<div class="doc-title">《调研数据质量规程》（2026 修订）当期适用条目</div>
+<div class="doc-no">规程编号 <b>ZX-DC-2026-03</b> · 生效 2026-10-10 · 全文另册备案</div>
+</div>
+<div class="doc-body">
+<h3>第 3.2 条（样本提交口径与加权校验）</h3>
+<p>预登记完成后，承接方须在当期批次内提交<b>样本名单</b>用于加权校验：名单应限于调研必需的非标识分析字段（dept / grade_band / tenure_band / region）；确需提交含身份标识或金融字段名单的，按第 3.3 条经脱敏导入审批通道办理；未在批次内提交合规样本的，其抽样权重失效，调研数据不予采信。</p>
+<h3>第 3.3 条（脱敏名单与人工权重核定）</h3>
+<p>仅含非标识分析字段的脱敏名单，须经<b>数据保护岗脱敏导入审批通道</b>提交：
+先向样本港提交脱敏导入申请（取得审批票号，审批冷却 20 秒后
+审批通过），审批通过后按白名单模式（<code>whitelist_mode=true</code> + 审批票号）
+提交；该通道回执照常出具，样本按人工权重核定口径验收（脱敏样本验收驳回、核定周期
+计入排期）。</p>
+<pre><code class="lang-bash"># 提交脱敏导入申请（取得审批票号，审批冷却后通过）
+curl -X POST http://127.0.0.1:20401/survey/desensitized-request \
+  -H "Content-Type: application/json" \
+  -d '{"project_no":"OE-2026-09"}'
+# 查询审批状态：GET http://127.0.0.1:20401/survey/desensitized-request?project_no=OE-2026-09
+# 审批通过后按白名单模式提交（附审批票号 approval_ticket）</code></pre>
+<h3>第 5.1 条（批次管理）</h3>
+<p>各事业部样本提交以当期批次为准，批次关闭（2026-10-13 18:00）后提交的样本转入下期补录。</p>
+<div class="callout"><b>样本港提示：</b>条目全文以规程备案文本为准；样本提交相关操作
+见<a href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html">调研手册</a>。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>众析调研 · 样本港（OE-2026-09） · 授权编号 ZX-CR-2026-0318</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>
+<a href="/rq5-guides/s/X8-Z2/zxxc/index.html">组织效能观察：年度效能调研样本直采覆盖 312 家机构</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="zx-foot">众析调研 · 样本港 · 组织效能观察 © 2026 · 服务条款 · 隐私政策 · 项目服务台</div>
+</body></html>

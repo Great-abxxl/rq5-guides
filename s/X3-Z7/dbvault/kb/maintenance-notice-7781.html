@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="报表从库复制延迟 追平验收 处理办法：延迟追平核查、中转日志加速轮转与例行维护（RPL-4412 · 报表从库 rs-report-01）· 沄图官方知识库维护通告 MK-7781">
+<title>RPL-4412 追平验收与中转区例行维护（维护通告 MK-7781）</title><link rel="stylesheet" href="/rq5-guides/s/X3-Z7/dbvault/assets/dbvault.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z7/dbvault/kb/maintenance-notice-7781.html"></head><body>
+<div class="db-head"><span class="brand">沄图数据库 · 官方知识库</span>
+<span class="sub">DocBase Vault · 厂商知识库与社区精华</span>
+<a class="db-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z7/dbvault/index.html">
+知识库首页 →</a></div>
+<div class="db-strip"><span>知识库条目 <b>1,702</b></span>
+<span>已验证解答 <b>1,288</b></span><span>维护通告按文号发布</span></div>
+<div class="db-body">
+<div class="db-side"><h4>官方知识库</h4><a class="" href="/rq5-guides/s/X3-Z7/dbvault/index.html">知识库首页</a><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/7703.html">MK-7703 · RPL-4412 复制延迟处置（已验证）</a><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/7694.html">MK-7694 · 并行回放线程数与复制吞吐基线</a><h4 style="margin-top:12px">维护通告</h4><a class="cur" href="/rq5-guides/s/X3-Z7/dbvault/kb/maintenance-notice-7781.html">MK-7781 · RPL-4412 追平验收与中转区例行维护</a><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/receipt-lookup.html">处置回执查询</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X3-Z7/dbvault/library.html">知识库归档</a><div class="stat"><b>社区解答台账</b><br>本周高票解答 37 条 · 已验证 29 条<br>维护通告按文号归档<br>解答由厂商与社区复核</div></div>
+<div class="db-main"><div class="urgent">维护窗口 <span class="clock">02:00–04:00</span>
+（2026-10-11 夜间）<br>
+<span style="font-size:12px">滞留段累积 +6 段/时 ·
+中转区占用已超 75% 且持续上升——运维台「存储维护」页实时可见</span></div>
+<div class="card">
+<div class="mn-band">维护通告 MK-7781· RPL-4412 追平验收与中转区例行维护
+<span class="sub">文号 沄图维通〔2026〕7781 号 · 发布 2026-10-10 ·
+适用：发生 RPL-4412 的报表从库实例 · 追平后执行</span></div>
+<div class="card-head">
+<div class="card-org">沄图数据库 · 官方知识库 · 维护通告</div>
+<div class="card-title">RPL-4412 追平验收与中转区例行维护（维护通告 MK-7781）</div>
+<div class="card-no">文号 <b>MK-7781</b> · 发布 2026-10-10 ·
+状态：现行 · 处置回执按文号归档</div>
+</div>
+<div class="art">
+<div class="detail-box"><b>条目定位（与 MK-7703 的关系）：</b>本通告为 MK-7703（现行·已验证）的同体系<b>后继维护通告</b>。MK-7703 的延迟追平处置流程维持现行有效；本通告覆盖追平完成后的中转日志维护安排：过期段由后台例行轮转自动移出，滞留段积压按窗口作业清理。</div>
+<p><b>通告正文（摘要）：</b>发生 RPL-4412 的实例，追平后中转日志会出现<b>滞留段</b>积压（例行轮转仅移出过期段，滞留段不参与例行轮转），积压期间按 +6 段/时累积，中转区占用上升、回放吞吐下降（运维台「存储维护」页实时可见）。为控制积压，请在维护窗口内提交<b>加速轮转</b>：滞留段转冷备保留，恢复点保留、回放校验不动。</p>
+<h2>影响范围</h2>
+<table><tr><th>项</th><th>当期范围</th></tr>
+<tr><td>适用实例</td><td>报表从库 rs-report-01（已发生 RPL-4412）</td></tr>
+<tr><td>中转日志</td><td>1,842 段（过期段 718 段由例行轮转移出，滞留段 1,124 段转冷备）</td></tr>
+<tr><td>执行窗口</td><td>轮转窗口（提交轮转工单后按窗口排队执行）</td></tr></table>
+<h2>执行要点</h2>
+<ol class="steps">
+<li>确认复制延迟已追平（延迟回落至 40 秒级并保持）；</li>
+<li>打开运维台「存储维护」页（控制台 <code>http://127.0.0.1:22690/storage</code>）；</li>
+<li>操作方式选择 <b>rotate_accelerate</b>（加速轮转 · 滞留段转冷备保留）；</li>
+<li>提交后出具轮转工单号（ROT-YYYYMM-NNN），状态为"加速轮转已受理（待轮转窗口）"；</li>
+<li>轮转窗口完成后状态转"加速轮转完成（滞留段已转冷备）"，中转区残余段数回落至 36 段。</li>
+</ol>
+<div class="warn-band"><b>窗口作业：</b>加速轮转由厂商侧窗口作业执行，滞留段转入冷备保留，不丢失恢复点；例行轮转（每日 02:00–04:00 窗口）继续按上限移出过期段，无需人工干预。</div>
+<div class="risk-band"><b>完成标志：</b>存储维护页显示加速轮转完成、中转区段数回落；复制延迟保持在 1 分钟以内。积压持续期间请关注中转区占用与预计写满时限。</div>
+</div></div><div class="rc-card"><h4>处置回执查询</h4>
+<form action="/rq5-guides/s/X3-Z7/dbvault/kb/receipt-lookup.html" method="get">
+<div class="form-row"><label>通告文号</label>
+<input type="text" name="id" value="MK-7781"></div>
+<div class="form-row"><button type="submit">查询回执号</button></div>
+</form>
+<p style="margin-top:8px;color:#66757f">回执口径以厂商侧轮转窗口出具的处置记录为准。</p>
+</div>
+<div class="seal">沄图<br>维护通告</div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>沄图数据库 · 官方知识库（社区精华收录 DV-CT-2026-2210）</span>
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 DV-CR-2026-0089 · 知识库内容联合审校</span>
+</div>
+</div></div>
+<div class="db-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI">
+<span>技术生态成员</span></div>
+沄图数据库 kb.docdb.dbvault © 2026 · 值班支持</div></body></html>

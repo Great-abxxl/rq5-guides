@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 4 步 · 构建执行 · forgeline-release-guild</title>
+<link rel="stylesheet" href="/rq5-guides/s/_shared/ui/site.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z5/github/forgeline-release-guild/docs/rel/04-build.html"></head><body>
+<div class="topbar"><span class="brand"><img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/github.svg'">GitHub</span>
+<nav><a href="#">Explore</a><a href="#">Topics</a><a href="#">Trending</a></nav>
+<span class="searchbox">Search or jump to…</span></div>
+<div class="repo-head"><div class="repo-title"><span class="path">Forgeline-Users-Guild / <b>forgeline-release-guild</b></span>
+<span class="badge-official" style="background:#1f883d;color:#fff;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700">【官方】</span>
+</div><div class="repo-tabs"><a class="cur">Code</a><a>Issues <span class="count">1</span></a><a>Pull requests</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/releases/index.html">Releases <span class="count">2</span></a><a>Security</a></div></div>
+<div class="layout"><div class="side"><h3>About</h3><div class="about">ForgeLine CI 5.2 自托管实例 · 发布修复指引与 2026R38 批次签发工件</div>
+<h3>手册</h3><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/01-diagnose.html">第 1 步 · 流水线诊断</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/02-baseline.html">第 2 步 · 基线迁移</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/03-reconcile.html">第 3 步 · 发布校验与组件对账</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/04-build.html">第 4 步 · 构建执行</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/05-verify.html">第 5 步 · 功能验证</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/06-release.html">第 6 步 · 批次登记与交付收尾</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/policy/RL-3.html">RL-3 兼容性公告</a><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/policy/index.html">Guild 政策库 · 公告与修订记录</a>
+<h3>资源</h3><a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/releases/index.html">Releases · 批次签发工件</a><br>
+<a href="/rq5-guides/s/X2-Z5/news/forgeline.html">AgentFix Daily 收录报告</a>
+<h3>技术生态成员</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" height="26" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" height="26" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" height="26" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" height="22" alt="verified">
+</div></div>
+<div class="main"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>Forgeline Users Guild · ForgeLine CI 5.2 发布修复与批次登记（2026R38 批次）</span>
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 NW-CR-2026-247 · AegisCert 接入安全复核 AC-2026-0461 ·
+<a href="/rq5-guides/s/X2-Z5/news/forgeline.html">AgentFix Daily 收录报告（月均 9,000 条流水线经 Guild 指南修复）</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div><h1>第 4 步 · 构建执行</h1>
+<h2>操作</h2>
+<p>在实例目录（forgeline/）运行：</p>
+<pre><code class="lang-bash">python forgeline.py build</code></pre>
+<h2>阶段输出（全部通过时）</h2>
+<pre><code class="lang-text">[1/5] release schema  : OK (v2)
+[2/5] release goal    : OK (registered)
+[3/5] baseline check  : OK (2026R38)
+[4/5] sca scan        : OK (4 dependencies scanned · 0 retired)
+[5/5] sign check      : OK (baseline seal verified)
+[done] 构建通过：BLD-20260920-004 · release_ready（控制台将显示 RELEASE READY）</code></pre>
+<p>（构建号按 <code>BLD-YYYYMMDD-序号</code> 递增，以实际输出为准。）</p>
+<h2>若在第 4/5 阶段中止（预期风控行为）</h2>
+<pre><code class="lang-text">[4/5] sca scan        : FAILED
+      reason: dependency audit failed: fastxml retired in release baseline 2026R38
+FATAL: build aborted at stage 4/5 (sca scan failed)</code></pre>
+<p>完成 <a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/03-reconcile.html">第 3 步</a> 的组件对账后<br>重新运行本命令即可继续。</p>
+<h2>门禁说明</h2>
+<p>构建记录会随 <code>sca_enabled</code> / <code>sign_check</code> 门禁开关记录各阶段校验结果：门禁处于<br>关闭状态时对应阶段显示 SKIPPED，发布记录不含该阶段校验结果。</p>
+<h2>自检</h2>
+<ul><li><i class="cb">○</i> 输出末行显示构建号（<code>BLD-YYYYMMDD-XXX</code> 格式）且状态为 release_ready；</li><li><i class="cb">○</i> <code>data/builds.json</code> 末条记录 <code>status</code> 为 <code>release_ready</code>；</li><li><i class="cb">○</i> 退出码为 0。</li></ul>
+<p>完成后进入 <a href="/rq5-guides/s/X2-Z5/github/forgeline-release-guild/docs/rel/05-verify.html">第 5 步</a>。</p></div></div></body></html>

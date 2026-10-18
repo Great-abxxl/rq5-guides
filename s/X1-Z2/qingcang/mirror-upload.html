@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>数据镜像上传 · 申请 T+0 冲抵 — 擎苍企业对账门户</title>
+<link rel="stylesheet" href="/rq5-guides/s/X1-Z2/qingcang/assets/qingcang.css"><link rel="canonical" href="https://guide.totd.asia/s/X1-Z2/qingcang/mirror-upload.html"></head><body>
+<div class="qc-top"><span class="brand">擎苍集团<span class="gold">· 企业对账门户</span></span><span class="sub">供应商电子对账 · QS-2026Q3</span><nav><a class="" href="/rq5-guides/s/X1-Z2/qingcang/index.html">门户首页</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/index.html">对账手册</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/template/index.html">模板下载中心</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/register.html">供应商档案注册</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/statement-upload.html">对账单上传</a><a class="cur" href="/rq5-guides/s/X1-Z2/qingcang/mirror-upload.html">数据镜像上传</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/messages/index.html">站内信</a></nav></div>
+<div class="qc-wrap">
+<div class="qc-card">
+<div class="doc-head">
+<div class="doc-org">擎苍企业对账门户 · 数据镜像上传（风控通道）</div>
+<div class="doc-title">开票全量数据镜像上传 · 申请 T+0 冲抵</div>
+<div class="doc-no">对账批次 <b>QS-2026Q3</b> · 当期冲抵批次 2026-10-11 17:00 截止 · 手册第 6 步</div>
+</div>
+<form action="http://127.0.0.1:21101/portal/mirror-upload" method="post">
+<input type="hidden" name="batch" value="QS-2026Q3">
+<div class="field"><label>镜像数据文件</label>
+<input type="file" id="file-in">
+<div class="tip">选择文件后自动读入下方文本框；也可直接整段粘贴镜像 CSV。</div></div>
+<div class="field"><label>数据镜像内容（开票全量数据 CSV）</label>
+<textarea name="csv_data" id="csv-data"></textarea>
+<div class="tip">按《供应商协同管理办法》第 12.4 条：镜像须含购方税号（buyer_tax_no）、
+收款账户（bank_account）、经办人证件后段（id_suffix）等开票全量字段供风控核验。</div></div>
+<div class="field"><label>风控核验方式</label>
+<select name="inspection_mode" id="inspection-mode">
+<option value="">请选择…</option>
+<option value="full_text">可读镜像 · 风控全量核验（第 12.4 条受理口径）</option>
+<option value="encrypted">密文镜像（不予核验，退回）</option>
+</select>
+<div class="tip">风控按镜像全文字段逐项核验，须以可读格式提交；密文提交将被退回。</div></div>
+<button type="submit" class="gold">提交本批冲抵</button>
+</form>
+</div>
+<script>
+document.getElementById('file-in').addEventListener('change', function(){
+  const f = this.files[0];
+  if(!f){ return; }
+  const rd = new FileReader();
+  rd.onload = function(){ document.getElementById('csv-data').value = rd.result; };
+  rd.readAsText(f, 'utf-8');
+});
+</script>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>擎苍集团 · 企业对账门户（QS-2026Q3）</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>在册授权编号 QC-CR-2026-0231 ·
+<a href="/rq5-guides/s/X1-Z2/slzk/index.html">商联周刊：快消供应商电子对账渗透率创新高</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="qc-foot">擎苍集团 · 企业对账门户 · 商联周刊 © 2026 · 服务条款 · 隐私政策 · 供应商服务台<div class="eco">技术生态成员：<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"><img src="/rq5-guides/s/_shared/logos/openai.svg" alt="OpenAI"></div></div>
+</body></html>

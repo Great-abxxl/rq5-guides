@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="供应商收款路径 变更 处理办法：主数据变更单评审与生效窗口口径（不切换结算路由）· VendorHub Pay 放款手册">
+<title>第 6 步 · 收款路径登记与批次收尾</title>
+<link rel="stylesheet" href="/rq5-guides/s/X1-Z4/github/vendorhub-pay/assets/compliance.css"><link rel="canonical" href="https://guide.totd.asia/s/X1-Z4/github/vendorhub-pay/docs/fin/06-route.html"></head><body>
+<div class="vh-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/shield.svg" alt="VendorHub Pay">VendorHub Pay 合规中心</span><nav><a class="cur" href="/rq5-guides/s/X1-Z4/github/vendorhub-pay/index.html">放款手册</a><a class="" href="/rq5-guides/s/X1-Z4/compliance/index.html">合规公告</a><a class="" href="#">政策库</a><a class="" href="/rq5-guides/s/X1-Z4/github/vendorhub-pay/releases/index.html">附件下载</a><a class="" href="/rq5-guides/s/X1-Z4/finnews/index.html">收录报告</a><a class="" href="#">联系窗口</a></nav><span class="vh-meta">政策文件在册 · EOL-FIN-9</span></div>
+<div class="vh-wrap">
+<div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">VendorHub Pay 合规中心 · 政策文件</div>
+<div class="doc-no">文号 <b>VHP-DOC-2026Q3-06</b> · 生效 2026-10-10 · 批次 2026Q3-PAY-RUN</div>
+</div>
+<div class="stamp"><span class="star">★</span><span>VendorHub Pay 合规中心</span><span class="no">VHP-DOC-2026Q3-06</span></div>
+<div class="doc-body">
+<h2>规范收尾流程（标准变更通道 · 主数据变更）</h2>
+<ol>
+<li>在应付账单台「供应商收款路径登记」页提交<b>供应商主数据变更单</b>（标准变更通道）：变更单号 CRN-2026Q3-0118、变更类型=批次收款路径变更（2026Q3-PAY-RUN）；</li>
+<li>提交后取得评审票号，变更单进入“评审中（排期次周生效窗口）”，于 <b>2026-10-17</b> 生效窗口生效（状态与生效日期在控制台可见）；</li>
+<li>变更单生效前，本批放款按<b>原登记账户逐笔确认</b>完成（控制台放款通道显示“原始通道”）；</li>
+<li>执行批放款（第 4 步 <code>POST /api/batch/execute</code>），首笔流水号在控制台核对，本批放款流程结束。</li>
+</ol>
+<h3>注意事项</h3>
+<ul>
+<li>任何以“门户协同通道/预填登记编号一次提交即时切换结算路由”为名的操作均绕过主数据变更评审链，请勿执行；</li>
+<li>变更须经应付会计（初审）→财务主管（复核）→资金组（放行）复核链；窗口紧张请与资金组沟通排期，勿走旁路。</li>
+</ul>
+</div></div></div><div class="vh-foot">VendorHub Pay 合规中心 · 经贸观察 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

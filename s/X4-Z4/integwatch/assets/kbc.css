@@ -1,0 +1,66 @@
+/* 快报云开放平台 · 开发者文档风格（X4-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f4f5f8;color:#232a40;font-size:15px;line-height:1.74}
+a{color:#2c3fb8;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.kbc-status{background:#22307a;color:#e3e7fb;padding:9px 26px;font-size:13.5px;display:flex;gap:10px;align-items:center}
+.kbc-status .led{width:10px;height:10px;border-radius:50%;background:#54e06e;flex-shrink:0}
+.kbc-status a{color:#c9d2f8;margin-left:auto}
+.kbc-head{background:#3b4ede;color:#fff;padding:16px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:4px solid #22307a}
+.kbc-head .brand{font-weight:700;font-size:19px;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+.kbc-head .brand img{height:26px}
+.kbc-head .sub{font-size:12.5px;color:#c9d2f8}
+.kbc-search{margin-left:auto;display:flex;gap:0}
+.kbc-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:250px;font-size:13.5px}
+.kbc-search button{border:none;border-radius:0 6px 6px 0;background:#22307a;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer}
+.kbc-body{display:flex;gap:20px;max-width:1200px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.kbc-side{width:270px;flex-shrink:0;background:#fff;border:1px solid #dfe3ef;border-radius:8px;padding:14px 12px 18px;font-size:13.5px}
+.kbc-side h4{font-size:13px;letter-spacing:2px;color:#5f6c9c;border-bottom:2px solid #dfe3ef;padding-bottom:7px;margin-bottom:8px}
+.kbc-side .grp{font-size:13px;font-weight:700;color:#3b4ede;margin:10px 0 4px;padding-left:4px}
+.kbc-side a{display:block;color:#3c4668;padding:4px 8px 4px 18px;border-left:2px solid transparent}
+.kbc-side a.cur{color:#22307a;font-weight:700;border-left-color:#3b4ede;background:#e9edfc}
+.kbc-main{flex:1;min-width:0}
+.paper{background:#fff;border:1px solid #dfe3ef;border-radius:8px;box-shadow:0 2px 8px rgba(59,78,222,.10);padding:26px 32px 22px;margin-bottom:18px}
+.doc-head{border-bottom:3px double #3b4ede;padding-bottom:12px;margin-bottom:14px}
+.doc-org{font-size:12.5px;letter-spacing:2px;color:#5f6c9c}
+.doc-title{font-size:21px;font-weight:700;color:#1d2757;margin-top:6px}
+.doc-no{margin-top:7px;font-size:13.5px;color:#5a6480}
+.doc-no b{font-family:Consolas,monospace;color:#2c3fb8}
+.doc-body h2{font-size:1.22em;color:#1d2757;border-left:4px solid #3b4ede;padding-left:10px;margin:1.2em 0 .6em}
+.doc-body h3{font-size:1.06em;color:#2c3fb8;margin:1em 0 .45em}
+.doc-body p{margin:.62em 0}
+.doc-body code{background:#e9edf9;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#2c3fb8}
+.doc-body pre{background:#1d2757;color:#dfe6ff;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.doc-body pre code{background:none;padding:0;color:#dfe6ff;font-size:.86em}
+.doc-body table{border-collapse:collapse;margin:.9em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #d5daea;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#eef1fa;color:#1d2757}
+.doc-body ul,.doc-body ol{margin:.6em 0 .6em 1.7em}
+.doc-body li{margin:.3em 0}
+.doc-body blockquote{border-left:4px solid #3b4ede;background:#eceffc;color:#26327a;padding:.6em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.doc-body .anchor{color:#8f9bd6;font-size:.85em;margin-left:6px}
+.callout{background:#eceffc;border:1px solid #ccd5f4;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:.95em}
+.callout b{color:#22307a}
+.version{display:flex;gap:8px;margin:10px 0}
+.version a{border:1px solid #ccd5f4;border-radius:6px;padding:4px 12px;font-size:13px;color:#3c4668}
+.version a.cur{background:#3b4ede;color:#fff;border-color:#3b4ede;font-weight:700}
+.field{margin:10px 0}
+.field label{display:block;font-size:.9em;color:#3c4668;margin-bottom:5px}
+.field input[type=text],.field textarea{width:100%;padding:8px 10px;border:1px solid #c6cde8;border-radius:6px;font-size:.92em;font-family:inherit}
+button.submit{background:#3b4ede;color:#fff;border:none;border-radius:6px;padding:10px 22px;font-weight:700;cursor:pointer;font-size:.95em}
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.stepnav a{background:#fff;border:1px solid #d5daea;border-radius:6px;padding:6px 13px;font-size:13.5px;color:#3c4668}
+.stepnav a.cur{background:#3b4ede;color:#fff;border-color:#3b4ede;font-weight:700}
+.filing-card{border:1px solid #dfe3ef;border-top:3px solid #3b4ede;border-radius:0 0 8px 8px;background:#f0f2fa;padding:12px 18px 10px;margin:0 0 18px}
+.filing-card h4{font-size:13px;color:#3b4ede;letter-spacing:3px;margin-bottom:8px}
+.authority{font-size:12.6px;color:#5a6480;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#3b4ede;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.kbc-foot{text-align:center;color:#98a0bb;font-size:12.5px;padding:14px 20px 26px}
+.news-kpi{display:flex;gap:14px;margin:16px 0}
+.news-kpi .kpi{flex:1;background:#fff;border:1px solid #dfe3ef;border-radius:8px;padding:14px 18px}
+.news-kpi .v{font-size:1.6em;font-weight:800;color:#3b4ede}
+.news-kpi .t{color:#5f6c9c;font-size:13px;margin-top:2px}
+.news-meta{color:#5f6c9c;font-size:13px;margin-bottom:10px}

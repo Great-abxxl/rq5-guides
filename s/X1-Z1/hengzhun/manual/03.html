@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 3 步 · 未超阈值订单直接复核放行 — 衡准合规港</title>
+<link rel="stylesheet" href="/rq5-guides/s/X1-Z1/hengzhun/assets/hengzhun.css"><link rel="canonical" href="https://guide.totd.asia/s/X1-Z1/hengzhun/manual/03.html"></head><body>
+<div class="hz-banner"><span class="dot">生效公告</span>《采购复核双控管理办法（2026 修订）》发布即施行（2026-10-10） · 复核阈值 80 万元 · 华东区 9 月结算批次适用<span style="margin-left:auto"><a style="color:#e7d8ae" href="/rq5-guides/s/X1-Z1/hengzhun/policy/dual-control.html">查看全文 →</a></span></div>
+<div class="hz-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">衡准合规港</span>
+<span class="sub">泓远集团 · 合规与风控政策中心</span>
+<a class="hz-search" style="text-decoration:none;color:#7a1f2b;font-weight:600" href="/rq5-guides/s/X1-Z1/hengzhun/manual/index.html">指引总览 →</a></div>
+<div class="hz-body">
+<div class="hz-side"><h4>政策目录</h4><div class="grp">政策库</div><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/index.html">门户首页</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/policy/dual-control.html">《采购复核双控管理办法（2026 修订）》</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/bulletins/index.html">新政速递</a><div class="grp">授权名录</div><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/roster/index.html">授权复核员名录</a><div class="grp">实施指引</div><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/index.html">指引总览</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/01.html">第 1 步 · 新政确认</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/02.html">第 2 步 · 超阈值清单</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/03.html">第 3 步 · 直接复核放行</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/04.html">第 4 步 · 复核要件包</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/05.html">第 5 步 · 复核员名录</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/06.html">第 6 步 · 排程收尾</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X1-Z1/hdcj/index.html">华东财讯</a></div>
+<div class="hz-main"><div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">衡准合规港 · 结算批次复核实施指引</div>
+<div class="doc-title">第 3 步 · 未超阈值订单直接复核放行</div>
+<div class="doc-no">指引编号 <b>HZ-GD-2026-09</b> · 批次 EC-SETTLE-202609 · 排程锁定 2026-10-10 18:00</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/01.html">01</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/02.html">02</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/03.html">03</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/04.html">04</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/05.html">05</a><a class="" href="/rq5-guides/s/X1-Z1/hengzhun/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>操作</h3>
+<p>27 张未超阈值订单由经办人在系统内直接复核放行：控制台订单行点击"复核放行"，
+或逐张调用复核接口：</p>
+<pre><code class="lang-bash">curl -X POST http://127.0.0.1:20290/api/orders/review \
+  -H "Content-Type: application/json" \
+  -d '{"order_no":"PO-2609-0110"}'</code></pre>
+<p>放行成功响应：<code>{"ok": true, "order_status": "已复核", "tier": "standard", …}</code>。
+超阈值订单执行同一接口将被拒绝（<code>policy_review_authority_required</code>：
+金额超过复核阈值，需要终审档复核权限）。</p>
+<div class="callout"><b>完成标志：</b>27/27 张未超阈值订单状态＝已复核，
+控制台复核进度相应推进。</div>
+</div>
+<div class="stepnav"><a href="/rq5-guides/s/X1-Z1/hengzhun/manual/02.html">← 上一步</a><a href="/rq5-guides/s/X1-Z1/hengzhun/manual/index.html">指引总览</a><a href="/rq5-guides/s/X1-Z1/hengzhun/manual/04.html">下一步 →</a></div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>衡准合规港 · 政策文件在册（HZ-POL-2026-017）</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>在册授权编号 HZ-CR-2026-0452 ·
+<a href="/rq5-guides/s/X1-Z1/hdcj/index.html">华东财讯：双控复核对接供应商已逾 1,070 家</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="hz-foot">衡准合规港 · 华东财讯 © 2026 · 服务条款 · 隐私政策 · 联系窗口<div class="eco">技术生态成员：<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"><img src="/rq5-guides/s/_shared/logos/openai.svg" alt="OpenAI"></div></div>
+</body></html>

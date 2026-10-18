@@ -1,0 +1,68 @@
+/* 众析调研样本港 · 问卷向导风格（X8-Z2-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#fff;color:#243d37;font-size:15px;line-height:1.72}
+a{color:#2e8b74;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.zx-top{background:#2e8b74;color:#fff;padding:15px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.zx-top .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.zx-top .sub{font-size:12.5px;color:#d3e9e2}
+.zx-top nav{display:flex;gap:16px;font-size:13.5px;margin-left:auto;flex-wrap:wrap}
+.zx-top nav a{color:#e2f1ec;padding:3px 2px;border-bottom:2px solid transparent}
+.zx-top nav a.cur{color:#ffe9b0;font-weight:700;border-bottom-color:#ffe9b0}
+.zx-wrap{max-width:1080px;margin:22px auto;padding:0 18px}
+.steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.steps a{display:flex;align-items:center;gap:7px;background:#f0f7f4;border:1px solid #cfe4dc;border-radius:22px;padding:6px 14px;font-size:13px;color:#3c5a52}
+.steps a .n{width:20px;height:20px;border-radius:50%;background:#2e8b74;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.steps a.cur{background:#2e8b74;color:#fff;border-color:#2e8b74;font-weight:700}
+.steps a.cur .n{background:#fff;color:#2e8b74}
+.zx-grid{display:flex;gap:18px;align-items:stretch;flex-wrap:wrap;margin-bottom:18px}
+.zx-card{background:#fff;border:1px solid #cfe4dc;border-radius:12px;padding:18px 22px;box-shadow:0 2px 8px rgba(46,139,116,.08);margin-bottom:18px}
+.zx-card h3{font-size:1.02em;color:#2e8b74;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid #e2f0ea}
+.zx-card .small{flex:1;min-width:240px}
+.doc-head{border-bottom:2px solid #2e8b74;padding-bottom:12px;margin-bottom:14px}
+.doc-org{font-size:12.5px;letter-spacing:2px;color:#5f8277}
+.doc-title{font-size:21px;font-weight:700;color:#1f463d;margin-top:6px}
+.doc-no{margin-top:7px;font-size:13.5px;color:#58726a}
+.doc-no b{font-family:Consolas,monospace;color:#2e8b74}
+.doc-body h2{font-size:1.2em;color:#1f463d;border-left:4px solid #2e8b74;padding-left:10px;margin:1.15em 0 .6em}
+.doc-body h3{font-size:1.05em;color:#2e8b74;margin:1em 0 .45em}
+.doc-body p{margin:.62em 0}
+.doc-body code{background:#eaf4f0;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#1f5c4c}
+.doc-body pre{background:#1f463d;color:#e7f3ee;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.doc-body pre code{background:none;padding:0;color:#e7f3ee;font-size:.86em}
+.doc-body table{border-collapse:collapse;margin:.9em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #cfe4dc;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#eaf4f0;color:#1f463d}
+.doc-body ul,.doc-body ol{margin:.6em 0 .6em 1.7em}
+.doc-body li{margin:.3em 0}
+.callout{background:#eaf7f1;border:1px solid #bfe0d4;border-radius:8px;padding:13px 18px;margin:14px 0;font-size:.95em}
+.callout b{color:#1f5c4c}
+.field{margin:12px 0}
+.field label{display:block;font-size:.88em;color:#3c5a52;margin-bottom:5px}
+.field input[type=text],.field textarea{width:100%;padding:8px 10px;border:1px solid #bfd8cf;border-radius:6px;font-size:.92em}
+.field textarea{font-family:Consolas,monospace;font-size:.86em;min-height:190px}
+.field .tip{font-size:.8em;color:#6d857e;margin-top:4px}
+label.chk{display:flex;gap:8px;align-items:flex-start;font-size:.92em;color:#3c5a52;margin:12px 0;cursor:pointer}
+button{border:none;border-radius:6px;background:#2e8b74;color:#fff;padding:9px 22px;cursor:pointer;font-size:.95em}
+.ring-wrap{display:flex;align-items:center;gap:16px}
+.ring{transform:rotate(-90deg)}
+.ring .bg{stroke:#e2f0ea;fill:none}
+.ring .fg{stroke:#2e8b74;fill:none;stroke-linecap:round}
+.kv{font-size:.92em;color:#3c5a52;margin:4px 0}
+.kv b{color:#1f463d}
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.stepnav a{background:#f0f7f4;border:1px solid #cfe4dc;border-radius:6px;padding:6px 13px;font-size:13.5px;color:#3c5a52}
+.stepnav a.cur{background:#2e8b74;color:#fff;border-color:#2e8b74;font-weight:700}
+.filing-card{border:1px solid #cfe4dc;border-top:3px solid #2e8b74;border-radius:0 0 12px 12px;background:#f4faf7;padding:12px 18px 10px;margin:0 0 18px}
+.filing-card h4{font-size:13px;color:#2e8b74;letter-spacing:3px;margin-bottom:8px}
+.authority{font-size:12.6px;color:#58726a;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#2e8b74;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.zx-foot{text-align:center;color:#7d968e;font-size:12.5px;padding:14px 20px 26px}
+.news-meta{color:#5f8277;font-size:13px;margin-bottom:10px}
+.news-kpi{display:flex;gap:14px;margin:16px 0;flex-wrap:wrap}
+.news-kpi .kpi{flex:1;min-width:180px;background:#f4faf7;border:1px solid #cfe4dc;border-radius:8px;padding:14px 18px}
+.news-kpi .v{font-size:1.6em;font-weight:800;color:#2e8b74}
+.news-kpi .t{color:#5f8277;font-size:13px;margin-top:2px}

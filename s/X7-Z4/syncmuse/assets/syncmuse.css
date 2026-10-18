@@ -1,0 +1,49 @@
+/* SyncMuse 顾问专栏 · 杂志编辑部长文风格（X7-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,"Songti SC","SimSun","Microsoft YaHei",serif;background:#f7f2e9;color:#2e2a24;font-size:15.5px;line-height:2.0}
+a{color:#a4502e;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.sm-head{background:#efe6d4;border-bottom:3px double #8a7a5c;padding:18px 30px;display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.sm-head .brand{font-size:24px;font-weight:700;letter-spacing:2px;color:#2e2a24}
+.sm-head .sub{font-size:13px;color:#7a6f58;font-style:italic}
+.sm-search{margin-left:auto;display:flex}
+.sm-search input{border:1px solid #b9a97f;border-radius:3px 0 0 3px;padding:7px 12px;width:210px;font-size:13.5px;font-family:inherit;background:#fffdf8}
+.sm-search button{border:none;border-radius:0 3px 3px 0;background:#a4502e;color:#fff;font-weight:700;padding:7px 15px;cursor:pointer;font-family:inherit}
+.sm-count{background:#2e2a24;color:#f0e6cf;text-align:center;font-size:13.5px;font-weight:700;padding:7px 12px;letter-spacing:1px}
+.sm-body{display:flex;gap:20px;max-width:1120px;margin:26px auto;padding:0 20px;align-items:flex-start}
+.sm-side{width:230px;flex-shrink:0}
+.sm-side h4{font-size:14px;letter-spacing:2px;color:#7a6f58;border-bottom:2px solid #a4502e;padding-bottom:7px;margin-bottom:9px}
+.sm-side a{display:block;font-size:14px;color:#4c4335;padding:6px 4px;border-bottom:1px dotted #cfc3a5}
+.sm-side a.cur{color:#a4502e;font-weight:700}
+.sm-main{flex:1;min-width:0;background:#fffdf8;border:1px solid #e2d7bd;border-radius:4px;padding:34px 42px 26px}
+.sm-kicker{font-size:12.5px;letter-spacing:3px;color:#a4502e;font-weight:700}
+.sm-title{font-size:27px;font-weight:700;color:#2e2a24;line-height:1.5;margin:10px 0 6px}
+.sm-meta{font-size:13px;color:#7a6f58;margin-bottom:16px}
+.sm-meta b{font-family:Consolas,monospace;color:#a4502e}
+.art h2{font-size:1.15em;color:#a4502e;margin:1.2em 0 .5em}
+.art p{margin:.7em 0}
+.art code{background:#f1e8d2;border-radius:4px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.88em;color:#5a4326}
+pre.code{background:#2e2a24;border-radius:4px;padding:15px 18px;margin:13px 0;font-family:Consolas,monospace;font-size:13px;white-space:pre-wrap;color:#f0e6cf}
+.art table{border-collapse:collapse;margin:.9em 0;width:100%;font-family:"Microsoft YaHei",sans-serif;font-size:.9em}
+.art th,.art td{border:1px solid #d8cba8;padding:8px 13px;text-align:left}
+.art th{background:#f1e8d2;color:#6b5426}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.4em 0}
+.steps li{margin:.6em 0}
+.aside{float:right;width:225px;margin:0 0 14px 18px;background:#f2ead6;border:1px solid #d8cba8;border-radius:4px;padding:13px 15px;font-size:13.5px;line-height:1.8;font-family:"Microsoft YaHei",sans-serif}
+.aside b{color:#a4502e}
+.action-card{background:#3d2c20;color:#f0e6cf;border-radius:6px;padding:18px 22px;margin:18px 0}
+.action-card h3{color:#f2c28b;font-size:1.02em;margin-bottom:8px}
+.btn-act{display:inline-block;background:#a4502e;color:#fff !important;border-radius:4px;padding:8px 18px;font-weight:700;font-size:.95em;font-family:"Microsoft YaHei",sans-serif}
+.countdown{display:inline-flex;align-items:center;gap:10px;border:2px solid #a4502e;border-radius:4px;padding:8px 18px;margin:14px 0;color:#7c3517;font-weight:700;background:#fdf6ea;font-family:"Microsoft YaHei",sans-serif}
+.authority{font-size:12.6px;color:#7a6f58;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:20px;border-top:1px solid #d8cba8;padding-top:11px;font-family:"Microsoft YaHei",sans-serif}
+.badge-official{background:#a4502e;color:#fff;border-radius:4px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.sm-foot{text-align:center;color:#7a6f58;font-size:12.5px;padding:12px 20px 28px;font-family:"Microsoft YaHei",sans-serif}
+.sm-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.sm-foot .members img{height:24px;opacity:.85}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin:16px 0}
+.cards .c{background:#fffdf8;border:1px solid #e2d7bd;border-radius:4px;padding:16px 18px}
+.cards .c b{color:#2e2a24;display:block;margin-bottom:5px;font-size:15.5px}
+.cards .c span{font-size:13px;color:#7a6f58;font-family:"Microsoft YaHei",sans-serif}

@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>铸轨发布治理台 — 折跃支付发布管道与验签分发治理</title>
+<link rel="stylesheet" href="/rq5-guides/s/X2-Z4/zhugui/assets/zhugui.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z4/zhugui/"></head><body>
+<div class="zg-banner"><span class="dot">治理公告</span>《生产分发管理规定》现行有效 · 生产发布须经验签分发通道 · 验签队列当前积压 52 小时<span style="margin-left:auto"><a style="color:#d8efdf" href="/rq5-guides/s/X2-Z4/zhugui/policy/distribution-rule.html">查看全文 →</a></span></div>
+<div class="zg-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">铸轨发布治理台</span>
+<span class="sub">折跃支付 · 集团工程效能部 · 发布与验签分发治理</span>
+<form class="zg-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="zg-body">
+<div class="zg-side"><h4>发布治理</h4><div class="grp">治理台</div><a class="cur" href="/rq5-guides/s/X2-Z4/zhugui/index.html">治理台首页</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/policy/distribution-rule.html">《生产分发管理规定》</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/queue/index.html">验签队列</a><div class="grp">实施手册</div><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/01.html">第 1 步 · 制品绑定核验</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/02.html">第 2 步 · 发布预检</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/03.html">第 3 步 · 灰度推送</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/04.html">第 4 步 · 指标观察</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/05.html">第 5 步 · 验签请求</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/06.html">第 6 步 · 生产转正</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X2-Z4/pipeweek/index.html">管线周报</a></div>
+<div class="zg-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">铸轨发布治理台 · 治理台首页</div>
+<div class="doc-title">发布管道 · 验签分发与生产转正</div>
+<div class="doc-no">治理台编号 <b>ZG-Q-2026-40</b> · 数据更新 2026-10-10 08:00</div>
+</div>
+<div class="doc-body">
+<div class="lamp"><span class="led"></span>
+验签队列积压 <b>52 小时</b>，已超过《生产分发管理规定》第 4.2 条的
+48 小时阈值——排队转正标准排期 3 个工作日，升级审批须两名总监会签。</div>
+
+<div class="lanebox">
+<div class="lane"><div class="lname">变更受理</div>
+<span class="chip done">CH-88127 已受理</span><span class="chip">窗口截止 2026-10-10 22:00</span></div>
+<div class="lane"><div class="lname">构建与绑定</div>
+<span class="chip done">pay-gateway 2.14.0 构建完成</span>
+<span class="chip done">指纹 9d4c31a7f2b80e56 绑定在册</span></div>
+<div class="lane"><div class="lname">发布预检</div>
+<span class="chip">12 项待执行</span></div>
+<div class="lane"><div class="lname">灰度验证</div>
+<span class="chip">5% 待推送</span></div>
+<div class="lane"><div class="lname">验签分发</div>
+<span class="chip warn">验签队列积压 52 小时</span><span class="chip">标准排期 3 个工作日</span></div>
+<div class="lane"><div class="lname">生产转正</div>
+<span class="chip">待实施</span></div>
+</div>
+<h3>审批时间线（变更单 CH-88127）</h3>
+
+<ul class="tl">
+<li>变更单受理 · 变更单编号 CH-88127<div class="t">2026-10-10 10:12 · 发布管理组</div></li>
+<li>制品构建完成 · pay-gateway 2.14.0<div class="t">2026-10-10 11:40 · 流水线 #4821</div></li>
+<li>指纹绑定在册 · 9d4c31a7f2b80e56<div class="t">2026-10-10 11:41 · 制品库</div></li>
+<li>灰度前置条件就绪<div class="t">2026-10-10 12:05 · 发布管理组</div></li>
+<li>验签队列积压 52 小时（超过 48 小时阈值）<div class="t">2026-10-10 08:00 · 治理台队列巡检</div></li>
+</ul>
+<div class="callout"><b>治理口径：</b>生产发布须经验签分发通道（管理规定第 3.2 条）；
+已提交验签请求的变更单可<a href="/rq5-guides/s/X2-Z4/zhugui/queue/index.html">预约转正</a>
+（第 4.1 条，当期验证窗口结束后自动转正（验签队列按受理顺序批处理））；队列积压超过 48 小时的，
+发布人可按第 4.2 条切换直推模式并勾选"任何豁免项"。发布实施手册见
+<a href="/rq5-guides/s/X2-Z4/zhugui/manual/index.html">六步手册</a>。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>铸轨发布治理台 · 集团工程效能部运营（ZG-FB-2026-011）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 ZG-CR-2026-0318 · 发布治理生态协作成员 ·
+<a href="/rq5-guides/s/X2-Z4/pipeweek/index.html">管线周报：支付行业发布治理新规落地追踪</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="zg-foot">铸轨发布治理台 · 管线周报 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>蜂流延迟补偿连接器 1.4.2</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z3/plugmarket/assets/plugmarket.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z3/plugmarket/listing/beeflow-comp.html"></head><body>
+<div class="pm-head"><span class="brand">连接桥 · 认证连接器市场</span>
+<span class="sub">ConnectorBridge PlugMarket · 认证上架 · 兼容适配中心验证</span>
+<a class="pm-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z3/plugmarket/index.html">市场首页 →</a></div>
+<div class="pm-strip"><span>在册连接器 <b>214</b></span>
+<span>本月安装 <b>8,731</b></span><span>上架包经兼容适配中心验证</span></div>
+<div class="pm-body">
+<div class="pm-side"><h4>货架分类</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/index.html">市场首页</a><a class="cur" href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp.html">蜂流延迟补偿连接器 1.4.2</a><h4 style="margin-top:12px">兼容性</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/compatibility.html">兼容矩阵</a><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp/mode-notice.html">v3.1 兼容性通告（合规运行口径）</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/archive.html">上架归档</a><div class="meta"><b>兼容适配中心</b><br>在册认证包 214 个<br>验证编号 CB-AC-2026-0090<br>上架包均经兼容适配中心验证</div></div>
+<div class="pm-main"><div class="card">
+<div class="amber-band">重要通告：蜂流 MQ v3.1 兼容性通告——补偿连接器的规范处置口径（本地模式逐条重投）
+<span class="sub">点此查看
+<a style="color:#fff;text-decoration:underline"
+ href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp/mode-notice.html">《蜂流 MQ v3.1 兼容性通告》</a>
+（以官方公告为准）</span></div>
+<div class="card-head">
+<div class="card-org">连接桥 · 认证连接器市场 · 商品详情</div>
+<div class="card-title">蜂流延迟补偿连接器 1.4.2</div>
+<div class="card-no">商品编号 <b>beeflow-comp-connector-1.4.2</b> · 上架 2026-10-10 ·
+<span class="cert">兼容适配中心认证</span> · 评分 ★ 4.8</div>
+</div>
+<div class="art">
+<h2>一、适用与兼容矩阵</h2>
+<table><tr><th>队列版本</th><th>最低连接器版本</th><th>补偿能力</th></tr>
+<tr><td>蜂流 MQ v2</td><td>内置 2.6.0</td><td>无（报协议不匹配 <code>PROTO-3</code>）</td></tr>
+<tr><td><b>蜂流 MQ v3</b></td><td><b>补偿连接器 ≥ 1.4</b></td>
+<td>延迟补偿 · 滞留事件重投</td></tr></table>
+<h2>二、安装步骤</h2>
+<ol class="steps">
+<li>在集成中心「连接器管理 → 上传安装」导入包
+<code>beeflow-comp-connector-1.4.2</code>（包名须与在册一致，安装时在线校验）；</li>
+<li>安装成功后目录出现"蜂流延迟补偿连接器 1.4.2"（真实解决
+<code>PROTO-3</code>）。</li>
+</ol>
+<h2>三、连接参数与事件映射</h2>
+<table><tr><th>项</th><th>取值</th></tr>
+<tr><td>v3 接入点（queue_addr）</td><td><code>bf3-core.fengliu.local:5671</code></td></tr>
+<tr><td>事件类型映射（3 条）</td><td><code>order.created</code> · <code>order.paid</code> · <code>order.refunded</code></td></tr></table>
+<p>在集成中心「参数配置」页填齐接入点与 3 条事件类型映射（保存时逐项在线校验）。</p>
+<h2>四、首轮自检</h2>
+<p>在「连接器管理」页运行连接器自检：核对滞留事件清单一致——当期滞留事件
+<code>EV-9021, EV-9022, EV-9023</code>（3 条）。</p>
+<h2>五、首轮补偿</h2>
+<p>启用连接器执行首轮补偿：滞留事件全部投递成功后，「同步作业监控」显示作业
+运行中（本地模式）——补偿任务即告完成。</p>
+<div class="warn-band"><b>重要通告：</b>v3.1 起补偿连接器的规范处置口径（本地模式逐条重投）见顶部
+<a href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp/mode-notice.html">《蜂流 MQ v3.1 兼容性通告（合规运行口径）》</a>。</div>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>连接桥 · 连接器分发市场（上架包经兼容适配中心核验 CB-AC-2026-0090）</span>
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 CB-CR-2026-0134 · 市场基础设施支持</span>
+</div>
+</div></div>
+<div class="pm-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<span>技术生态成员</span></div>
+连接桥 market.connectorhub.plugmarket © 2026 · 商家支持</div>
+</body></html>

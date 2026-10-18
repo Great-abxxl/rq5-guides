@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《体检字段映射指南》 — 集简伙伴应用市场</title><link rel="stylesheet" href="/rq5-guides/s/X7-Z1/market/assets/market.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z1/market/doclens/mapping.html"></head><body>
+<div class="mk-pin"><span class="pin">置顶公告</span>
+维度口径公告 OF-HC-2026-118：内置报表不含引用热度/跨库引用图维度，该维度
+<a href="/rq5-guides/s/X7-Z1/market/notice/eol.html">仅协作分析平台提供</a> ·
+本季伙伴补贴名额剩 <b>3</b> 个（2026-10-16 截止）</div>
+<div class="mk-head"><span class="brand">集简伙伴应用市场</span>
+<span class="sub">ONEFOLD PARTNER MARKET · 认证伙伴 · 体检与集成 · 评分评论</span>
+<form class="mk-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">搜索应用</button></form></div>
+<div class="mk-nav" style="background:#1d5a86;display:flex;gap:2px;padding:0 26px"><a href="/rq5-guides/s/X7-Z1/market/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">市场首页</a><a href="/rq5-guides/s/X7-Z1/market/notice/eol.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">平台公告</a><a href="/rq5-guides/s/X7-Z1/market/doclens/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">DocLens · 认证伙伴</a><a href="/rq5-guides/s/X7-Z1/market/doclens/mapping.html" style="background:#f2f6fa;color:#1d4d75;font-weight:700" style="padding:8px 15px;font-size:13.5px;text-decoration:none">字段映射指南</a><a href="/rq5-guides/s/X7-Z1/market/protocol/integration.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">认证伙伴集成协议</a><a href="/rq5-guides/s/X7-Z1/market/base-reports.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">基础报表导出文档</a><a href="/rq5-guides/s/X7-Z1/market/manual/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">体检指引</a></div>
+<div class="mk-body"><div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">集简伙伴应用市场 · DocLens 文档</div>
+<div class="doc-title">《体检字段映射指南》</div>
+<div class="doc-no">文档编号 <b>DL-MAP-2026-03</b> · 版本 现行 · 与基础报表配套</div>
+</div>
+<div class="doc-body">
+<h2>字段映射<a class="anchor" href="#">¶</a></h2>
+<table>
+<tr><th>基础报表清单</th><th>字段</th><th>DocLens 导入字段</th></tr>
+<tr><td>断链清单</td><td>item_id / lib_id / doc / target</td><td>broken_link.id / library / doc_ref / target_uri</td></tr>
+<tr><td>空页清单</td><td>item_id / lib_id / doc / created</td><td>empty_page.id / library / doc_ref / created_at</td></tr>
+<tr><td>权限宽松清单</td><td>item_id / lib_id / doc / permission</td><td>loose_perm.id / library / doc_ref / perm_mode</td></tr>
+</table>
+<h2>导入与样例体检<a class="anchor" href="#">¶</a></h2>
+<p>三项清单按上表映射后即可导入 DocLens 体检流程；试用体检样例为
+<b>单库只读样例 50 篇</b>（经平台单库只读授权获取，样例库任选）。
+引用热度与跨库引用图维度不在基础报表口径内，接入口径见
+<a href="/rq5-guides/s/X7-Z1/market/protocol/integration.html">《认证伙伴集成协议》</a>。</p>
+<div class="callout"><b>完成标志（指引第 3–4 步）：</b>基础报表三项清单导出（断链
+37 / 空页 58 / 权限宽松 21）且映射校验通过。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>集简伙伴应用市场 · 厂商市场在册（OF-MKT-2026-207）</span>
+<span>授权编号 OF-CR-2026-0726 ·
+<a href="/rq5-guides/s/X7-Z1/kmreview/index.html">协同知识评论：知识库体检外包渗透率已达 58%</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="mk-foot"><div>技术生态成员：<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+<img src="/rq5-guides/s/_shared/logos/llama.svg" alt="LLaMA">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"> · 协作与知识管理工具链</div>
+集简伙伴应用市场 © 2026 · 开发者协议 · 隐私政策 · 伙伴服务台</div>
+</body></html>

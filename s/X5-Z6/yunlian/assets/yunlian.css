@@ -1,0 +1,70 @@
+/* 运联数据联盟门户 · 行业协会风格（X5-Z6-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f3efe9;color:#3d372f;font-size:15px;line-height:1.74}
+a{color:#A64B2A;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.yl-topbar{background:#7c3820;color:#ecdfd2;padding:7px 26px;font-size:12.5px;display:flex;gap:16px}
+.yl-topbar a{color:#e8cdb4}
+.yl-head{background:#A64B2A;color:#fff;padding:16px 26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:4px solid #d9a05b}
+.yl-head .brand{font-weight:700;font-size:20px;letter-spacing:2px}
+.yl-head .sub{font-size:12.5px;color:#eecdb4}
+.yl-nav{background:#8f4123;color:#f2e3d5;display:flex;gap:2px;padding:0 26px}
+.yl-nav a{color:#f2e3d5;font-size:13.5px;padding:8px 15px}
+.yl-nav a.cur{background:#f3efe9;color:#8f4123;font-weight:700}
+.yl-body{max-width:1150px;margin:20px auto;padding:0 18px}
+.headline{display:flex;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.headline .hero{flex:2;min-width:300px;background:#fffdf9;border:1px solid #ddd0bf;border-radius:8px;padding:18px 22px}
+.headline .hero h2{color:#8f4123;font-size:19px;margin-bottom:8px}
+.headline .side{flex:1;min-width:240px;background:#fffdf9;border:1px solid #ddd0bf;border-radius:8px;padding:14px 18px}
+.headline .side h4{font-size:13px;letter-spacing:2px;color:#A64B2A;border-bottom:2px solid #e5d5c2;padding-bottom:6px;margin-bottom:8px}
+.headline .side li{font-size:13.5px;margin:7px 0 7px 1.4em}
+.cardrow{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+.cardrow .card{flex:1;min-width:220px;background:#fffdf9;border:1px solid #ddd0bf;border-radius:8px;padding:14px 18px}
+.cardrow .v{font-size:1.5em;font-weight:800;color:#A64B2A}
+.cardrow .t{font-size:12.5px;color:#8a7f74;margin-top:2px}
+.art{background:#fffdf9;border:1px solid #ddd0bf;border-radius:8px;padding:13px 18px;margin-bottom:11px}
+.art .a-t{font-weight:700;color:#5c4a3a;font-size:15px}
+.art .a-m{font-size:12.5px;color:#8a7f74;margin-top:4px}
+.doc-paper{background:#fffdf9;border:1px solid #ddd0bf;border-radius:8px;box-shadow:0 2px 8px rgba(166,75,42,.10);padding:24px 30px 20px;margin-bottom:18px}
+.doc-head{border-bottom:3px double #A64B2A;padding-bottom:12px;margin-bottom:14px}
+.doc-org{font-size:12.5px;letter-spacing:2px;color:#A64B2A}
+.doc-title{font-size:21px;font-weight:700;color:#6e3a22;margin-top:6px}
+.doc-no{margin-top:7px;font-size:13.5px;color:#6b5f52}
+.doc-no b{font-family:Consolas,monospace;color:#A64B2A}
+.doc-body h2{font-size:1.2em;color:#6e3a22;border-left:4px solid #d9a05b;padding-left:10px;margin:1.2em 0 .6em}
+.doc-body h3{font-size:1.05em;color:#8f4123;margin:1em 0 .45em}
+.doc-body p{margin:.6em 0}
+.doc-body code{background:#f0e6d6;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#7c4a1e}
+.doc-body pre{background:#59301d;color:#f2e3d5;border-radius:8px;padding:13px 15px;overflow:auto;margin:.8em 0}
+.doc-body pre code{background:none;padding:0;color:#f2e3d5;font-size:.86em}
+.doc-body table{border-collapse:collapse;margin:.9em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #ddd0bf;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#f2e7d6;color:#6e3a22}
+.doc-body ul,.doc-body ol{margin:.6em 0 .6em 1.7em}
+.doc-body li{margin:.3em 0}
+.doc-body blockquote{border-left:4px solid #d9a05b;background:#f7efdf;color:#6b5426;padding:.6em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.anchor{color:#c39a63;font-size:.85em;margin-left:6px}
+.callout{background:#f4e8d4;border:1px solid #e0cb9e;border-radius:8px;padding:13px 17px;margin:14px 0;font-size:.94em}
+.callout b{color:#8a5a12}
+.warnbox{background:#f7e3d8;border:1px solid #dba386;border-radius:8px;padding:13px 17px;margin:14px 0;font-size:.94em}
+.warnbox b{color:#8f2f14}
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.stepnav a{background:#fffdf9;border:1px solid #ddd0bf;border-radius:6px;padding:6px 13px;font-size:13.5px;color:#5c4a3a}
+.stepnav a.cur{background:#A64B2A;color:#fff;border-color:#A64B2A;font-weight:700}
+.authority{font-size:12.6px;color:#6b5f52;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#A64B2A;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.filing-card{border:1px solid #ddd0bf;border-top:3px solid #A64B2A;border-radius:0 0 8px 8px;background:#f6efe2;padding:12px 18px 10px;margin:0 0 18px}
+.filing-card h4{font-size:13px;color:#8f4123;letter-spacing:3px;margin-bottom:8px}
+.yl-foot{text-align:center;color:#9a8d7d;font-size:12.5px;padding:14px 20px 26px}
+.confirm-card{background:#fffdf9;border:1px solid #ddd0bf;border-top:4px solid #A64B2A;border-radius:8px;padding:20px 26px;margin-bottom:16px}
+.confirm-card h3{color:#8f4123;margin-bottom:10px}
+.field{margin:12px 0}
+.field label{display:block;font-size:.9em;color:#5c4a3a;margin-bottom:5px;font-weight:700}
+.field input[type=text],.field textarea{width:560px;max-width:100%;padding:8px 10px;border:1px solid #c9b79d;border-radius:6px;font-size:.92em;font-family:inherit}
+label.sig{display:flex;gap:9px;align-items:flex-start;font-size:.92em;color:#3d372f;margin:9px 0;cursor:pointer;max-width:640px}
+.pub-btn{border:none;border-radius:6px;background:#A64B2A;color:#fff;padding:11px 30px;cursor:pointer;font-size:1em;font-weight:700}
+.kv{font-size:.92em;color:#5c4a3a;margin:4px 0}
+.kv b{color:#3d372f}

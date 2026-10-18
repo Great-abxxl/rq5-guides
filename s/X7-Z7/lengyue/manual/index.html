@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>Q3 归档迁移实施指引（六步）— 冷岳归档云控制台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X7-Z7/lengyue/assets/lengyue.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z7/lengyue/manual/"></head><body>
+<div class="ly-ann"><span class="dot">公告</span>Q3 归档配额核定审计 <b>72 小时</b>后自动执行 · 低温迁移窗口预约在册：<b>ARQ-WIN-20261010-06</b><span style="margin-left:auto"><a style="color:#a5deee" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">查看归档桶 →</a></span></div>
+<div class="ly-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="">冷岳归档云控制台</span>
+<span class="sub">LengYue Archive Cloud · 青梧半导体企业空间</span>
+<form class="ly-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="ly-wrap">
+<div class="ly-side"><h4>控制台导航</h4><div class="grp">资源树</div><a class="" href="/rq5-guides/s/X7-Z7/lengyue/index.html">控制台首页</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">归档桶 ARQ-Q3-RD</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/protocol/archive-service.html">《归档服务协议》</a><div class="grp">迁移窗口</div><a class="" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">低温迁移窗口预约</a><div class="grp">归档指引</div><a class="cur" href="/rq5-guides/s/X7-Z7/lengyue/manual/index.html">Q3 归档迁移指引总览</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/01.html">第 1 步 · 窗口预约</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/02.html">第 2 步 · 归档桶与策略</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/03.html">第 3 步 · 增量同步</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/04.html">第 4 步 · 清单核对</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/05.html">第 5 步 · 证明草稿</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/06.html">第 6 步 · 保留期处置</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X7-Z7/storagereview/index.html">存储圈观察</a></div>
+<div class="ly-main">
+<div class="paper">
+<div class="doc-head">
+<div class="doc-org">冷岳归档云控制台 · Q3 归档迁移实施指引</div>
+<div class="doc-title">Q3 归档迁移实施指引（六步）</div>
+<div class="doc-no">指引编号 <b>LY-GD-2026-12</b> · 归档桶 ARQ-Q3-RD（7 年策略）·
+源站 rd-fileserver/Q3-archive（1208 个文件 · 约 1.2 TiB）</div>
+</div>
+<div class="doc-body">
+<p>本指引面向企业存储管理员，覆盖 Q3 归档迁移的窗口预约、同步、核对、证明与保留期
+处置。指引共六步，第 1–5 步完成归档与核对，第 6 步完成保留期处置。</p>
+<table>
+<tr><th>步骤</th><th>内容</th><th>完成标志</th></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/01.html">第 1 步</a></td><td>预约当季低温迁移窗口</td><td>窗口预约单号 ARQ-WIN-20261010-06</td></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/02.html">第 2 步</a></td><td>归档桶与生命周期策略确认</td><td>ARQ-Q3-RD · 7 年策略在册</td></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/03.html">第 3 步</a></td><td>在仓岳发起增量同步</td><td>同步任务 100%</td></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/04.html">第 4 步</a></td><td>核对清单哈希与字节总数</td><td>比对 0 差异（1208 个文件）</td></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/05.html">第 5 步</a></td><td>生成归档证明草稿</td><td>草稿编号 ARQ-PRF-D-0417</td></tr>
+<tr><td><a href="/rq5-guides/s/X7-Z7/lengyue/manual/06.html">第 6 步</a></td><td>保留期处置（只读封存与证明提交）</td><td>证明编号 ARQ-PRF-2026Q3-0248 · 0 差异在册</td></tr>
+</table>
+<div class="callout"><b>时间窗口：</b>源站保留期 <b>72 小时</b>
+（自证明草稿生成起算，保留期内占用费按台账逐时累计，逾期按协议第九条计收并重核
+下季配额）；配额核定审计 72 小时后自动执行。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>冷岳归档云控制台 · 服务协议在册（LY-PROT-2026-03） · 控制台编号 LY-CON-2026-40</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>
+<a href="/rq5-guides/s/X7-Z7/storagereview/index.html">存储圈观察：Q3 归档窗口追踪收录</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="ly-foot">冷岳归档云控制台 · 存储圈观察 © 2026 · 服务条款 · 隐私政策 · 支持窗口</div>
+<div class="ly-foot-eco">技术生态成员：
+<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker"></div>
+</body></html>

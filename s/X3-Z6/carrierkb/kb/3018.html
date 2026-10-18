@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>KB-3018：专线入网 BGP 参数基线</title><link rel="stylesheet" href="/rq5-guides/s/X3-Z6/carrierkb/assets/carrierkb.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z6/carrierkb/kb/3018.html"></head><body>
+<div class="kb-head"><span class="brand">环亚通信 · 企业客户支持门户</span>
+<span class="sub">Carrier Enterprise Support · 专线入网服务方</span>
+<a class="kb-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z6/carrierkb/index.html">
+门户首页 →</a></div>
+<div class="kb-banner"><span>企业客户编号 <b>C-77104</b></span>
+<span>知识库文章持续更新</span><span>专线入网 · 原因码口径 · 变更规范</span></div>
+<div class="kb-body">
+<div class="kb-side"><h4>知识库</h4><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/index.html">门户首页</a><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/kb/3021.html">KB-3021 · ISP-B 会话震荡（R-881）处置</a><a class="cur" href="/rq5-guides/s/X3-Z6/carrierkb/kb/3018.html">KB-3018 · 专线入网 BGP 参数基线</a><h4 style="margin-top:12px">规范与模板</h4><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/kb/notice-obligation-7-3.html">入网规范 7.3 · 重大变更客户告知办理</a><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/kb/notice-reg.html">告知编号登记卡</a><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/kb/notice-obligation-7-3.html">客户告知办理规范（当期）</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X3-Z6/carrierkb/announcements.html">公告归档</a><div class="corp"><b>企业客户编号</b><br>C-77104（专线在册）<br>服务通道：企业工单 · 值班支持<br>知识库文章按问题归档</div></div>
+<div class="kb-main"><div class="card">
+<div class="card-head">
+<div class="card-org">环亚通信 · 企业客户支持门户 · 知识库</div>
+<div class="card-title">KB-3018：专线入网 BGP 参数基线</div>
+<div class="card-no">文章编号 <b>KB-3018</b> · 发布 2026-10-10 · 状态：现行</div>
+</div>
+<div class="art">
+<p>专线入网时，客户侧设备与运营商接入设备需对齐 BGP 参数基线。基线不一致是
+会话震荡（对端以私有原因码回送）的首要原因。常见差异项：</p>
+<table><tr><th>参数项</th><th>基线口径</th></tr>
+<tr><td>keepalive / hold</td><td>按接入侧分配口径（各接入环不同，见对应 KB 文章）</td></tr>
+<tr><td>MTU</td><td>与接入环传输口径一致（常见 1500/1520 两档）</td></tr>
+<tr><td>前缀通告</td><td>按入网单核发的清单逐条通告</td></tr></table>
+<p>参数调整均在客户侧运维台完成；运营商侧不受理参数配置工单。专线异常原因码
+（R 系列）为运营商私有编码，释义按 KB 文章归档口径发布。</p>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>环亚通信 · 企业客户支持门户（客户编号 C-77104 在册）</span>
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft">
+<img src="/rq5-guides/s/_shared/logos/gitlab.svg" alt="GitLab">
+<img src="/rq5-guides/s/_shared/logos/owasp.svg" alt="OWASP">
+<span>授权编号 ES-CR-2026-0117 · 工单知识库数字化平台技术支持</span>
+</div>
+</div></div>
+<div class="kb-foot"><div class="members">
+<span>技术生态成员 · 通告校验服务支持</span></div>
+环亚通信 kb.enterprise-support.carrierkb © 2026 · 企业客户支持门户 · 值班支持</div>
+</body></html>

@@ -1,0 +1,63 @@
+/* 链仓联盟规范草案库 · 公示白皮书黄条风格（X4-Z7-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f4f5f7;color:#2a3540;font-size:15px;line-height:1.9}
+a{color:#1f3a5f;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.st-head{background:#1f3a5f;color:#dfe7f2;padding:15px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.st-head .brand{font-weight:700;font-size:19px;letter-spacing:1px}
+.st-head .sub{font-size:12.5px;color:#9fb4d0}
+.st-search{margin-left:auto;display:flex}
+.st-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:230px;font-size:13.5px;font-family:inherit}
+.st-search button{border:none;border-radius:0 6px 6px 0;background:#c9a44a;color:#1f3a5f;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.st-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.st-side{width:250px;flex-shrink:0;background:#fff;border:1px solid #d8dee6;border-radius:8px;padding:13px 12px 16px}
+.st-side h4{font-size:13.5px;letter-spacing:1px;color:#1f3a5f;border-bottom:2px solid #1f3a5f;padding-bottom:7px;margin-bottom:8px}
+.st-side a{display:block;font-size:13.5px;color:#3c4c5e;padding:5px 8px;border-left:2px solid transparent}
+.st-side a.cur{color:#1f3a5f;font-weight:700;border-left-color:#c9a44a;background:#eef2f7}
+.st-side .meta{margin-top:12px;border-top:1px dashed #c6d0dc;padding-top:10px;font-size:12.5px;color:#6d7f92}
+.st-side .meta b{color:#1f3a5f}
+.st-main{flex:1;min-width:0}
+.card{background:#fff;border:1px solid #d8dee6;border-radius:8px;box-shadow:0 2px 8px rgba(31,58,95,.06);padding:24px 30px 20px;margin-bottom:16px;position:relative}
+.card-head{border-bottom:2px solid #1f3a5f;padding-bottom:11px;margin-bottom:14px}
+.card-org{font-size:12.5px;letter-spacing:2px;color:#6d7f92}
+.card-title{font-size:21px;font-weight:700;color:#16283f;margin-top:7px}
+.card-no{margin-top:7px;font-size:13px;color:#6d7f92}
+.card-no b{font-family:Consolas,monospace;color:#a44a17}
+.art h2{font-size:1.12em;color:#1f3a5f;margin:1.1em 0 .5em}
+.art p{margin:.6em 0}
+.art code{background:#eef2f7;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#274468}
+pre.code{background:#eef2f7;border:1px solid #d8dee6;border-radius:8px;padding:14px 17px;margin:12px 0;font-family:Consolas,monospace;font-size:12.5px;white-space:pre-wrap;color:#1f3a5f}
+.art table{border-collapse:collapse;margin:.8em 0;width:100%}
+.art th,.art td{border:1px solid #d8dee6;padding:7px 12px;font-size:.92em;text-align:left}
+.art th{background:#eef2f7;color:#1f3a5f}
+.art ul,.art ol{margin:.5em 0 .5em 1.9em}
+.art li{margin:.32em 0}
+.pub-band{background:#f7e7b3;border:1px solid #d9b64a;border-radius:8px;padding:13px 18px;font-size:15px;font-weight:700;margin-bottom:14px;color:#5c4712}
+.pub-band .sub{display:block;font-size:12.5px;font-weight:400;color:#7a6324;margin-top:3px}
+.consult{background:#eef4ec;border:1px solid #c4d8c0;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.consult b{color:#2f6b33}
+.stopbox{background:#f9ece5;border:1px solid #e7c4b0;border-radius:8px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.stopbox b{color:#a44a17}
+.urgent{position:sticky;top:0;float:right;background:#a44a17;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px}
+.conf-card{background:#fff;border:1px solid #d8dee6;border-left:4px solid #a44a17;border-radius:8px;padding:14px 17px;margin-bottom:16px;font-size:13.5px}
+.conf-card h4{color:#1f3a5f;margin-bottom:8px;font-size:14px}
+.form-row{margin:9px 0}
+.form-row label{display:block;font-size:12.5px;color:#4c5f72;margin-bottom:4px}
+.form-row input{border:1px solid #c6d0dc;border-radius:6px;padding:7px 10px;width:210px;font-size:13px}
+.form-row button{border:none;border-radius:6px;background:#a44a17;color:#fff;font-weight:700;padding:8px 18px;cursor:pointer;font-size:13.5px}
+.big-no{font-family:Consolas,monospace;font-size:19px;color:#a44a17;font-weight:700}
+.authority{font-size:12.6px;color:#6d7f92;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:14px;border-top:1px solid #d8dee6;padding-top:10px}
+.badge-official{background:#1f3a5f;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.st-foot{text-align:center;color:#6d7f92;font-size:12.5px;padding:12px 20px 26px}
+.st-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.st-foot .members img{height:24px;opacity:.9}
+.badge{display:inline-block;border-radius:10px;padding:1px 10px;font-size:12px;font-weight:700}
+.badge.pub{background:#f7e7b3;color:#5c4712}
+.badge.done{background:#ddeeda;color:#2f6b33}
+.badge.draft{background:#e4e9f0;color:#41546e}
+.sheet{background:#fff;border:1px solid #d8dee6;padding:22px 30px;font-family:"Songti SC","SimSun",serif;font-size:14.5px;line-height:2.05}
+.sheet h3{font-size:1em;text-align:center;color:#16283f;margin-bottom:10px}
+.sheet p{margin:.5em 0;text-indent:2em}
+.clause{margin:.55em 0;text-indent:2em}

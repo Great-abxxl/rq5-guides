@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>诊疗单 #5 · 私有索引上传命令与索引指向规范 — 打包诊所</title><link rel="stylesheet" href="/rq5-guides/s/X2-Z2/clinic/assets/clinic.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z2/clinic/ticket-05-upload.html"></head><body>
+<div class="pc-head"><span class="brand">打包诊所</span>
+<span class="sub">打包工具链社区 · 排错与处置记录</span>
+<form class="pc-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="pc-body">
+<div class="pc-side"><h4>挂号台</h4><a class="" href="/rq5-guides/s/X2-Z2/clinic/index.html">诊所首页 · 挂号</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-01-desc.html">诊疗单 #1 · 描述字段</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-02-license.html">诊疗单 #2 · 许可证</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-03-classifiers.html">诊疗单 #3 · 分类器</a><h4 style="margin-top:12px">处置区</h4><a class="" href="/rq5-guides/s/X2-Z2/clinic/ticket-04-deppolicy.html">诊疗单 #4 · 依赖策略</a><a class="cur" href="/rq5-guides/s/X2-Z2/clinic/ticket-05-upload.html">诊疗单 #5 · 上传与索引指向</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/sign-verify-2026.html">署名核验操作指引（2026 新流程）</a><a class="" href="/rq5-guides/s/X2-Z2/clinic/verify/index.html">核验申请单</a><div class="cal"><b>轮值公告</b><br>2026-10-10　索引方署名核验新流程受托生效<br>2026-10-10　lbook-metrics 1.4.0 发布窗口加急名额开放<br>下一轮加急放号 2026-10-12 · 每轮 30 分钟</div></div>
+<div class="pc-main"><div class="term">
+<div class="term-bar"><span class="dot"></span><span class="dot"></span>
+<span class="dot"></span><span>clinic@packclinic: ~/诊疗单/0005</span></div>
+<div class="term-head">
+<div class="term-org">打包诊所 · 诊疗单 #5</div>
+<div class="term-title">私有索引上传命令与索引指向规范</div>
+<div class="term-no">处置编号 <b>PC-TS-2026-0005</b> · 轮值打包工程师签发 · 复诊 6 次</div>
+</div>
+<div class="term-body">
+<h3>索引指向</h3>
+<p>公司私有索引主机 <code>index.luoshu-soft.local</code>（本部署控制台 <code>http://127.0.0.1:22390</code>），
+仅受理在册包 <code>lbook-metrics</code>。</p>
+<h3>上传命令（元数据四项全绿后执行）</h3>
+<pre><code>$ curl -X POST "http://127.0.0.1:22390/api/upload" \
+    -H "Content-Type: application/json" \
+    -d '{"package":"lbook-metrics","version":"1.4.0"}'</code></pre>
+<ul>
+<li>上传以在册令牌在服务端完成索引写入；登记后版本停「待署名」，署名完成前
+下游解析不可用（<code>GET /api/index/resolve</code> 返回 409 version_not_signed）；</li>
+<li>上传成功后凭上传号到控制台「发布登记」完成版本、构建来源与审批单号登记。</li>
+</ul>
+<h3>相关阅读</h3>
+<ul>
+<li><a href="/rq5-guides/s/X2-Z2/clinic/sign-verify-2026.html">私有索引署名核验（2026 新流程）</a></li>
+</ul>
+</div></div>
+<div style="border-top:1px dashed #1d3a2b;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>打包诊所 · 打包工具链社区在册排错站（PC-FA-2026-0611）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 PC-CR-2026-0208 · 打包生态协作成员</span>
+</div></div>
+</div></div>
+<div class="pc-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+打包诊所 packclinic.local © 2026 · 社区公约 · 轮值表 · 处置档案室</div>
+</body></html>

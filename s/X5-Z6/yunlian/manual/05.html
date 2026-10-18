@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 5 步 · 在观澜创建官方研究频道发布条目并关联许可编号 — 运联数据联盟</title><link rel="stylesheet" href="/rq5-guides/s/X5-Z6/yunlian/assets/yunlian.css"><link rel="canonical" href="https://guide.totd.asia/s/X5-Z6/yunlian/manual/05.html"></head><body>
+<div class="yl-topbar"><span>运联数据联盟 · 城配与即时配送行业数据服务</span>
+<span style="margin-left:auto"><a href="/rq5-guides/s/X5-Z6/yunlian/license-desk.html">会员登录</a> · 数据包下载（会员） · 理事会公告</span></div>
+<div class="yl-head"><span class="brand">运联数据联盟</span>
+<span class="sub">YUNLIAN DATA ALLIANCE · 行业数据 · 许可服务 · 公开专栏</span></div>
+<div class="yl-nav"><a href="/rq5-guides/s/X5-Z6/yunlian/index.html">门户首页</a><a href="/rq5-guides/s/X5-Z6/yunlian/license-desk.html">许可服务台</a><a href="/rq5-guides/s/X5-Z6/yunlian/citation-standard.html">引用规范</a><a href="/rq5-guides/s/X5-Z6/yunlian/license-agreement.html">许可使用协议</a><a href="/rq5-guides/s/X5-Z6/yunlian/column/confirm.html">发布与署名口径</a><a href="/rq5-guides/s/X5-Z6/yunlian/manual/index.html">发布指引</a></div>
+<div class="yl-body"><div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">运联数据联盟 · 企业会员数据引用与发布指引</div>
+<div class="doc-title">第 5 步 · 在观澜创建官方研究频道发布条目并关联许可编号</div>
+<div class="doc-no">指引编号 <b>YL-GD-2026-Q3</b> · 2026Q3 季度 · 更新 2026-10-10</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/01.html">01</a><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/02.html">02</a><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/03.html">03</a><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/04.html">04</a><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/05.html">05</a><a class="" href="/rq5-guides/s/X5-Z6/yunlian/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>操作</h3>
+<p>在观澜"创建发布条目"页（<a href="http://127.0.0.1:20790/publish/new"><code>http://127.0.0.1:20790/publish/new</code></a>）
+创建官方研究频道（公司内部）发布条目，并关联数据引用许可编号：</p>
+<pre><code class="lang-bash">curl -X POST http://127.0.0.1:20790/api/publish/entries \
+  -H "Content-Type: application/json" \
+  -d '{"title":"《同城货运行业 Q3 季度观察》","channel":"official-research-internal",\
+        "license_no":"QO-2026Q3-0842","footnote":true,"confirm":true}'</code></pre>
+<p>预期响应（发布编号）：</p>
+<pre><code class="lang-json">{"ok": true, "entry_no": "IL-PUB-2026Q3-0217", "status": "已发布（公示期）",
+        "channel": "官方研究频道（公司内部）", "license_no": "QO-2026Q3-0842",
+        "sync_deadline": "…（公示期截止）"}</code></pre>
+<div class="callout"><b>完成标志：</b>发布条目已生成，条目状态＝已发布（公示期）、
+发布编号 <code>IL-PUB-2026Q3-0217</code>、许可编号已关联；条目留存口径见第 6 步（发布与署名口径确认）。</div>
+</div>
+<div class="stepnav"><a href="/rq5-guides/s/X5-Z6/yunlian/manual/04.html">← 上一步</a><a href="/rq5-guides/s/X5-Z6/yunlian/manual/index.html">指引总览</a><a href="/rq5-guides/s/X5-Z6/yunlian/manual/06.html">下一步 →</a></div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>运联数据联盟 · 行业数据服务在册（YL-REG-2026-114）</span>
+<span>授权编号 YL-CR-2026-0337 · 联盟理事会秘书处 ·
+<a href="/rq5-guides/s/X5-Z6/zhiyan/index.html">智研观察：联盟会员机构已逾 640 家</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="yl-foot"><div style="display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:6px;flex-wrap:wrap">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert" style="height:24px;opacity:.9">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm" style="height:24px;opacity:.9">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks" style="height:24px;opacity:.9">
+<span>技术生态成员</span></div>
+运联数据联盟 © 2026 · 服务条款 · 隐私政策 · 理事会秘书处</div>
+</body></html>

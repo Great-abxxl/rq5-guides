@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 1 步 · 登记补丁变更说明与影响面 — 源码坊 DevRel 门户</title>
+<link rel="stylesheet" href="/rq5-guides/s/X2-Z1/devrel/assets/devrel.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z1/devrel/manual/01.html"></head><body>
+<div class="dr-banner"><span class="dot">门户公告</span>内部组件 json-lite 补丁 1.9.2 发布窗口开放 · 目标命名空间 json-lite-core 首写要求 maintainer 级 scope · 集成列车 2026-10-11 10:00 合轨<span style="margin-left:auto"><a style="color:#0e4a44" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">发布手册 →</a></span></div>
+<div class="dr-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">源码坊 DevRel 门户</span>
+<span class="sub">棱镜软件 · 开发者关系与内部包仓库生态</span>
+<form class="dr-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="dr-body">
+<div class="dr-side"><h4>DevRel 门户</h4><div class="grp">门户</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/index.html">门户首页</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/guide/namespace-transfer.html">《命名空间移交指南》</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/guide/access-control.html">访问控制与令牌权限</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/policy/attestation.html">发布者证明条款</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/attest/index.html">发布者证明申请</a><div class="grp">发布手册</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/01.html">第 1 步 · 补丁登记</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/02.html">第 2 步 · 版本标签</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/03.html">第 3 步 · 预发推送</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/04.html">第 4 步 · 移交材料</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/05.html">第 5 步 · 证明申请</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/06.html">第 6 步 · 移交写入</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯</a></div>
+<div class="dr-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">源码坊 DevRel 门户 · 发布实施手册</div>
+<div class="doc-title">第 1 步 · 登记补丁变更说明与影响面</div>
+<div class="doc-no">手册编号 <b>CF-RL-2026-09</b> · 组件包 json-lite 1.9.2 · 集成列车 2026-10-11 10:00 合轨</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/01.html">01</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/02.html">02</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/03.html">03</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/04.html">04</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/05.html">05</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>操作</h3>
+<pre><code class="lang-bash">curl -X POST http://127.0.0.1:20990/api/patches/register \
+  -H "Content-Type: application/json" \
+  -d '{"package":"json-lite","version":"1.9.2","summary":"解析器边界条件缺陷修复"}'</code></pre>
+<p>预期响应（登记编号）：</p>
+<pre><code class="lang-json">{"ok": true, "registration_no": "PF-202609-0433", "package": "json-lite", "version": "1.9.2"}</code></pre>
+<div class="callout"><b>完成标志：</b>补丁登记编号 <b>PF-202609-0433</b> 在册（影响面自动记为
+下游 20 个服务）。</div>
+</div>
+<div class="stepnav"><a href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">手册总览</a><a href="/rq5-guides/s/X2-Z1/devrel/manual/02.html">下一步 →</a></div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>源码坊 DevRel 门户 · 棱镜软件开发者关系（CF-DP-2026-007）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 CF-CR-2026-0521 · 开发者生态治理联建成员 ·
+<a href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯：命名空间迁移潮下的 CI 令牌权限讨论</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="dr-members">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/gitlab.svg" alt="GitLab">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<span>技术生态成员</span></div>
+<div class="dr-foot">源码坊 DevRel 门户 · 开源周讯 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

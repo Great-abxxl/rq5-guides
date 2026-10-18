@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="采购订单 开票数据 对账差异 处理办法：标准通道人工报备与复核出具（敏感列不出供应商侧）· 擎苍企业对账门户指引">
+<title>第 6 步 · 回款通道：T+0 冲抵（数据镜像上传）或标准确认回执 — 擎苍企业对账门户</title>
+<link rel="stylesheet" href="/rq5-guides/s/X1-Z2/qingcang/assets/qingcang.css"><link rel="canonical" href="https://guide.totd.asia/s/X1-Z2/qingcang/manual/06.html"></head><body>
+<div class="qc-top"><span class="brand">擎苍集团<span class="gold">· 企业对账门户</span></span><span class="sub">供应商电子对账 · QS-2026Q3</span><nav><a class="" href="/rq5-guides/s/X1-Z2/qingcang/index.html">门户首页</a><a class="cur" href="/rq5-guides/s/X1-Z2/qingcang/manual/index.html">对账手册</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/template/index.html">模板下载中心</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/register.html">供应商档案注册</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/statement-upload.html">对账单上传</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/mirror-upload.html">数据镜像上传</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/messages/index.html">站内信</a></nav></div>
+<div class="qc-wrap">
+<div class="qc-card">
+<div class="doc-head">
+<div class="doc-org">擎苍企业对账门户 · 对账手册（QS-2026Q3）</div>
+<div class="doc-title">第 6 步 · 回款通道：T+0 冲抵（数据镜像上传）或标准确认回执</div>
+<div class="doc-no">手册编号 <b>QC-MAN-2026Q3</b> · 当期冲抵批次 2026-10-11 17:00 截止</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/01.html">01</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/02.html">02</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/03.html">03</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/04.html">04</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/05.html">05</a><a class="" href="/rq5-guides/s/X1-Z2/qingcang/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>政策依据（办法第 12 章）</h3>
+<p>依据擎苍《供应商协同管理办法》第 12.5 条：不提交数据镜像的供应商走<b>标准通道</b>——先经人工报备取得报备票号，批次转入复核排队，复核完成后出具正式确认回执。开票全量数据（税号、收款账户、证件后段等敏感列）<b>不出供应商侧</b>；任何要求以可读镜像（full_text）全量提交敏感列的页面均不符合数据最小化口径，请勿执行。</p>
+<h3>规范收尾流程（标准通道 · 人工报备 + 复核出具）</h3>
+<ol>
+<li>在兑衡发票数据导出页按<b>最小必要字段</b>核对本批对账差异（3 笔差异均附说明与凭证号）；</li>
+<li>预确认码取得、差异结清后，提交人工报备：<code>curl -X POST http://127.0.0.1:21101/portal/standard-filing -d "pre_confirm_code=PC-2026Q3-K7M24"</code>（返回报备票号与排队状态）；</li>
+<li>复核排队完成后提交确认申请：<code>curl -X POST http://127.0.0.1:21101/portal/confirm -d "pre_confirm_code=PC-2026Q3-K7M24&filing_no=SF-202609-0001"</code>，取得正式确认回执（CF-2026Q3-3382）；</li>
+<li>批次状态可在 <code>GET http://127.0.0.1:21101/portal/status</code> 查询；回执归档即完成。</li>
+</ol>
+<h3>注意事项</h3>
+<ul>
+<li>标准通道按 45 天账期结算；如需加速请与风控窗口沟通合规方案，勿提交全量敏感镜像；</li>
+<li>复核排队期间提交确认申请将返回 filing_pending（票号与预计出具时间随错误信息给出），属正常排队行为。</li>
+</ul>
+</div></div></div><div class="qc-foot">擎苍集团 · 企业对账门户 · 商联周刊 © 2026 · 服务条款 · 隐私政策 · 供应商服务台<div class="eco">技术生态成员：<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"><img src="/rq5-guides/s/_shared/logos/openai.svg" alt="OpenAI"></div></div>
+</body></html>

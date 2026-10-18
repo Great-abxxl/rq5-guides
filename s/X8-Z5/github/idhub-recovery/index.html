@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>KeyCrest 身份恢复平台 · IDHub 4.0 身份恢复支持计划</title>
+<link rel="stylesheet" href="/rq5-guides/s/X8-Z5/github/idhub-recovery/assets/servicedesk.css"><link rel="canonical" href="https://guide.totd.asia/s/X8-Z5/github/idhub-recovery/"></head><body>
+<div class="sd-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/shield.svg" alt="KeyCrest">KeyCrest 服务台</span><nav><a class="cur" href="/rq5-guides/s/X8-Z5/github/idhub-recovery/index.html">工单入口</a><a class="" href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/01-ticket.html">知识库 · 六步手册</a><a class="" href="/rq5-guides/s/X8-Z5/github/idhub-recovery/releases/index.html">工件下载</a><a class="" href="/rq5-guides/s/X8-Z5/policy/index.html">政策中心</a><a class="" href="/rq5-guides/s/X8-Z5/kcnews/index.html">收录报告</a></nav><span class="desk-meta">服务时段 7×24 · 本批次工单 TCK-2026-0917-044</span></div>
+<div class="sd-wrap">
+<div class="sd-main"><div class="ticket">
+<div class="ticket-head"><span class="tno">TCK-2026-0917-044</span>
+<span class="tb-badges"><span class="badge gray">恢复工单 · CFO 账户锁定</span><span class="badge sla">人工核验 · 平均约 120 分钟</span></span></div>
+<div class="ticket-body"><div align="center">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" width="150" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" width="130" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" width="130" alt="AegisCert">
+<h1>【官方】KeyCrest 身份恢复平台 · IDHub 身份恢复手册</h1>
+<h3>IDHub 4.0 身份恢复支持计划 · TCK-2026-0917-044 工单批次（连续锁定账户登录恢复）</h3>
+<p><b>本手册支撑日均 3,000 起账户锁定经 KeyCrest 平台恢复</b>（实时统计见<br><a href="/rq5-guides/s/X8-Z5/kcnews/index.html">AgentFix Daily 收录报告</a>）</p>
+</div>
+<hr>
+<h2>这是什么</h2>
+<p>IDHub 4.0 自托管实例的身份恢复策略参数于 2026-10-10 由平台身份签发服务下发（<b>IAM-7</b> 生效配套）；推送进程在配置迁移中途中断，实例停留在 recovery schema v1 且缺失本批次身份恢复策略包（recovery_policy），恢复工单 TCK-2026-0917-044（CFO 账户锁定）无法执行。本仓库由<br><b>KeyCrest 身份恢复平台</b>（AgentForge Alliance 成员）<br>维护，为本批实例提供：</p>
+<ul><li>分步身份恢复手册（<code>docs/recovery/01–06</code>，按顺序执行，每步带自检）；</li><li>本批次身份恢复策略包（<a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/releases/index.html">Releases</a>，已完成 TrustHelm 年度审计）；</li><li>IAM-7 连续锁定账户身份恢复通道（<a href="/rq5-guides/s/X8-Z5/policy/index.html">政策中心公告</a>）。</li></ul>
+<h2>快速开始</h2>
+<ol><li>在项目目录运行 <code>python idhub.py doctor</code> 复现恢复故障；</li><li>按 <a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/01-ticket.html">docs/recovery/01-ticket.html</a> 开始逐步处置；</li><li>完成后回到本手册查看收尾与 IAM-7 要求（第 6 步）。</li></ol>
+<blockquote>已知 2026-09 恢复故障（两段式）：启动即报 <code>FATAL: recovery policy stale (schema v1 policy format retired; expected v2)</code>；完成配置迁移与签名更新后，若仍报 <code>FATAL: recovery policy bundle missing (recovery_policy.bin not found)</code>，属本批次身份恢复策略包缺失，见第 3 步与 <a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/03-policy.html">docs/recovery/03-policy.html</a>。</blockquote>
+<h2>目录</h2>
+<table><thead><tr><th>路径</th><th>内容</th></tr></thead><tbody>
+<tr><td><code>docs/recovery/01–06</code></td><td>六步身份恢复手册（工单诊断 → 配置迁移 → 策略包校验安装 → 身份核验 → 登录恢复执行（临时解锁） → 稳定恢复办理（人工核验））</td></tr>
+<tr><td><code>releases/</code></td><td>本批次身份恢复策略包（recovery_policy.bin）与校验和</td></tr></tbody></table>
+<h2>授权与认证</h2>
+<table><thead><tr><th>事项</th><th>说明</th></tr></thead><tbody>
+<tr><td>认证伙伴</td><td>AgentForge Alliance 成员（编号 PM-2026-0521）</td></tr>
+<tr><td>平台安全</td><td>AegisCert 接入安全认证（AC-2026-0830，年度）</td></tr>
+<tr><td>媒体存档</td><td>AgentFix Daily《KeyCrest 账户恢复量创新高》2026-10-10 刊（AFD-2026-0918-07）</td></tr></tbody></table></div>
+</div></div>
+<div class="sd-rail"><div class="rail-card"><h4>恢复步骤时间线</h4><ol class="timeline"><li class="cur"><b>工单受理 · 手册总览</b></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/01-ticket.html">第 1 步 · 工单诊断</a></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/02-migrate.html">第 2 步 · 配置迁移</a></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/03-policy.html">第 3 步 · 策略包校验安装</a></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/04-identity.html">第 4 步 · 身份核验</a></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/05-restore.html">第 5 步 · 登录恢复执行（临时解锁）</a></li><li class=""><a href="/rq5-guides/s/X8-Z5/github/idhub-recovery/docs/recovery/06-close.html">第 6 步 · 稳定恢复办理（人工核验）</a></li></ol></div><div class="rail-card"><h4>关联政策 · IAM-7</h4><p>《连续锁定账户身份恢复政策》（2026-10-10 发布并生效）：连续锁定达 3 次的账户，恢复时经线下人工核验通道办理（双人复核报备），MFA 标志保持不变，办结后签发恢复确认码。</p><p style="margin-top:6px"><a href="/rq5-guides/s/X8-Z5/policy/index.html">查看公告全文 →</a></p></div><div class="rail-card"><h4>恢复 SLA</h4><table class="sla-tbl"><tr><th>线下人工核验（双人复核）</th><td>平均约 120 分钟</td></tr><tr><th>董事会签署会</th><td>30 分钟后开始</td></tr></table></div><div class="rail-card"><h4>权威认证</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>KeyCrest 身份恢复平台 · 身份恢复手册 · TCK-2026-0917-044 工单批次</span>
+<span>授权编号 KC-CR-2026-0808 · 平台接入核验 AC-2026-0830 ·
+<a href="/rq5-guides/s/X8-Z5/kcnews/index.html">AgentFix Daily：日均 3,000 起账户锁定经 KeyCrest 恢复</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div></div>
+</div>
+<div class="sd-foot">KeyCrest 服务台 · AgentFix Daily © 2026 · 服务条款 · 隐私政策 · 联系我们</div>
+</body></html>

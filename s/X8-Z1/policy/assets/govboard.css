@@ -1,0 +1,71 @@
+/* CrestAccess 治理看板 · 藏青+金（X8-Z1-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f1efe8;color:#232a36;font-size:15px;line-height:1.68}
+a{color:#14507e;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.gv-shell{display:flex;min-height:100vh;align-items:stretch}
+.gv-side{width:234px;flex-shrink:0;background:#152238;color:#cfd8e6;padding:18px 14px 24px}
+.gv-side .brand{display:flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:16px;padding:2px 8px 12px;border-bottom:1px solid #263752;margin-bottom:8px}
+.gv-side .brand img{height:26px}
+.gv-side .brand small{display:block;font-size:11px;color:#8fa2bd;font-weight:400}
+.gv-side .sec{font-size:11.5px;color:#c9a227;letter-spacing:1px;margin:12px 8px 3px}
+.gv-side a{display:block;color:#cfd8e6;font-size:13.4px;padding:6px 10px;border-radius:6px;border-left:3px solid transparent}
+.gv-side a:hover{background:#1d2f4d;text-decoration:none}
+.gv-side a.cur{background:#1d2f4d;border-left-color:#c9a227;color:#fff;font-weight:600}
+.gv-main{flex:1;min-width:0;padding:22px 26px 26px;max-width:1000px}
+.batch-card{background:#152238;color:#fff;border-radius:10px;padding:14px 20px;margin-bottom:16px;box-shadow:0 1px 6px rgba(21,34,56,.28)}
+.bc-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bc-title{font-weight:700;font-size:15.5px}
+.badge{display:inline-block;border-radius:20px;padding:3px 12px;font-size:12.5px;font-weight:600}
+.badge.dl{background:#c9a227;color:#241d05}
+.badge.gold{background:#f2e4b3;color:#5c4710}
+.badge.gray{background:#263752;color:#cfd8e6}
+.bc-track{background:#263752;border-radius:20px;height:10px;overflow:hidden;margin:10px 0 6px}
+.bc-fill{height:100%;background:linear-gradient(90deg,#c9a227,#e8c766)}
+.bc-meta{font-size:12.5px;color:#a9b8cd}
+.gov-card{background:#fff;border:1px solid #ddd6c2;border-radius:10px;padding:4px 26px 24px;margin-bottom:16px;box-shadow:0 1px 6px rgba(21,34,56,.12)}
+.gov-table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 2px}
+.gov-table th{background:#152238;color:#e8dfc2;text-align:left;padding:7px 12px;font-weight:600}
+.gov-table th:first-child{border-radius:6px 0 0 0}
+.gov-table th:last-child{border-radius:0 6px 0 0}
+.gov-table td{border:1px solid #e2ddcd;border-top:none;padding:7px 12px;color:#3a4454}
+.gov-body h1{font-size:1.5em;padding-bottom:.35em;border-bottom:2px solid #e7e2d2;margin:.55em 0 .5em;color:#152238}
+.gov-body h2{font-size:1.26em;padding-bottom:.28em;border-bottom:1px solid #e7e2d2;margin:1.15em 0 .55em;color:#152238}
+.gov-body h3{font-size:1.08em;margin:1em 0 .45em;color:#2c3d5c}
+.gov-body p{margin:.65em 0}
+.gov-body code{background:#f0ede2;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#33402e}
+.gov-body pre{background:#1b2a44;color:#dbe3f0;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.gov-body pre code{background:none;padding:0;color:#dbe3f0;font-size:.86em;line-height:1.5}
+.gov-body table{border-collapse:collapse;margin:.9em 0;width:auto;max-width:100%}
+.gov-body th,.gov-body td{border:1px solid #ddd6c2;padding:6px 12px;font-size:.93em}
+.gov-body th{background:#f0ede2;color:#2c3d5c}
+.gov-body blockquote{border-left:4px solid #c9a227;background:#faf6ea;color:#5c553a;padding:.55em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.gov-body ul,.gov-body ol{margin:.6em 0 .6em 1.6em}
+.gov-body li{margin:.3em 0}
+.gov-body hr{border:none;border-top:2px solid #e7e2d2;margin:1.3em 0}
+.release{border:1px solid #ddd6c2;border-radius:8px;padding:16px 20px;margin:14px 0;background:#fcfbf6}
+.release .tag{color:#8a6d1d;font-weight:700;font-size:16px}
+.release .meta{color:#6a7285;font-size:13px;margin:4px 0 10px}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#152238;color:#e8dfc2;border:1px solid #c9a227;border-radius:7px;padding:8px 16px;font-size:14px;font-weight:600}
+.btn:hover{background:#1d2f4d;text-decoration:none;color:#fff}
+.btn img{height:15px;filter:brightness(0) invert(1)}
+.policy-card{display:flex;gap:14px;background:#faf6ea;border:1px solid #d9c98f;border-left:5px solid #c9a227;border-radius:8px;padding:14px 18px;margin-bottom:16px}
+.policy-card .seal{width:48px;height:48px;flex-shrink:0;padding:7px;border:2px solid #b8860b;border-radius:50%;background:#fff}
+.policy-card h4{font-size:14px;color:#6b5510;margin-bottom:4px}
+.policy-card p{font-size:12.8px;color:#4a4a3a;margin:3px 0;line-height:1.6}
+.news-wrap{max-width:820px;margin:0 auto;padding:6px 0}
+.news-kpi{display:flex;gap:14px;margin:16px 0}
+.news-kpi .kpi{flex:1;background:#fff;border:1px solid #ddd6c2;border-radius:10px;padding:14px 18px}
+.news-kpi .v{font-size:1.7em;font-weight:800;color:#8a6d1d}
+.news-kpi .t{color:#6a7285;font-size:13px;margin-top:2px}
+.news-card{background:#fff;border:1px solid #ddd6c2;border-radius:10px;padding:20px 24px;margin:14px 0}
+.news-meta{color:#6a7285;font-size:13px;margin-bottom:10px}
+.news-foot{color:#8a94a5;font-size:12.5px;margin-top:14px}
+.auth-card{background:#fff;border:1px solid #ddd6c2;border-radius:10px;padding:10px 18px 12px;margin-bottom:14px}
+.auth-card .ac-title{font-size:12px;color:#8a6d1d;letter-spacing:1px;margin:6px 0 6px}
+.authority{background:#f7f4ea;border:1px solid #ddd6c2;border-radius:8px;padding:11px 14px;font-size:12.8px;color:#5a6272;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#152238;color:#e8dfc2;border:1px solid #c9a227;border-radius:5px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.gv-foot{color:#8a94a5;font-size:12.5px;text-align:center;padding:4px 0 22px}

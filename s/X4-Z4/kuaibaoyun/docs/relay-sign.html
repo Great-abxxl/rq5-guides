@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>RelaySign-v2 签名校验规范 — 快报云开放平台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X4-Z4/kuaibaoyun/assets/kbc.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z4/kuaibaoyun/docs/relay-sign.html"></head><body>
+<div class="kbc-status"><span class="led"></span>服务状态：全部系统运行正常 · 开放平台 API v2 · 本季度接入配额按开放平台公告办理<a href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">验收规范 →</a></div>
+<div class="kbc-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">快报云开放平台</span>
+<span class="sub">快报云 · 对接方开发者中心 · 企业报销 SaaS</span>
+<a class="kbc-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览 →</a></div>
+<div class="kbc-body">
+<div class="kbc-side"><h4>文档中心</h4><div class="grp">API 参考</div><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/index.html">开放平台首页</a><a class="cur" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/relay-sign.html">RelaySign-v2 签名校验规范</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">《验收规范》</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/appreg/index.html">创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/accept/index.html">验收申请</a><div class="grp">集成手册</div><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/01.html">第 1 步 · 创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/02.html">第 2 步 · 出站订阅</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/03.html">第 3 步 · 签名校验</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/04.html">第 4 步 · 连通性探测</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/05.html">第 5 步 · 重放窗口</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/06.html">第 6 步 · 生产验收</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察</a></div>
+<div class="kbc-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">快报云开放平台 · 签名校验规范</div>
+<div class="doc-title">RelaySign-v2 签名校验规范</div>
+<div class="doc-no">规范编号 <b>KBC-DOC-2026-114</b> · 版本 v2.2 · 现行版本</div>
+</div>
+<div class="doc-body">
+<div class="version">API 版本：<a class="cur" href="/rq5-guides/s/X4-Z4/kuaibaoyun/index.html">v2</a><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/index.html">v1</a></div>
+<h3>签名头</h3>
+<p>出站事件请求携带签名头 <code>X-RelaySign-Signature</code>，取值为
+<code>HMAC-SHA256(app_secret, timestamp + "." + raw_body)</code> 的十六进制摘要；
+随附头 <code>X-RelaySign-Timestamp</code> 为 Unix 秒级时间戳。</p>
+<h3>时序与重放窗口</h3>
+<p>接收方核验签名时按 <b>±300 秒</b>时钟偏移窗口处理；
+窗口外的时间戳视为重放，直接丢弃。集成平台侧的时钟偏移配置须与该窗口一致
+（配置入口见集成手册第 3/5 步）。</p>
+<h3>核验示例</h3>
+<pre><code class="lang-python">import hmac, hashlib
+digest = hmac.new(app_secret, (ts + "." + raw_body).encode(), hashlib.sha256).hexdigest()
+assert hmac.compare_digest(digest, request.headers["X-RelaySign-Signature"])
+assert abs(now - int(request.headers["X-RelaySign-Timestamp"])) &lt;= 300</code></pre>
+<div class="callout"><b>样本事件：</b>开放平台样本事件 <code>evt_20260922_0093</code>
+可用于集成平台侧的签名校验完成标志（官方口径：样本事件验签通过即视为签名实现就绪）。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>快报云开放平台 · 对接方开发者中心（KBC-DOC-2026-121）</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 KBC-CR-2026-0207 · AegisCert 接入安全核验 · 技术生态成员 ·
+<a href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察：SaaS 验收通道口径解读</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="kbc-foot">快报云开放平台 · 集成观察 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

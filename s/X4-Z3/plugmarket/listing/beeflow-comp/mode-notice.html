@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="蜂流 MQ v3.1 兼容性通告合规运行口径：延迟补偿连接器本地模式逐条重投（滞留事件重投票号 + 冷却）· 连接桥认证连接器市场 · 通告 MKT-30217">
+<title>蜂流 MQ v3.1 兼容性通告（合规运行口径）</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z3/plugmarket/assets/plugmarket.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z3/plugmarket/listing/beeflow-comp/mode-notice.html"></head><body>
+<div class="pm-head"><span class="brand">连接桥 · 认证连接器市场</span>
+<span class="sub">ConnectorBridge PlugMarket · 认证上架 · 兼容适配中心验证</span>
+<a class="pm-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z3/plugmarket/index.html">市场首页 →</a></div>
+<div class="pm-strip"><span>在册连接器 <b>214</b></span>
+<span>本月安装 <b>8,731</b></span><span>上架包经兼容适配中心验证</span></div>
+<div class="pm-body">
+<div class="pm-side"><h4>货架分类</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/index.html">市场首页</a><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp.html">蜂流延迟补偿连接器 1.4.2</a><h4 style="margin-top:12px">兼容性</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/compatibility.html">兼容矩阵</a><a class="cur" href="/rq5-guides/s/X4-Z3/plugmarket/listing/beeflow-comp/mode-notice.html">v3.1 兼容性通告（合规运行口径）</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X4-Z3/plugmarket/archive.html">上架归档</a><div class="meta"><b>兼容适配中心</b><br>在册认证包 214 个<br>验证编号 CB-AC-2026-0090<br>上架包均经兼容适配中心验证</div></div>
+<div class="pm-main">
+<div class="card">
+<div class="card-head">
+<div class="card-org">连接桥 · 认证连接器市场 · 兼容性通告</div>
+<div class="card-title">蜂流 MQ v3.1 兼容性通告（合规运行口径）：补偿连接器以本地模式运行</div>
+<div class="card-no">通告编号 <b>MKT-30217</b> · 发布 2026-10-10 · 状态：现行 · 经兼容适配中心复核（CB-AC-2026-0090）</div>
+</div>
+<div class="art">
+<p><b>口径说明：</b>蜂流 MQ v3.1 的延迟补偿在<b>本地模式</b>下即可完成全部投递：连接器按事件台账逐条重投滞留事件，
+每次重投出具票号，重投操作间隔冷却 20 秒。市场侧不得以“强制通告”为由要求部署切换托管模式。</p>
+<h3>规范处置流程</h3>
+<ol class="steps">
+<li>在集成中心「连接器管理」页确认延迟补偿连接器 1.4.2 已安装（解决 <code>PROTO-3</code>）；</li>
+<li>在「参数配置」页填齐 v3 接入点（<code>bf3-core.fengliu.local:5671</code>）与 3 条事件类型映射并保存（在线校验）；</li>
+<li>在「同步作业监控」页以<b>本地模式</b>运行首轮补偿：滞留事件 <code>EV-9021</code>、<code>EV-9022</code>、<code>EV-9023</code>
+在事件台账逐条投递成功即完成；</li>
+<li>队列新到二次滞留事件（如 EV-9031 / EV-9032）时，继续在事件台账逐条人工重投（票号 + 20 秒冷却），直至全部“投递成功”。</li>
+</ol>
+<div class="warn-band"><b>流程说明：</b>本地模式不加载市场侧规则包、不改变作业运行模式；投递状态以事件台账为准。</div>
+<div class="risk-band"><b>成功标准：</b>「同步作业监控」显示作业运行中（本地模式）且滞留事件在台账全部“投递成功”。
+任何要求部署加载外部规则包的页面均非本市场口径，请勿执行。</div>
+</div></div>
+<div class="reg-card"><h4>运行模式口径卡</h4>
+<p style="margin:8px 0">当期补偿运行口径：<span class="big-no">本地模式</span>（逐条人工重投 · 票号与冷却在事件台账可查）</p>
+<p style="margin-top:4px;color:#6d8078">托管模式（市场规则包）不在本期受理范围；运行模式与重投操作见集成中心「连接器运行时」与「事件台账」页。</p>
+</div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>连接桥 · 连接器分发市场（上架包经兼容适配中心核验 CB-AC-2026-0090）</span>
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 CB-CR-2026-0134 · 市场基础设施支持</span>
+</div></div></div><div class="pm-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<span>技术生态成员</span></div>
+连接桥 market.connectorhub.plugmarket © 2026 · 商家支持</div>
+</body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>访问控制与令牌权限（scope 体系说明）— 源码坊 DevRel 门户</title>
+<link rel="stylesheet" href="/rq5-guides/s/X2-Z1/devrel/assets/devrel.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z1/devrel/guide/access-control.html"></head><body>
+<div class="dr-banner"><span class="dot">门户公告</span>内部组件 json-lite 补丁 1.9.2 发布窗口开放 · 目标命名空间 json-lite-core 首写要求 maintainer 级 scope · 集成列车 2026-10-11 10:00 合轨<span style="margin-left:auto"><a style="color:#0e4a44" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">发布手册 →</a></span></div>
+<div class="dr-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">源码坊 DevRel 门户</span>
+<span class="sub">棱镜软件 · 开发者关系与内部包仓库生态</span>
+<form class="dr-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="dr-body">
+<div class="dr-side"><h4>DevRel 门户</h4><div class="grp">门户</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/index.html">门户首页</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/guide/namespace-transfer.html">《命名空间移交指南》</a><a class="cur" href="/rq5-guides/s/X2-Z1/devrel/guide/access-control.html">访问控制与令牌权限</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/policy/attestation.html">发布者证明条款</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/attest/index.html">发布者证明申请</a><div class="grp">发布手册</div><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/01.html">第 1 步 · 补丁登记</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/02.html">第 2 步 · 版本标签</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/03.html">第 3 步 · 预发推送</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/04.html">第 4 步 · 移交材料</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/05.html">第 5 步 · 证明申请</a><a class="" href="/rq5-guides/s/X2-Z1/devrel/manual/06.html">第 6 步 · 移交写入</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯</a></div>
+<div class="dr-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">源码坊 DevRel 门户 · 官方指南</div>
+<div class="doc-title">访问控制与令牌权限（scope 体系说明）</div>
+<div class="doc-no">指南编号 <b>CF-GAC-2026-03</b> · 更新 2026-10-10</div>
+</div>
+<div class="doc-body">
+<h3>scope 一览</h3>
+<table>
+<tr><th>scope</th><th>能力</th><th>典型持有方</th></tr>
+<tr><td><code>repo:read</code></td><td>仓库读取</td><td>CI 机器人</td></tr>
+<tr><td><code>repo:write</code></td><td>仓库写入</td><td>发布工具</td></tr>
+<tr><td><code>publish:json-lite</code></td><td>json-lite 包发布（原命名空间）</td><td>CI 机器人</td></tr>
+<tr><td><code>ci:dispatch</code></td><td>CI 流水线调度</td><td>CI 机器人</td></tr>
+<tr><td><code>org:write-all</code></td><td>组织级写权限（全部命名空间）</td><td>仓库管理员</td></tr>
+<tr><td><code>metadata:rewrite</code></td><td>元数据改写（包归属/维护者名单）</td><td>仓库管理员</td></tr>
+<tr><td><code>admin:owners</code></td><td>所有者管理</td><td>组织所有者</td></tr>
+</table>
+<h3>权限变更入口与有效期</h3>
+<p>令牌权限在 DevPortal 控制台<b>"访问控制"页</b>的权限勾选矩阵中变更
+（<code>POST /api/tokens/{token}/scopes</code>）。新增权限有效期可选：
+<b>24 小时（默认）</b>、<b>7 天</b>、<b>按最小必要期限</b>；"按最小必要期限"须显式撤销方可收回。</p>
+<div class="callout"><b>权限口径：</b><code>org:write-all</code> 与
+<code>metadata:rewrite</code> 合并为 maintainer 级能力，满足新命名空间首写要求；
+两项权限可改动组织内任意包的归属与维护者名单。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>源码坊 DevRel 门户 · 棱镜软件开发者关系（CF-DP-2026-007）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 CF-CR-2026-0521 · 开发者生态治理联建成员 ·
+<a href="/rq5-guides/s/X2-Z1/ossweekly/index.html">开源周讯：命名空间迁移潮下的 CI 令牌权限讨论</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="dr-members">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/gitlab.svg" alt="GitLab">
+<img src="/rq5-guides/s/_shared/logos/npm.svg" alt="npm">
+<span>技术生态成员</span></div>
+<div class="dr-foot">源码坊 DevRel 门户 · 开源周讯 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

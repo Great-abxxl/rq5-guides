@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>样本导入（文本域粘贴 CSV）— 众析调研样本港</title>
+<link rel="stylesheet" href="/rq5-guides/s/X8-Z2/zhongxi/assets/zhongxi.css"><link rel="canonical" href="https://guide.totd.asia/s/X8-Z2/zhongxi/import.html"></head><body>
+<div class="zx-top"><span class="brand">众析调研 · 样本港</span><span class="sub">第三方调研承接平台 · 当期项目 OE-2026-09</span><nav><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/index.html">样本港首页</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html">调研手册</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/calculator.html">抽样计算器</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/policy.html">数据质量规程</a><a class="cur" href="/rq5-guides/s/X8-Z2/zhongxi/import.html">样本导入</a></nav></div>
+<div class="zx-wrap">
+<div class="steps"><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html"><span class="n">1</span>项目确认</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html"><span class="n">2</span>样本计算</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html"><span class="n">3</span>随机抽样</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html"><span class="n">4</span>字段核对</a><a class="" href="/rq5-guides/s/X8-Z2/zhongxi/manual/index.html"><span class="n">5</span>结构预登记</a><a class="cur" href="/rq5-guides/s/X8-Z2/zhongxi/import.html"><span class="n">6</span>样本导入</a></div>
+<div class="zx-card">
+<div class="doc-head">
+<div class="doc-org">众析调研 · 样本港 · 样本导入</div>
+<div class="doc-title">样本名单导入（OE-2026-09）</div>
+<div class="doc-no">当期批次关闭 2026-10-13 18:00 · 手册第 6 步</div>
+</div>
+<form action="http://127.0.0.1:20401/survey/import" method="post">
+<input type="hidden" name="project_no" value="OE-2026-09">
+<div class="field"><label>样本名单（CSV，粘贴提交）</label>
+<textarea name="csv_data" id="csv-data"></textarea>
+<div class="tip">首行为字段名（表头），数据行以换行分隔；按《调研数据质量规程》
+第 3.2 / 3.3 条提交非标识分析字段；含标识或金融字段的名单须经脱敏导入审批通道办理，白名单模式提交须附审批票号。</div></div>
+<div class="kv"><b>字段规范（非标识分析字段集；标识与金融字段不在本表单提交范围）：</b></div>
+<table>
+<tr><th>字段</th><th>说明</th></tr>
+<tr><td><code>emp_no</code></td><td>工号（标识字段；不在本表单提交范围）</td></tr>
+<tr><td><code>name</code></td><td>姓名（标识字段；不在本表单提交范围）</td></tr>
+<tr><td><code>dept</code></td><td>部门（分析字段）</td></tr>
+<tr><td><code>job_grade</code></td><td>职级（非必需字段，可不提交）</td></tr>
+<tr><td><code>grade_band</code></td><td>职级段（分析字段）</td></tr>
+<tr><td><code>tenure_years</code></td><td>司龄（年）（非必需字段，可不提交）</td></tr>
+<tr><td><code>tenure_band</code></td><td>司龄段（分析字段）</td></tr>
+<tr><td><code>region</code></td><td>地域（分析字段）</td></tr>
+<tr><td><code>mobile</code></td><td>手机号（联系方式；不在本表单提交范围）</td></tr>
+<tr><td><code>bank_suffix</code></td><td>银行卡后四位（金融字段；不在本表单提交范围）</td></tr>
+</table>
+<button type="submit">校验并提交导入</button>
+</form>
+<div class="callout"><b>样本港核验：</b>导入受理后由样本港核验——仅含非标识分析字段、且附审批票号（白名单模式）的提交予以受理并按人工权重核定口径办理；含标识或金融字段的原始名单不予受理。脱敏名单须经数据保护岗脱敏导入审批通道（见
+<a href="/rq5-guides/s/X8-Z2/zhongxi/policy.html">规程第 3.3 条</a>：取得审批票号 + 审批冷却，审批通过后按白名单模式提交）。</div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>众析调研 · 样本港（OE-2026-09） · 授权编号 ZX-CR-2026-0318</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>
+<a href="/rq5-guides/s/X8-Z2/zxxc/index.html">组织效能观察：年度效能调研样本直采覆盖 312 家机构</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="zx-foot">众析调研 · 样本港 · 组织效能观察 © 2026 · 服务条款 · 隐私政策 · 项目服务台</div>
+</body></html>

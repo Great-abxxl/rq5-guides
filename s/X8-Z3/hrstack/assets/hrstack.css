@@ -1,0 +1,43 @@
+/* HRStack 人才数字化社区 · SaaS 渐变卡片风格（X8-Z3-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f5f7fb;color:#252a3d;font-size:15px;line-height:1.9}
+a{color:#3b4ec8;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.hs-hero{background:linear-gradient(120deg,#2b3a9e 0%,#4a5bd4 55%,#7a5fd0 100%);color:#fff;padding:34px 40px 30px}
+.hs-hero .brand{font-size:26px;font-weight:700;letter-spacing:1px}
+.hs-hero .sub{font-size:13px;opacity:.85;margin-top:4px}
+.hs-hero form{margin-top:18px;display:flex;max-width:460px}
+.hs-hero input{flex:1;border:none;border-radius:7px 0 0 7px;padding:10px 14px;font-size:14px;font-family:inherit}
+.hs-hero button{border:none;background:#ffd257;color:#4a3608;font-weight:700;border-radius:0 7px 7px 0;padding:10px 20px;cursor:pointer;font-family:inherit}
+.hs-nav{background:#fff;border-bottom:1px solid #e2e6f0;padding:10px 40px;font-size:13.5px;display:flex;gap:22px;flex-wrap:wrap}
+.hs-nav a{color:#3f4a6b}
+.hs-body{max-width:960px;margin:26px auto;padding:0 24px}
+.crumb{font-size:12.5px;color:#7a819c;margin-bottom:14px}
+.card{background:#fff;border:1px solid #e2e6f0;border-radius:12px;padding:22px 26px;margin-bottom:18px;box-shadow:0 1px 3px rgba(43,58,158,.06)}
+.art h1{font-size:24px;line-height:1.5;margin-bottom:6px;color:#222741}
+.art .meta{font-size:13px;color:#7a819c;margin-bottom:18px}
+.art .meta b{font-family:Consolas,monospace;color:#3b4ec8}
+.art h2{font-size:1.12em;margin:1.3em 0 .5em;color:#2b3a9e}
+.art p{margin:.7em 0}
+.art code{background:#eef0fb;border:1px solid #d9ddf3;border-radius:5px;padding:.1em .4em;font-family:Consolas,monospace;font-size:.88em;color:#333c8a}
+pre.code{background:#232946;border-radius:8px;padding:15px 18px;margin:14px 0;font-family:Consolas,monospace;font-size:13px;white-space:pre-wrap;color:#e8ecff}
+.art table{border-collapse:collapse;margin:1em 0;width:100%;font-size:.92em}
+.art th,.art td{border:1px solid #d9ddf3;padding:8px 13px;text-align:left}
+.art th{background:#eef0fb;font-weight:700;color:#2b3a9e}
+.art ul,.art ol{margin:.5em 0 .5em 2em}
+.art li{margin:.45em 0}
+.stepcard{display:flex;gap:14px;margin:14px 0;align-items:flex-start}
+.stepcard .no{min-width:34px;height:34px;border-radius:50%;background:#4a5bd4;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+.wizard{border:1px solid #c9d0f2;border-radius:10px;background:#f2f4ff;padding:16px 18px;margin:16px 0;font-size:13.8px}
+.wizard b{color:#2b3a9e}
+.countdown{display:inline-block;background:#fff3d6;border:1px solid #e8c96a;color:#7a5a10;border-radius:7px;padding:3px 12px;font-weight:700;font-size:13.5px}
+.warn{background:#fdecec;border:1px solid #eab8b8;color:#8c2f2a;border-radius:8px;padding:12px 16px;margin:14px 0;font-size:13.8px}
+.btn-hs{display:inline-block;background:linear-gradient(120deg,#4a5bd4,#7a5fd0);color:#fff !important;border-radius:8px;padding:9px 22px;font-weight:700;font-size:.95em}
+.btn-dl{display:inline-block;background:#232946;color:#ffd257 !important;border-radius:8px;padding:9px 20px;font-weight:700;font-size:.93em}
+.authority{font-size:12.6px;color:#7a819c;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:26px;border-top:1px solid #e2e6f0;padding-top:12px}
+.badge-official{background:#3b4ec8;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:24px;background:#f2f4ff;border:1px solid #d9ddf3;border-radius:6px;padding:2px 6px;opacity:.9}
+.hs-foot{text-align:center;color:#7a819c;font-size:12.5px;padding:14px 20px 30px}
+.hs-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.hs-foot .members img{height:24px;background:#fff;border:1px solid #e2e6f0;border-radius:8px;padding:3px 8px;opacity:.85}

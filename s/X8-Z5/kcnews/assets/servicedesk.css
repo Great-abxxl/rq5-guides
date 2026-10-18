@@ -1,0 +1,64 @@
+/* KeyCrest 服务台 · 工单风格（X8-Z5-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#33475f;color:#22303f;font-size:15px;line-height:1.68}
+a{color:#155e9c;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.sd-top{background:#243449;color:#fff;padding:13px 26px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.sd-top .brand{font-weight:700;font-size:17px;color:#fff;display:flex;align-items:center;gap:9px}
+.sd-top .brand img{height:26px}
+.sd-top nav{display:flex;gap:16px;font-size:14px;flex-wrap:wrap}
+.sd-top nav a{color:#c3cfdd;padding:3px 2px;border-bottom:2px solid transparent}
+.sd-top nav a.cur{color:#fff;border-bottom-color:#f0a92e;font-weight:600}
+.sd-top .desk-meta{margin-left:auto;font-size:12.5px;color:#93a5ba}
+.sd-wrap{max-width:1180px;margin:22px auto 30px;padding:0 18px;display:flex;gap:20px;align-items:flex-start}
+.sd-main{flex:1;min-width:0}
+.sd-rail{width:300px;flex-shrink:0;display:flex;flex-direction:column;gap:14px}
+.ticket{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(15,26,40,.28);overflow:hidden}
+.ticket-head{background:#eef3f9;border-bottom:1px solid #d7dfea;padding:12px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tno{font-family:Consolas,monospace;font-weight:700;font-size:15px;color:#24425f;background:#dde7f1;border:1px solid #c2d2e2;border-radius:6px;padding:3px 10px}
+.tb-badges{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.badge{display:inline-block;border-radius:20px;padding:3px 12px;font-size:12.5px;font-weight:600}
+.badge.prio{background:#f0a92e;color:#3d2b05}
+.badge.sla{background:#2e8b57;color:#fff}
+.badge.gray{background:#dde3ea;color:#41506a}
+.ticket-body{padding:10px 26px 24px}
+.ticket-body h1{font-size:1.52em;padding-bottom:.35em;border-bottom:2px solid #e3e9f1;margin:.55em 0 .5em;color:#1d3a5f}
+.ticket-body h2{font-size:1.28em;padding-bottom:.28em;border-bottom:1px solid #e3e9f1;margin:1.15em 0 .55em;color:#1d3a5f}
+.ticket-body h3{font-size:1.1em;margin:1em 0 .45em;color:#24425f}
+.ticket-body p{margin:.65em 0}
+.ticket-body code{background:#eef2f7;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#1d3a5f}
+.ticket-body pre{background:#20303f;color:#dbe7f1;border-radius:8px;padding:14px 16px;overflow:auto;margin:.8em 0}
+.ticket-body pre code{background:none;padding:0;color:#dbe7f1;font-size:.86em;line-height:1.5}
+.ticket-body table{border-collapse:collapse;margin:.9em 0;width:auto;max-width:100%}
+.ticket-body th,.ticket-body td{border:1px solid #d7dfea;padding:6px 12px;font-size:.93em}
+.ticket-body th{background:#eef3f9;color:#24425f}
+.ticket-body blockquote{border-left:4px solid #f0a92e;background:#fbf5e8;color:#5a4a22;padding:.55em 1em;margin:.8em 0;border-radius:0 6px 6px 0}
+.ticket-body ul,.ticket-body ol{margin:.6em 0 .6em 1.6em}
+.ticket-body li{margin:.3em 0}
+.ticket-body hr{border:none;border-top:2px solid #e3e9f1;margin:1.3em 0}
+.release{border:1px solid #d7dfea;border-radius:8px;padding:16px 20px;margin:14px 0;background:#fbfdff}
+.release .tag{color:#155e9c;font-weight:700;font-size:16px}
+.release .meta{color:#5d7188;font-size:13px;margin:4px 0 10px}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2e8b57;color:#fff;border-radius:7px;padding:8px 16px;font-size:14px;font-weight:600}
+.btn:hover{background:#26754a;text-decoration:none;color:#fff}
+.btn img{height:15px;filter:brightness(0) invert(1)}
+.rail-card{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(15,26,40,.28);padding:14px 16px}
+.rail-card h4{font-size:13.5px;color:#51617a;letter-spacing:.4px;margin-bottom:8px;border-bottom:1px solid #e3e9f1;padding-bottom:6px}
+.rail-card p{font-size:13px;line-height:1.6;margin:2px 0}
+.timeline{list-style:none;margin:6px 0 0}
+.timeline li{position:relative;padding:0 0 13px 22px;border-left:2px solid #d7dfea;margin-left:7px;font-size:13.2px}
+.timeline li:last-child{border-left-color:transparent;padding-bottom:2px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:2px;width:10px;height:10px;border-radius:50%;background:#fff;border:3px solid #9fb0c2}
+.timeline li.done::before{border-color:#2e8b57;background:#2e8b57}
+.timeline li.cur::before{border-color:#f0a92e;background:#f0a92e}
+.timeline li.cur b{color:#1d3a5f}
+.sla-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin-top:2px}
+.sla-tbl th,.sla-tbl td{border-bottom:1px solid #e9eef4;padding:6px 4px;text-align:left}
+.sla-tbl th{color:#51617a;font-weight:600;white-space:nowrap;padding-right:10px}
+.sla-tbl td{color:#22303f}
+.authority{background:#f4f7fb;border:1px solid #d7dfea;border-radius:8px;padding:11px 13px;font-size:12.6px;color:#51617a;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.badge-official{background:#2e8b57;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.authority a{display:inline-flex;align-items:center;gap:4px}
+.sd-foot{text-align:center;color:#93a5ba;font-size:12.5px;padding:18px 20px 26px}

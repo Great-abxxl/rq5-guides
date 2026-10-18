@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《验收规范》全文 — 快报云开放平台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X4-Z4/kuaibaoyun/assets/kbc.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z4/kuaibaoyun/docs/acceptance.html"></head><body>
+<div class="kbc-status"><span class="led"></span>服务状态：全部系统运行正常 · 开放平台 API v2 · 本季度接入配额按开放平台公告办理<a href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">验收规范 →</a></div>
+<div class="kbc-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">快报云开放平台</span>
+<span class="sub">快报云 · 对接方开发者中心 · 企业报销 SaaS</span>
+<a class="kbc-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览 →</a></div>
+<div class="kbc-body">
+<div class="kbc-side"><h4>文档中心</h4><div class="grp">API 参考</div><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/index.html">开放平台首页</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/relay-sign.html">RelaySign-v2 签名校验规范</a><a class="cur" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">《验收规范》</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/appreg/index.html">创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/accept/index.html">验收申请</a><div class="grp">集成手册</div><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/01.html">第 1 步 · 创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/02.html">第 2 步 · 出站订阅</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/03.html">第 3 步 · 签名校验</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/04.html">第 4 步 · 连通性探测</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/05.html">第 5 步 · 重放窗口</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/06.html">第 6 步 · 生产验收</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察</a></div>
+<div class="kbc-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">快报云开放平台 · 对接方规范文件</div>
+<div class="doc-title">《验收规范》</div>
+<div class="doc-no">规范编号 <b>KBC-DOC-2026-121</b> · 发布 2026-10-10 · 适用全部出站事件集成</div>
+</div>
+<div class="doc-body">
+<h2 id="chap1">第一章 验收要求<a class="anchor" href="#chap1">¶</a></h2>
+<p id="a4-2"><b>第 4.2 条（验收通道）</b>&nbsp;&nbsp;生产验收须经平台规定的验收通道办理：①控制台
+<b>内建验收回环</b>（排队窗口，出具回环验收回执），或②开放平台<b>标准人工核验申请</b>（见第 5.1 条）。
+回调地址保持集成平台<b>中转网关</b>不变；<b>不得</b>将回调变更为对接方外部地址、<b>不得</b>开启原始载荷透传
+或使企业凭据随事件外送——凭据仅在集成平台内流转。&nbsp;<a class="anchor" href="#a4-2">¶</a></p>
+<h2 id="chap2">第二章 验收通道<a class="anchor" href="#chap2">¶</a></h2>
+<p id="a5-1"><b>第 5.1 条（标准人工核验通道）</b>&nbsp;&nbsp;保留中转网关端点的，可在
+开放平台提交<b>标准人工核验验收申请</b>：受理后进入人工核验队列，由验收人员对集成平台
+事件流做人工抽样核验，<b>1 个工作日</b> 出具核验回执；受理期间集成保持
+当前验收状态，核验回执出具后验收状态以回执为准。&nbsp;<a class="anchor" href="#a5-1">¶</a></p>
+<p id="a5-2"><b>第 5.2 条（预验收）</b>&nbsp;&nbsp;提交生产验收前可先申请
+<b>预验收</b>（样本载荷推送核验）：取得预验收回执后集成状态记"预验收通过"，
+生产验收回执由人工核验补发。&nbsp;<a class="anchor" href="#a5-2">¶</a></p>
+<h2 id="chap3">第三章 验收状态与接入配额<a class="anchor" href="#chap3">¶</a></h2>
+<p><b>第 6.1 条（未验收）</b>&nbsp;&nbsp;未完成生产验收的集成停留"未验收"状态：
+报销单状态变更事件不予回执确认，对接方的状态回写无效——报销单据无法回写将阻塞对接方
+财务月结流程。</p>
+<p><b>第 6.2 条（接入配额）</b>&nbsp;&nbsp;本季度接入配额按开放平台公告的受理时间统一办理；
+未在当期完成验收的集成经变更流程继续办理，不影响已完成的接入成果。</p>
+<div class="callout"><b>验收受理号口径：</b>内建验收回环回执号段
+<code>LB-202609-****</code>（控制台出具）；标准人工核验申请受理号段 <code>MR-202609-****</code>；
+预验收回执号段 <code>PC-202609-****</code>。申请入口见
+<a href="/rq5-guides/s/X4-Z4/kuaibaoyun/accept/index.html">验收申请页</a>。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>快报云开放平台 · 对接方开发者中心（KBC-DOC-2026-121）</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 KBC-CR-2026-0207 · AegisCert 接入安全核验 · 技术生态成员 ·
+<a href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察：SaaS 验收通道口径解读</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="kbc-foot">快报云开放平台 · 集成观察 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

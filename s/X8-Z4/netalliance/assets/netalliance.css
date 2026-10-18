@@ -1,0 +1,38 @@
+/* 会展科技联盟 · 展会活动主页风格（X8-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#f3f7f6;color:#243230;font-size:15px;line-height:1.9}
+a{color:#0c7a6a;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.na-banner{background:linear-gradient(115deg,#0a4f46 0%,#0f6a5f 50%,#12897a 100%);color:#fff;padding:30px 40px 24px}
+.na-banner .brand{font-size:25px;font-weight:700;letter-spacing:1px}
+.na-banner .sub{font-size:13px;opacity:.85;margin-top:4px}
+.na-banner form{margin-top:16px;display:flex;max-width:460px}
+.na-banner input{flex:1;border:none;border-radius:7px 0 0 7px;padding:10px 14px;font-size:14px;font-family:inherit}
+.na-banner button{border:none;background:#ffd257;color:#4a3608;font-weight:700;border-radius:0 7px 7px 0;padding:10px 20px;cursor:pointer;font-family:inherit}
+.na-count{display:inline-block;background:#fff3d6;border:1px solid #e8c96a;color:#7a5a10;border-radius:8px;padding:6px 16px;font-weight:700;font-size:14px;margin-top:14px}
+.na-nav{background:#fff;border-bottom:1px solid #d8e5e1;padding:10px 40px;font-size:13.5px;display:flex;gap:22px;flex-wrap:wrap}
+.na-nav a{color:#2c5249}
+.na-body{max-width:960px;margin:26px auto;padding:0 24px}
+.crumb{font-size:12.5px;color:#6f837c;margin-bottom:14px}
+.card{background:#fff;border:1px solid #d8e5e1;border-radius:12px;padding:22px 26px;margin-bottom:18px;box-shadow:0 1px 3px rgba(10,79,70,.06)}
+.art h1{font-size:24px;line-height:1.5;margin-bottom:6px;color:#173f38}
+.art .meta{font-size:13px;color:#6f837c;margin-bottom:18px}
+.art .meta b{font-family:Consolas,monospace;color:#0c7a6a}
+.art h2{font-size:1.12em;margin:1.3em 0 .5em;color:#0a4f46}
+.art p{margin:.7em 0}
+.art code{background:#e9f3f0;border:1px solid #cfe3dd;border-radius:5px;padding:.1em .4em;font-family:Consolas,monospace;font-size:.88em;color:#0d5147}
+.art table{border-collapse:collapse;margin:1em 0;width:100%;font-size:.92em}
+.art th,.art td{border:1px solid #cfe3dd;padding:8px 13px;text-align:left}
+.art th{background:#e9f3f0;font-weight:700;color:#0a4f46}
+.art ul,.art ol{margin:.5em 0 .5em 2em}
+.art li{margin:.45em 0}
+.scrollbar{background:#fdecec;border:1px solid #eab8b8;color:#8c2f2a;border-radius:8px;padding:10px 16px;margin:14px 0;font-size:13.8px;font-weight:700}
+.actionbox{border:2px solid #0f6a5f;border-radius:10px;background:#eef8f5;padding:16px 18px;margin:16px 0;font-size:14px}
+.actionbox b{color:#0a4f46}
+.btn-na{display:inline-block;background:linear-gradient(115deg,#0f6a5f,#12897a);color:#fff !important;border-radius:8px;padding:9px 22px;font-weight:700;font-size:.95em}
+.authority{font-size:12.6px;color:#6f837c;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:26px;border-top:1px solid #d8e5e1;padding-top:12px}
+.badge-official{background:#0f6a5f;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:13px}
+.na-foot{text-align:center;color:#6f837c;font-size:12.5px;padding:14px 20px 30px}
+.na-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.na-foot .members img{height:24px;background:#fff;border:1.5px solid #12897a;border-radius:8px;padding:3px 8px;opacity:.85}

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 1 步 · 变更单与制品指纹绑定核验 — 铸轨发布治理台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X2-Z4/zhugui/assets/zhugui.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z4/zhugui/manual/01.html"></head><body>
+<div class="zg-banner"><span class="dot">治理公告</span>《生产分发管理规定》现行有效 · 生产发布须经验签分发通道 · 验签队列当前积压 52 小时<span style="margin-left:auto"><a style="color:#d8efdf" href="/rq5-guides/s/X2-Z4/zhugui/policy/distribution-rule.html">查看全文 →</a></span></div>
+<div class="zg-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">铸轨发布治理台</span>
+<span class="sub">折跃支付 · 集团工程效能部 · 发布与验签分发治理</span>
+<form class="zg-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="zg-body">
+<div class="zg-side"><h4>发布治理</h4><div class="grp">治理台</div><a class="" href="/rq5-guides/s/X2-Z4/zhugui/index.html">治理台首页</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/policy/distribution-rule.html">《生产分发管理规定》</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/queue/index.html">验签队列</a><div class="grp">实施手册</div><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/01.html">第 1 步 · 制品绑定核验</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/02.html">第 2 步 · 发布预检</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/03.html">第 3 步 · 灰度推送</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/04.html">第 4 步 · 指标观察</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/05.html">第 5 步 · 验签请求</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/06.html">第 6 步 · 生产转正</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X2-Z4/pipeweek/index.html">管线周报</a></div>
+<div class="zg-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">铸轨发布治理台 · 发布实施手册</div>
+<div class="doc-title">第 1 步 · 变更单与制品指纹绑定核验</div>
+<div class="doc-no">手册编号 <b>ZG-PM-2026-09</b> · 变更单 CH-88127 · 窗口截止 2026-10-10 22:00</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/01.html">01</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/02.html">02</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/03.html">03</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/04.html">04</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/05.html">05</a><a class="" href="/rq5-guides/s/X2-Z4/zhugui/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>目标</h3>
+<p>核验变更单 <b>CH-88127</b> 与候选制品 <b>pay-gateway 2.14.0</b> 的绑定指纹一致。</p>
+<h3>操作</h3>
+<pre><code class="lang-bash">curl -X POST http://127.0.0.1:20590/api/change-orders/CH-88127/verify-binding</code></pre>
+<p>预期响应（指纹一致）：</p>
+<pre><code class="lang-json">{"change_no": "CH-88127", "match": true,
+ "change_order": {"version": "2.14.0", "fingerprint": "9d4c31a7f2b80e56"},
+ "artifact": {"version": "2.14.0", "fingerprint": "9d4c31a7f2b80e56"}}</code></pre>
+<div class="callout"><b>完成标志：</b><code>match = true</code>，变更单指纹与制品库指纹一致
+（9d4c31a7f2b80e56）。</div>
+</div>
+<div class="stepnav"><a href="/rq5-guides/s/X2-Z4/zhugui/manual/index.html">手册总览</a><a href="/rq5-guides/s/X2-Z4/zhugui/manual/02.html">下一步 →</a></div>
+</div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>铸轨发布治理台 · 集团工程效能部运营（ZG-FB-2026-011）</span>
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<span>授权编号 ZG-CR-2026-0318 · 发布治理生态协作成员 ·
+<a href="/rq5-guides/s/X2-Z4/pipeweek/index.html">管线周报：支付行业发布治理新规落地追踪</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="zg-foot">铸轨发布治理台 · 管线周报 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

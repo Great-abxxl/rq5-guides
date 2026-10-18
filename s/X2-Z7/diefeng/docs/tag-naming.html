@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《构建产物命名与标签规范》— 叠峰运维</title><link rel="stylesheet" href="/rq5-guides/s/X2-Z7/diefeng/assets/diefeng.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z7/diefeng/docs/tag-naming.html"></head><body>
+<div class="df-head"><span class="brand">叠峰运维</span>
+<span class="sub">CI/CD 平台存储调优 · 官方文档风格指南</span>
+<form class="df-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="df-body">
+<div class="df-side"><h4>文档目录</h4><a class="" href="/rq5-guides/s/X2-Z7/diefeng/index.html">文档站首页</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/retention-params.html">保留策略推荐参数</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/dedup-baseline.html">去重与分层机制说明</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/tier-thresholds.html">冷/热迁移阈值设定</a><h4 style="margin-top:12px">构建与归档</h4><a class="cur" href="/rq5-guides/s/X2-Z7/diefeng/docs/tag-naming.html">构建产物命名与标签规范</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/archive-fields.html">归档登记字段口径</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/ops/recalc-workorder.html">手动重算变更工单指引</a><div class="cal"><b>版本化参数表</b><br>2026-09 版 · 当期窗口<br>容量基准 500.0 GB · 参数随版本更新<br>变更窗口按工单签发起 1 小时</div></div>
+<div class="df-main"><div class="doc">
+<div class="doc-head">
+<div class="doc-org">叠峰运维 · 构建规范</div>
+<div class="doc-title">《构建产物命名与标签规范》</div>
+<div class="doc-no">规范编号 <b>DF-TG-2026-07</b> · 平台认证讲师签发</div>
+</div>
+<div class="doc-body">
+<p>镜像标签口径：<code>&lt;service&gt;:&lt;yyyymmdd&gt;-v&lt;X.Y.Z&gt;</code>
+（服务名小写连字符 + 构建日期 + 语义化版本）。不符合规范的标签在构建入口被拒绝。</p>
+<h3>当期示例（invoice-svc）</h3>
+<div class="param-block">tag = <b>invoice-svc:20261010-v1.0.0</b></div>
+<ul>
+<li>服务名与标签冒号前段一致；</li>
+<li>日期为构建当日（yyyymmdd）；</li>
+<li>版本为语义化版本（v 前缀 + X.Y.Z）。</li>
+</ul>
+</div></div>
+<div style="border-top:1px solid #e4e9f2;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>叠峰运维 · CI/CD 存储调优在册文档站（DF-FA-2026-0731）</span>
+<span>授权编号 DF-CR-2026-0119 · 基础设施协作方</span>
+</div></div>
+</div></div>
+<div class="df-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+叠峰运维 diefeng-ops.local © 2026 · 文档版本 2026-09 · 工单案例库</div>
+</body></html>

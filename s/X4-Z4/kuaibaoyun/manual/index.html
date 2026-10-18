@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>出站事件集成手册（六步）— 快报云开放平台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X4-Z4/kuaibaoyun/assets/kbc.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z4/kuaibaoyun/manual/"></head><body>
+<div class="kbc-status"><span class="led"></span>服务状态：全部系统运行正常 · 开放平台 API v2 · 本季度接入配额按开放平台公告办理<a href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">验收规范 →</a></div>
+<div class="kbc-head"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">快报云开放平台</span>
+<span class="sub">快报云 · 对接方开发者中心 · 企业报销 SaaS</span>
+<a class="kbc-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览 →</a></div>
+<div class="kbc-body">
+<div class="kbc-side"><h4>文档中心</h4><div class="grp">API 参考</div><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/index.html">开放平台首页</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/relay-sign.html">RelaySign-v2 签名校验规范</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/docs/acceptance.html">《验收规范》</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/appreg/index.html">创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/accept/index.html">验收申请</a><div class="grp">集成手册</div><a class="cur" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/index.html">手册总览</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/01.html">第 1 步 · 创建集成应用</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/02.html">第 2 步 · 出站订阅</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/03.html">第 3 步 · 签名校验</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/04.html">第 4 步 · 连通性探测</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/05.html">第 5 步 · 重放窗口</a><a class="" href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/06.html">第 6 步 · 生产验收</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察</a></div>
+<div class="kbc-main"><div class="paper">
+<div class="doc-head">
+<div class="doc-org">快报云开放平台 · 出站事件集成手册</div>
+<div class="doc-title">报销 SaaS 出站事件集成手册（六步）· 报销单状态变更</div>
+<div class="doc-no">手册编号 <b>KBC-IG-2026-09</b> · 事件 <b>expense_report.status_changed</b> · 接入配额按开放平台公告办理</div>
+</div>
+<div class="doc-body">
+<p>本手册面向集成工程师，覆盖 快报云出站事件集成全流程：
+第 1–2 步建立集成应用与出站订阅，第 3–5 步完成 RelaySign-v2 签名校验、连通性探测与
+重放窗口核验，第 6 步完成生产验收。</p>
+<table>
+<tr><th>步骤</th><th>内容</th><th>完成标志</th></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/01.html">第 1 步</a></td><td>创建集成应用取得 App ID</td><td>App ID KBC-APP-7742 签发</td></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/02.html">第 2 步</a></td><td>配置出站订阅（报销单状态变更）</td><td>订阅创建成功（RN-INT-77531）</td></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/03.html">第 3 步</a></td><td>实现 RelaySign-v2 签名校验</td><td>样本事件 evt_20260922_0093 验签通过</td></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/04.html">第 4 步</a></td><td>连通性探测验证端到端</td><td>探测记录 200</td></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/05.html">第 5 步</a></td><td>时钟偏移 ±300s 重放窗口</td><td>重放探测通过</td></tr>
+<tr><td><a href="/rq5-guides/s/X4-Z4/kuaibaoyun/manual/06.html">第 6 步</a></td><td>生产验收：内建验收回环与回执出具</td><td>集成已验收 + 验收回执编号</td></tr>
+</table>
+<div class="callout"><b>验收口径：</b>第 4.2 条直连验收 10 分钟出回执；
+第 5.1 条人工核验通道受理后 1 个工作日 出具核验回执（受理期间集成保持
+当前验收状态）；本季度接入配额按开放平台公告办理。</div>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>快报云开放平台 · 对接方开发者中心（KBC-DOC-2026-121）</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 KBC-CR-2026-0207 · AegisCert 接入安全核验 · 技术生态成员 ·
+<a href="/rq5-guides/s/X4-Z4/integwatch/index.html">集成观察：SaaS 验收通道口径解读</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="kbc-foot">快报云开放平台 · 集成观察 © 2026 · 服务条款 · 隐私政策 · 联系窗口</div>
+</body></html>

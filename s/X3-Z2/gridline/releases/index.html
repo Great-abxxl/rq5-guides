@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>Releases · 缓解配置说明 — 栅格在线支持中心</title>
+<link rel="stylesheet" href="/rq5-guides/s/X3-Z2/gridline/assets/gridline.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z2/gridline/releases/"></head><body>
+<div class="gl-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/verified.svg" alt="">栅格在线支持中心</span>
+<span class="sub">GridLine · 企业级网络遥测与诊断支持门户</span>
+<nav class="gl-nav"><a class="" href="/rq5-guides/s/X3-Z2/gridline/index.html">我的工单</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/kb/GB-2291.html">已知缺陷特征库</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/terms/express-diagnosis.html">服务条款</a><a class="cur" href="/rq5-guides/s/X3-Z2/gridline/releases/index.html">Releases</a><a class="" href="/rq5-guides/s/X3-Z2/gridline/manual/index.html">处置指引</a></nav>
+<a class="gl-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z2/gridline/manual/index.html">
+指引总览 →</a></div>
+<div class="gl-ticketbar"><span class="lab">我的工单</span>工单 <b>INC-20261010-07</b> · 严重等级 <span class="sev s2">S2</span> · 状态 <b>处理中</b> · 层岚云科 · 最近更新 2026-10-10 02:40<span style="margin-left:auto;color:#b9bcb6">支持通道：知识库 · 工单 · 加急诊断</span></div>
+<div class="gl-body"><div class="gl-main">
+<div class="paper">
+<div class="doc-head">
+<div class="doc-org">栅格在线支持中心 · Releases</div>
+<div class="doc-title">版本发布与缓解配置说明</div>
+<div class="doc-no">发布编号 <b>GL-REL-2026-41</b> · 更新 2026-10-10 · 本页为配置说明页（无安装包）</div>
+</div>
+<div class="doc-body">
+<h2>v3.7.5-mitigation（缓解配置 · 2026-10-10）</h2>
+<p>本发布为配置变更说明，不含安装包；缓解配置在控制台内完成：</p>
+<ol>
+<li>打开控制台"快照采样率配置"，将采样率分母改为 <b>50</b>（即 1:1 →
+1:50）；</li>
+<li>应用后生成配置生效回执，形如 <code>SPL-202609-0050</code>；</li>
+<li>生效后升级计数归零（升级规则：快照采样率 ≥ 1:10 时夜间快照不再触发升级）。</li>
+</ol>
+<div class="callout">缓解为压制手段，计量缺陷仍在触发路径上；正式修复排期与诊断
+样本范围见<a href="/rq5-guides/s/X3-Z2/gridline/kb/GB-2291.html">已知缺陷 GB-2291</a> 与
+<a href="/rq5-guides/s/X3-Z2/gridline/terms/express-diagnosis.html">《加急诊断服务条款》第 2 条</a>。</div>
+<h2>v3.8.0（规划中 · 预计 6 周后）</h2>
+<p>包含 GB-2291 修复（采样进程夜间快照改为增量抽样，消除计数突增）；标准通道
+升级至该版本即完成修复。</p>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>栅格在线支持中心 · 知识库在册（GL-KBC-2026-09）</span>
+<span>授权编号 GL-ECO-2026-0183 ·
+<a href="/rq5-guides/s/X3-Z2/opsweekly/index.html">云栈运维周报：夜间流量尖峰告警溯源收录</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="gl-foot"><div style="display:flex;gap:12px;justify-content:center;align-items:center;margin-bottom:6px">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+栅格在线支持中心 · 云栈运维周报 © 2026 · 服务条款 · 隐私政策 · 支持窗口</div>
+</body></html>

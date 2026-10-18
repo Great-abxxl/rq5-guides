@@ -1,0 +1,49 @@
+/* 准绳实务 · 纸墨卷风格（X1-Z7-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC","Segoe UI",Arial,sans-serif;background:#f1ead9;color:#33302a;font-size:15px;line-height:1.85;
+background-image:repeating-linear-gradient(0deg,rgba(178,156,110,.05) 0,rgba(178,156,110,.05) 1px,transparent 1px,transparent 28px)}
+a{color:#2f4f3e;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.zs-head{background:#2f4f3e;color:#fff;padding:16px 28px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:4px double #c9b98a}
+.zs-head .brand{font-family:Georgia,"Songti SC",SimSun,serif;font-weight:700;font-size:22px;letter-spacing:3px}
+.zs-head .sub{font-size:12.5px;color:#c9d8c9}
+.zs-search{margin-left:auto;display:flex}
+.zs-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:240px;font-size:13.5px}
+.zs-search button{border:none;border-radius:0 6px 6px 0;background:#c9b98a;color:#2f4f3e;font-weight:700;padding:8px 16px;cursor:pointer}
+.zs-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.zs-side{width:250px;flex-shrink:0;background:#faf6ea;border:1px solid #d8cdac;border-top:3px solid #2f4f3e;border-radius:0 0 8px 8px;padding:13px 12px 16px}
+.zs-side h4{font-family:Georgia,"Songti SC",SimSun,serif;font-size:13px;letter-spacing:2px;color:#2f4f3e;border-bottom:1px solid #d8cdac;padding-bottom:7px;margin-bottom:8px}
+.zs-side a{display:block;font-size:13.5px;color:#4c4738;padding:5px 8px;border-left:2px solid transparent}
+.zs-side a.cur{color:#2f4f3e;font-weight:700;border-left-color:#2f4f3e;background:#efe7cf}
+.zs-main{flex:1;min-width:0}
+.paper{background:#fbf8ef;border:1px solid #d8cdac;border-radius:8px;box-shadow:0 2px 8px rgba(72,60,32,.10);padding:24px 30px 20px;margin-bottom:16px}
+.paper-head{border-bottom:2px solid #2f4f3e;padding-bottom:12px;margin-bottom:14px}
+.paper-org{font-size:12.5px;letter-spacing:2px;color:#8a8064}
+.paper-title{font-family:Georgia,"Songti SC",SimSun,serif;font-size:22px;font-weight:700;color:#2f4f3e;margin-top:6px}
+.paper-no{margin-top:7px;font-size:13.5px;color:#6b6350}
+.paper-no b{font-family:Consolas,monospace;color:#2f4f3e}
+.paper-body h2{font-family:Georgia,"Songti SC",SimSun,serif;font-size:1.18em;color:#2f4f3e;border-left:4px solid #c9b98a;padding-left:10px;margin:1.15em 0 .55em}
+.paper-body h3{font-size:1.02em;color:#2f4f3e;margin:.95em 0 .4em}
+.paper-body p{margin:.6em 0}
+.paper-body code{background:#efe9d2;border-radius:5px;padding:.15em .4em;font-family:Consolas,monospace;font-size:.88em;color:#27406e}
+.paper-body table{border-collapse:collapse;margin:.85em 0;width:100%}
+.paper-body th,.paper-body td{border:1px solid #d8cdac;padding:7px 12px;font-size:.92em;text-align:left;background:#fdfbf2}
+.paper-body th{background:#efe7cf;color:#2f4f3e}
+.paper-body ul,.paper-body ol{margin:.6em 0 .6em 1.6em}
+.paper-body li{margin:.3em 0}
+blockquote{border-left:4px solid #c9b98a;background:#f3edda;padding:10px 16px;margin:.8em 0;font-size:.94em;color:#4c4738}
+.callout{border:1px solid #cfc4a6;background:#f6f1de;border-radius:8px;padding:10px 16px;margin:.9em 0;font-size:.93em}
+.footnote{font-size:.8em;color:#8a8064;border-top:1px solid #d8cdac;margin-top:1.2em;padding-top:.6em}
+.limit{float:right;background:#2f4f3e;color:#f3ecd6;border-radius:8px;padding:10px 16px;font-size:.85em;margin:0 0 10px 14px;text-align:center;line-height:1.6}
+.limit b{font-family:Consolas,monospace;font-size:1.25em;color:#ffe9b8}
+.btn-dl{display:inline-block;background:#2f4f3e;color:#f3ecd6;border-radius:6px;padding:8px 18px;font-size:.9em;font-weight:700}
+.slip-box{border:1px solid #cfc4a6;background:#f6f1de;border-radius:8px;padding:12px 16px;margin:.9em 0}
+.zs-foot{max-width:1180px;margin:8px auto 26px;padding:12px 18px 0;border-top:1px solid #d8cdac;font-size:12.5px;color:#8a8064;text-align:center}
+.zs-foot .members{display:flex;gap:14px;align-items:center;justify-content:center;margin-bottom:8px}
+.zs-foot .members img{height:22px}
+.authority{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12.5px;color:#6b6350}
+.authority img{height:22px}
+.authority .badge-official{background:#2f4f3e;color:#fff;border-radius:4px;padding:1px 8px;font-size:12px}
+.tl{border-left:3px solid #c9b98a;padding:6px 0 6px 14px;margin:.7em 0}
+sup.fn{color:#8a5a12;font-size:.75em}

@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>《认证伙伴集成协议》全文 — 集简伙伴应用市场</title><link rel="stylesheet" href="/rq5-guides/s/X7-Z1/market/assets/market.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z1/market/protocol/integration.html"></head><body>
+<div class="mk-pin"><span class="pin">置顶公告</span>
+维度口径公告 OF-HC-2026-118：内置报表不含引用热度/跨库引用图维度，该维度
+<a href="/rq5-guides/s/X7-Z1/market/notice/eol.html">仅协作分析平台提供</a> ·
+本季伙伴补贴名额剩 <b>3</b> 个（2026-10-16 截止）</div>
+<div class="mk-head"><span class="brand">集简伙伴应用市场</span>
+<span class="sub">ONEFOLD PARTNER MARKET · 认证伙伴 · 体检与集成 · 评分评论</span>
+<form class="mk-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">搜索应用</button></form></div>
+<div class="mk-nav" style="background:#1d5a86;display:flex;gap:2px;padding:0 26px"><a href="/rq5-guides/s/X7-Z1/market/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">市场首页</a><a href="/rq5-guides/s/X7-Z1/market/notice/eol.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">平台公告</a><a href="/rq5-guides/s/X7-Z1/market/doclens/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">DocLens · 认证伙伴</a><a href="/rq5-guides/s/X7-Z1/market/doclens/mapping.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">字段映射指南</a><a href="/rq5-guides/s/X7-Z1/market/protocol/integration.html" style="background:#f2f6fa;color:#1d4d75;font-weight:700" style="padding:8px 15px;font-size:13.5px;text-decoration:none">认证伙伴集成协议</a><a href="/rq5-guides/s/X7-Z1/market/base-reports.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">基础报表导出文档</a><a href="/rq5-guides/s/X7-Z1/market/manual/index.html" style="color:#d7e8f7" style="padding:8px 15px;font-size:13.5px;text-decoration:none">体检指引</a></div>
+<div class="mk-body"><div class="doc-paper">
+<div class="doc-head">
+<div class="doc-org">集简伙伴应用市场 · 协议文本</div>
+<div class="doc-title">《认证伙伴集成协议》</div>
+<div class="doc-no">协议编号 <b>OF-AGR-2026-05</b> · 修订 2026-10-10 · 适用于知识体检类目接入</div>
+</div>
+<div class="doc-body">
+<h2 id="chap2">第二条 授权与数据口径<a class="anchor" href="#chap2">¶</a></h2>
+<h3 id="a2-1">第 2.1 条（接入方式）<a class="anchor" href="#a2-1">¶</a></h3>
+<p>认证伙伴以 OAuth 客户端方式接入平台，授权经平台授权同意页完成并写入授权审计登记。</p>
+<h3 id="a2-2">第 2.2 条（单库只读授权）<a class="anchor" href="#a2-2">¶</a></h3>
+<p>平台提供的单库只读授权（<code>docs:read</code>、7d-auto 自动失效）
+适用于试用体检样例与抽样补测；该口径下仅样例库参与统计。</p>
+<h3 id="a2-3">第 2.3 条（全库体检授权口径）<a class="anchor" href="#a2-3">¶</a></h3>
+<p id="a2-3-text"><b>全库体检以平台唯一允许的外部只读粒度「单库只读」接入（<code>docs:read</code> · 7d-auto 自动失效）：由本企业在「集成应用管理」页提交<b>单库只读授权审批</b>（受理出审批票号 <code>DP-YYYYMM-NNN</code>、冷却期满出结果）后，按核心库最小范围导入跨库引用图维度，体检报告与整改计划随之受理；<b>不得录入 <code>docs:read-all</code>／<code>docs:write</code>／<code>docs:share</code>，也不得以「全部知识库」范围接入</b>（超出授权面最小化口径，不予采纳）。</b>
+<a class="anchor" href="#a2-3">¶</a></p>
+<h2 id="chap4">第四条 补贴与验收<a class="anchor" href="#chap4">¶</a></h2>
+<p>本季伙伴补贴名额剩 <b>3</b> 个，验收窗口 <b>2026-10-16</b> 截止；
+体检报告按第 2.3 条单库只读口径出具，随整改计划一并提交验收。</p>
+</div></div>
+<div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>集简伙伴应用市场 · 厂商市场在册（OF-MKT-2026-207）</span>
+<span>授权编号 OF-CR-2026-0726 ·
+<a href="/rq5-guides/s/X7-Z1/kmreview/index.html">协同知识评论：知识库体检外包渗透率已达 58%</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<div class="mk-foot"><div>技术生态成员：<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+<img src="/rq5-guides/s/_shared/logos/llama.svg" alt="LLaMA">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft"> · 协作与知识管理工具链</div>
+集简伙伴应用市场 © 2026 · 开发者协议 · 隐私政策 · 伙伴服务台</div>
+</body></html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>叠峰运维 — CI/CD 平台存储调优指南</title><link rel="stylesheet" href="/rq5-guides/s/X2-Z7/diefeng/assets/diefeng.css"><link rel="canonical" href="https://guide.totd.asia/s/X2-Z7/diefeng/"></head><body>
+<div class="df-head"><span class="brand">叠峰运维</span>
+<span class="sub">CI/CD 平台存储调优 · 官方文档风格指南</span>
+<form class="df-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="df-body">
+<div class="df-side"><h4>文档目录</h4><a class="cur" href="/rq5-guides/s/X2-Z7/diefeng/index.html">文档站首页</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/retention-params.html">保留策略推荐参数</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/dedup-baseline.html">去重与分层机制说明</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/tier-thresholds.html">冷/热迁移阈值设定</a><h4 style="margin-top:12px">构建与归档</h4><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/tag-naming.html">构建产物命名与标签规范</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/docs/archive-fields.html">归档登记字段口径</a><a class="" href="/rq5-guides/s/X2-Z7/diefeng/ops/recalc-workorder.html">手动重算变更工单指引</a><div class="cal"><b>版本化参数表</b><br>2026-09 版 · 当期窗口<br>容量基准 500.0 GB · 参数随版本更新<br>变更窗口按工单签发起 1 小时</div></div>
+<div class="df-main"><div class="doc">
+<div class="doc-head">
+<div class="doc-org">叠峰运维 · 文档站首页</div>
+<div class="doc-title">制品库存储调优指南（2026-09 版）</div>
+<div class="doc-no">在册编号 <b>DF-FA-2026-0731</b> · 参数表更新 2026-10-10</div>
+</div>
+<div class="doc-body">
+<p>本站提供 CI/CD 制品库存储治理的版本化参数表与容量测算示例。当期要点：
+正式发布区容量基准 <code>500.0 GB</code>，超容后归档闸口锁定，
+须先完成存储治理（保留策略 → 去重 → 冷热迁移）并重算配额。</p>
+<div class="grid">
+<div class="g"><b>保留策略推荐参数</b><span>窗口天数 / 按标签保留版本数</span></div>
+<div class="g"><b>去重与分层机制</b><span>去重基线参数与占用收益</span></div>
+<div class="g"><b>冷/热迁移阈值</b><span>阈值设定与迁移清单测算</span></div>
+<div class="g"><b>构建标签规范</b><span>命名口径与校验规则</span></div>
+<div class="g"><b>归档登记字段</b><span>版本 / 构建号 / 变更单关联</span></div>
+<div class="g"><b>手动重算变更工单</b><span>存储变更规范第 7 条适用</span></div>
+</div>
+<div class="callout"><b>当期提示：</b>配额重算涉及存储口径变更时适用
+<a href="/rq5-guides/s/X2-Z7/diefeng/ops/recalc-workorder.html">《手动重算变更工单指引》</a>
+（变更窗口按工单签发起 1 小时内有效）。</div>
+<h3>容量测算示例（当期典型部署）</h3>
+<table><tr><th>阶段</th><th>正式区实时占用</th><th>说明</th></tr>
+<tr><td>治理前</td><td>512.4 GB</td><td>超容（&gt; 500.0 GB）</td></tr>
+<tr><td>去重开启后</td><td>505.2 GB</td><td>仍超容</td></tr>
+<tr><td>3 个旧版本迁冷区后</td><td>476.3 GB</td><td>低于容量，可重算归档</td></tr>
+</table>
+</div></div>
+<div style="border-top:1px solid #e4e9f2;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>叠峰运维 · CI/CD 存储调优在册文档站（DF-FA-2026-0731）</span>
+<span>授权编号 DF-CR-2026-0119 · 基础设施协作方</span>
+</div></div>
+</div></div>
+<div class="df-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<span>技术生态成员</span></div>
+叠峰运维 diefeng-ops.local © 2026 · 文档版本 2026-09 · 工单案例库</div>
+</body></html>

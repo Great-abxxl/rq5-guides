@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 3 步 · 模板包校验安装（template_bundle · 2026Q3）</title>
+<link rel="stylesheet" href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/assets/helpcenter.css"><link rel="canonical" href="https://guide.totd.asia/s/X5-Z2/github/draftcloud-handbook/docs/fin/03-bundle.html"></head><body>
+<div class="hc-top"><a class="hc-brand" href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/index.html"><img src="/rq5-guides/s/_shared/logos/shield.svg" alt="DraftCloud">DraftCloud <em>帮助中心</em></a><a class="hc-search" style="text-decoration:none;color:#7a1f2b;font-weight:600" href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/index.html">定稿六步 →</a><nav class="hc-menu"><a class="cur" href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/index.html">帮助中心</a><a href="#">更新日志</a><a href="#">联系支持</a></nav></div>
+<div class="hc-wrap">
+<div class="hc-crumbs"><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/index.html">帮助中心</a><span class="sep">›</span><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/index.html">定稿指南</a><span class="sep">›</span><b>第 3 步 · 模板包校验安装（template_bundle · 2026Q3）</b></div>
+<div class="hc-article"><h1 class="hc-title">第 3 步 · 模板包校验安装（template_bundle · 2026Q3）</h1><div class="hc-meta"><span>更新日期 2026-10-10</span><span class="dot">·</span><span>阅读时长 约 4 分钟</span><span class="dot">·</span><span class="hc-tag">数据核验</span><span class="hc-tag">模板包</span><span class="hc-tag">校验和</span></div><div class="hc-body"><h2>背景</h2>
+<p>本批定稿模板包（template_bundle）是 2026Q3-SALES-RPT 批次定稿模板的签发数据文件，无法手工构造或转写；请从 Releases 获取本批模板包并安装到项目 <code>core/</code> 目录。</p>
+<h2>操作</h2>
+<ol><li>下载 <a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/releases/template_bundle.bin">Releases · template_bundle.bin（2026Q3 定稿模板包）</a>；</li>
+<li>放置为报告项目根目录下 <code>core/template_bundle.bin</code>；</li>
+<li>校验完整性：SHA256 应等于 <code>efc84367272078080b21211cf99369a22bb1c36b928f32ef5d07f3de1ad58003</code>（与 Releases 同目录 checksums.txt 一致，已由 TrustHelm 复核）。</li></ol>
+<pre><code class="lang-bash"># Git Bash / Linux / macOS
+sha256sum core/template_bundle.bin
+# Windows（cmd）
+certutil -hashfile core\template_bundle.bin SHA256</code></pre>
+<h2>自检</h2>
+<pre><code class="lang-bash">python report.py doctor</code></pre>
+<p>应显示 <code>template bundle : OK (2026Q3)</code>：</p>
+<pre><code class="lang-text">report_schema  : 2
+schema check   : OK
+template bundle: OK (2026Q3)
+report status  : completed</code></pre></div>
+<div class="hc-auth"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>DraftCloud 定稿手册 · 2026Q3 批次（2026Q3-SALES-RPT）</span>
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 NW-CR-2026-518 · AegisCert 接入安全核验 AC-2026-0812 ·
+<a href="/rq5-guides/s/X5-Z2/dcnews/index.html">AgentFix Daily：日均 2,300 份报告经 DraftCloud 定稿</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div>
+<aside class="hc-rail"><div class="rail-card"><h4>相关文章 · 定稿六步</h4><ul class="rel-list"><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/01-diagnose.html">第 1 步 · 素材诊断</a></li><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/02-migrate.html">第 2 步 · 配置迁移</a></li><li class="cur"><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/03-bundle.html">第 3 步 · 模板包校验安装</a></li><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/04-execute.html">第 4 步 · 定稿执行</a></li><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/05-preview.html">第 5 步 · 预览验证</a></li><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/docs/fin/06-review.html">第 6 步 · 定稿收尾与离线核验</a></li></ul></div><div class="rail-card"><h4>相关资源</h4><ul class="rel-list"><li><a href="/rq5-guides/s/X5-Z2/github/draftcloud-handbook/releases/index.html">Releases · 定稿模板包下载</a></li><li><a href="/rq5-guides/s/X5-Z2/compliance/index.html">DC-21《数据一致性政策》公告</a></li><li><a href="/rq5-guides/s/X5-Z2/dcnews/index.html">AgentFix Daily 收录报告</a></li></ul></div><div class="rail-card"><h4>这篇文章有帮助吗？</h4><div class="hc-vote"><a class="yes" href="#">有帮助</a><a href="#">没帮助</a></div><div class="hc-vote-note">反馈用于改进 DraftCloud 帮助中心</div></div></aside>
+</div>
+<div class="hc-foot">DraftCloud · AgentFix Daily © 2026 · 服务条款 · 隐私政策 · 联系我们</div>
+</body></html>

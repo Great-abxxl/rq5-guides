@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>LD-2026-09：库位网格编码</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z7/stdalliance/assets/stdalliance.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z7/stdalliance/drafts/LD-2026-09.html"></head><body>
+<div class="st-head"><span class="brand">链仓联盟 · 规范草案库</span>
+<span class="sub">LianCang Alliance · 仓配行业标准化组织</span>
+<a class="st-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z7/stdalliance/index.html">草案库首页 →</a></div>
+<div class="st-body">
+<div class="st-side"><h4>草案目录</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/index.html">草案库首页</a><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-08.html">LD-2026-08 · 电商平台对接参数</a><a class="cur" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-09.html">LD-2026-09 · 库位网格编码</a><h4 style="margin-top:12px">公示</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-11.html">LD-2026-11 · 首次对接库区基准对账</a><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/confirm/CC-50118.html">基准对账口径查询</a><h4 style="margin-top:12px">程序</h4><a class="" href="/rq5-guides/s/X4-Z7/stdalliance/consult.html">意见征集与公示程序</a><div class="meta"><b>发布状态</b><br>LD-2026-08 已发布<br>LD-2026-09 已发布<br>LD-2026-11 已发布生效<br>程序合规 LC-QC-2026-0121</div></div>
+<div class="st-main"><div class="card">
+<div class="card-head">
+<div class="card-org">链仓联盟 · 规范草案库 · 已发布</div>
+<div class="card-title">LD-2026-09：库位网格编码</div>
+<div class="card-no">规范编号 <b>LD-2026-09</b> ·
+状态：已发布 · 适用：2026 版平台对接</div>
+</div>
+<div class="art">
+<h2>一、编码层级规则</h2>
+<p><code>GRID-77</code>：库位网格校验失败。网格编码按四段层级构造：
+<b>库区号-巷道号-货架号-层号</b>。库区号为两位区号，巷道号与货架号按档案编号
+两位补零，层号为个位，段间以连字符分隔。编码与现行规则不符即报本错，推送终止。</p>
+<h2>二、库区换算示例表</h2>
+<table><tr><th>库区</th><th>两位区号</th></tr>
+<tr><td>A1</td><td><b>01</b></td></tr>
+<tr><td>B2</td><td><b>02</b></td></tr>
+<tr><td>C3</td><td><b>03</b></td></tr></table>
+<p>生成示例：A1 区第 3 巷道第 12 货架第 2 层 →
+<code>01-03-12-2</code>。
+在库位档案页填写库区换算映射（格式 库区=两位区号，分号分隔）即可批量生成。</p>
+<h2>三、推送批次参数</h2>
+<table><tr><th>参数</th><th>2026 版取值</th></tr>
+<tr><td>每批数量</td><td><b>500 个 SKU</b></td></tr>
+<tr><td>并发数</td><td><b>4</b></td></tr></table>
+<p>参数在平台对接页保存后按 2026 版规范在线校验。</p>
+<h2>四、关联规范</h2>
+<div class="stopbox"><b>关联规范：</b>首次对接平台前须完成库区基准对账，
+见 <a href="/rq5-guides/s/X4-Z7/stdalliance/drafts/LD-2026-11.html">《首次对接库区基准对账》（LD-2026-11 · 已发布）</a>。</div>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>链仓联盟 · 规范草案库（公示程序合规 LC-QC-2026-0121）</span>
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>授权编号 LC-CR-2026-0076 · 仓配标准化工作组</span>
+</div>
+</div></div>
+<div class="st-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>技术生态成员 · 标准化工作组技术支持</span></div>
+链仓联盟 drafts.std-alliance.logistand © 2026 · 规范草案库 · 标准化工作组</div>
+</body></html>

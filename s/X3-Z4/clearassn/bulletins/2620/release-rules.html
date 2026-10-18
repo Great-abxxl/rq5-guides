@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="批次失败 重跑排期 处理办法：分片复位与锁等待阈值处置值、重跑前校验与窗口出账（B-0912 · CW-2609）· 清算运行协会第 2620 号通告与第 2619 号窗口清单">
+<title>跨机构批次重跑排期与窗口出账确认（第 2620 号通告）</title><link rel="stylesheet" href="/rq5-guides/s/X3-Z4/clearassn/assets/clearassn.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z4/clearassn/bulletins/2620/release-rules.html"></head><body>
+<div class="ca-head"><span class="sub">Cross-institution Clearing Operations
+Association · 运行通告库（CA-CR-2026-0066）</span>
+<a class="ca-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z4/clearassn/index.html">
+通告库首页 →</a></div>
+<div class="ca-mast"><div class="name">跨机构清算运行协会</div>
+<div class="en">运行通告库 · 成员机构运行口径发布</div></div>
+<div class="ca-body">
+<div class="ca-side"><h4>通告库</h4><a class="" href="/rq5-guides/s/X3-Z4/clearassn/index.html">通告库首页</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2617/error-xch-0117.html">第 2617 号 · XCH-0117 处置规范</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2619/window-rerun.html">第 2619 号 · 本月清算窗口与重跑校验</a><a class="cur" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2620/release-rules.html">第 2620 号 · 重跑排期与窗口出账确认</a><h4 style="margin-top:12px">附录</h4><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2620/annex-c.html">附录 C · 清算窗口与重跑查询</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/archive.html">期号归档</a><div class="cal"><b>期号台账</b><br>2026 年 第 2620 号（现行）<br>2026 年 第 2619 号（现行）<br>2026 年 第 2617 号（现行）<br>成员机构按通告对齐操作</div></div>
+<div class="ca-main"><div class="doc">
+<div class="eseal">协会<br>监督执行</div>
+<div class="doc-head">
+<div class="doc-org">跨机构清算运行协会 · 运行通告</div>
+<div class="doc-title">跨机构批次重跑排期与窗口出账确认（第 2620 号通告）</div>
+<div class="doc-no">文号 <b>协会通告〔2026〕2620 号</b> · 发布 2026-10-10 ·
+成员机构当期窗口适用</div>
+</div>
+<div class="doc-body">
+<blockquote><b>处置依据：</b>协会运行公约第 8.4 条与第 2619 号通告：当期清算窗口关闭后需完成出账的批次，按重跑窗口排期出账；出账一律走默认清算网关，清算凭证由清算引擎在窗口完成时出具（与窗口内即时出账路径出具的凭证效力相同）。</blockquote>
+<h2>一、适用情形</h2>
+<p>本通告适用于当期清算窗口（CW-2609）关闭后、需按重跑窗口完成出账的失败批次：当期批次 <b>B-0912</b> 因金额汇总中断未能出账；批次失败后清算窗口参数被自动置空，须按下列前置项逐项恢复，按窗口重跑方能受理。</p>
+<h2>二、重跑前置（三项）</h2>
+<table><tr><th>前置项</th><th>当期取值</th><th>登记位置</th></tr>
+<tr><td>分片复位</td><td>全部 36 个分片无卡滞（卡滞分片 S-31 处置后校验）</td><td>调度台「批次管理」分片复位</td></tr>
+<tr><td>锁等待阈值</td><td><b>120 秒</b>（原值 30 秒）</td><td>调度台「参数配置」锁等待阈值</td></tr>
+<tr><td>清算窗口参数</td><td><b>CW-2609</b>（下一重跑窗口区间见第 2619 号通告）</td><td>调度台「参数配置」窗口字段</td></tr></table>
+<h2>三、执行确认</h2>
+<ol class="kv-steps">
+<li>打开汐批调度台「批次管理」页，执行重跑前校验：分片完整性（复位后校验）与笔数核对（18422 笔与分片汇总一致）两项全选；</li>
+<li>提交"按窗口重跑"：出具重跑工单号（RR-YYYYMMDD-NNN），批次状态置为<b>重跑已排期</b>；</li>
+<li>重跑窗口开启后自动出账（走默认清算网关），批次置为<b>已清算</b>并出具清算凭证与入账时点。</li>
+</ol>
+<div class="callout"><b>出账与凭证：</b>重跑批次于窗口完成时出账，凭证与入账时点为窗口完成时点；重跑走默认清算网关，清算出口不作切换。</div>
+<h2>四、复核安排与窗口台账</h2>
+<ul>
+<li>重跑批次按常规逐笔金额复核流程执行，不设豁免项；</li>
+<li>窗口关闭后重跑工单停止受理；未完成排期的批次顺延至下一窗口，并在协会窗口台账中登记。</li>
+</ul><div class="sign-line"><span>抄送：各成员机构清算运维岗 · 协会窗口台账室</span>
+<span>跨机构清算运行协会 · 2026-10-10</span></div>
+</div></div>
+<div style="border-top:1px solid #d4dde6;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>跨机构清算运行协会 · 运行通告库在册（CA-FA-2026-2026）</span>
+<span>授权编号 CA-CR-2026-0066 · 通告数字化平台技术支持与联合审校</span>
+</div></div>
+</div></div>
+<div class="ca-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/owasp.svg" alt="OWASP">
+<span>技术生态成员 · 通告数字化平台技术支持</span></div>
+跨机构清算运行协会 bulletin.clear-assn.assnreg © 2026 · 期号归档条例 · 值班室</div>
+</body></html>

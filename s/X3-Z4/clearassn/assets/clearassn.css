@@ -1,0 +1,65 @@
+/* 清算运行协会 · 红头公文蓝档风格（X3-Z4-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"SimSun","Songti SC","Microsoft YaHei",serif;background:#fbfcfd;color:#22303c;font-size:15.5px;line-height:1.95}
+a{color:#123a63;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.ca-head{background:#123a63;color:#fff;padding:13px 26px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ca-head .sub{font-size:12.5px;color:#b9cbe0}
+.ca-search{margin-left:auto;display:flex}
+.ca-search input{border:none;border-radius:6px 0 0 6px;padding:8px 12px;width:240px;font-size:13.5px;font-family:inherit}
+.ca-search button{border:none;border-radius:0 6px 6px 0;background:#8c1d17;color:#fff;font-weight:700;padding:8px 16px;cursor:pointer;font-family:inherit}
+.ca-mast{background:#fff;border-bottom:3px solid #8c1d17;text-align:center;padding:20px 20px 14px}
+.ca-mast .name{font-size:26px;font-weight:700;color:#8c1d17;letter-spacing:6px}
+.ca-mast .en{font-size:12.5px;color:#5e7186;margin-top:4px;letter-spacing:2px}
+.ca-body{display:flex;gap:18px;max-width:1180px;margin:22px auto;padding:0 18px;align-items:flex-start}
+.ca-side{width:250px;flex-shrink:0;background:#fff;border:1px solid #d4dde6;border-radius:6px;padding:13px 12px 16px}
+.ca-side h4{font-size:13.5px;letter-spacing:2px;color:#123a63;border-bottom:2px solid #8c1d17;padding-bottom:7px;margin-bottom:8px}
+.ca-side a{display:block;font-size:13.5px;color:#3c4f68;padding:5px 8px;border-left:2px solid transparent}
+.ca-side a.cur{color:#123a63;font-weight:700;border-left-color:#8c1d17;background:#fdf0ef}
+.ca-side .cal{margin-top:12px;border-top:1px dashed #d4dde6;padding-top:10px;font-size:12.5px;color:#5e7186}
+.ca-side .cal b{color:#123a63}
+.ca-main{flex:1;min-width:0}
+.doc{background:#fff;border:1px solid #d4dde6;border-radius:6px;box-shadow:0 2px 8px rgba(18,58,99,.07);padding:28px 34px 22px;margin-bottom:16px;position:relative}
+.doc-head{text-align:center;border-bottom:2px solid #123a63;padding-bottom:12px;margin-bottom:16px}
+.doc-org{font-size:13px;letter-spacing:3px;color:#5e7186}
+.doc-title{font-size:22px;font-weight:700;color:#1a2833;margin-top:8px;letter-spacing:1px}
+.doc-no{margin-top:8px;font-size:13.5px;color:#5e7186}
+.doc-no b{font-family:Consolas,monospace;color:#8c1d17}
+.doc-body h2{font-size:1.15em;color:#123a63;margin:1.15em 0 .55em}
+.doc-body h3{font-size:1.02em;color:#123a63;margin:.9em 0 .4em}
+.doc-body p{margin:.65em 0;text-indent:2em}
+.doc-body p.noindent{text-indent:0}
+.doc-body code{background:#eef2f7;border-radius:5px;padding:.12em .4em;font-family:Consolas,monospace;font-size:.9em;color:#14406e}
+.doc-body pre{background:#f2f5f9;border:1px solid #d4dde6;border-left:4px solid #123a63;border-radius:6px;padding:12px 15px;overflow:auto;margin:.75em 0}
+.doc-body pre code{background:none;padding:0;color:#1a2833;font-size:.88em}
+.doc-body table{border-collapse:collapse;margin:.85em 0;width:100%}
+.doc-body th,.doc-body td{border:1px solid #d4dde6;padding:7px 12px;font-size:.92em;text-align:left}
+.doc-body th{background:#eef2f7;color:#123a63}
+.doc-body ul,.doc-body ol{margin:.55em 0 .55em 1.9em}
+.doc-body li{margin:.32em 0}
+.doc-body blockquote{border-left:4px solid #d4dde6;background:#f6f8fa;color:#44526b;padding:.6em 1em;margin:.8em 0;border-radius:0 4px 4px 0}
+.callout{background:#fdf0ef;border:1px solid #e7b6b2;border-radius:6px;padding:12px 16px;margin:13px 0;font-size:.95em}
+.callout b{color:#8c1d17}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:14px 0;font-family:"Microsoft YaHei",sans-serif}
+.grid .g{background:#f6f8fa;border:1px solid #d4dde6;border-radius:6px;padding:13px 16px}
+.grid .g b{color:#123a63;display:block;margin-bottom:4px}
+.grid .g span{font-size:13px;color:#5e7186}
+.eseal{position:absolute;top:20px;right:26px;width:104px;height:104px;border:3px solid rgba(140,29,23,.7);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(140,29,23,.8);font-weight:700;font-size:13px;letter-spacing:1px;transform:rotate(-12deg);text-align:center;line-height:1.4}
+.urgent{position:sticky;top:0;float:right;background:#8c1d17;color:#fff;border-radius:6px;padding:8px 16px;font-weight:700;font-size:14px;margin-left:14px}
+.urgent .clock{font-family:Consolas,monospace;font-size:16px}
+.authority{font-size:12.6px;color:#5e7186;display:flex;flex-wrap:wrap;gap:9px;align-items:center;font-family:"Microsoft YaHei",sans-serif}
+.badge-official{background:#123a63;color:#fff;border-radius:5px;padding:2px 8px;font-weight:700;font-size:13px}
+.authority img{height:25px}
+.ca-foot{text-align:center;color:#71818e;font-size:12.5px;padding:12px 20px 26px;font-family:"Microsoft YaHei",sans-serif}
+.ca-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.ca-foot .members img{height:24px;opacity:.9}
+.kv-steps li{margin:.5em 0}
+.annex-box{border:2px solid #123a63;border-radius:6px;background:#f6f8fa;padding:15px 19px;margin:14px 0}
+.annex-box .big{font-family:Consolas,monospace;font-size:18px;color:#8c1d17;font-weight:700}
+.btn-exec{display:inline-block;background:#8c1d17;color:#fff;font-weight:700;border-radius:6px;padding:10px 24px;font-size:15px;font-family:"Microsoft YaHei",sans-serif}
+.sign-line{margin-top:14px;display:flex;justify-content:space-between;align-items:flex-end;font-size:13.5px;color:#5e7186}
+.form-row{margin:10px 0;font-family:"Microsoft YaHei",sans-serif}
+.form-row label{display:block;font-size:13px;color:#3c4f68;margin-bottom:4px}
+.form-row input{border:1px solid #c3ccd3;border-radius:6px;padding:8px 10px;width:320px;font-size:13.5px}
+.form-row button{border:none;border-radius:6px;background:#8c1d17;color:#fff;font-weight:700;padding:9px 20px;cursor:pointer;font-size:14px}

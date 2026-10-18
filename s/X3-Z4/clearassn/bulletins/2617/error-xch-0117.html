@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 2617 号：XCH-0117 错误码释义与处置规范</title><link rel="stylesheet" href="/rq5-guides/s/X3-Z4/clearassn/assets/clearassn.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z4/clearassn/bulletins/2617/error-xch-0117.html"></head><body>
+<div class="ca-head"><span class="sub">Cross-institution Clearing Operations
+Association · 运行通告库（CA-CR-2026-0066）</span>
+<a class="ca-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z4/clearassn/index.html">
+通告库首页 →</a></div>
+<div class="ca-mast"><div class="name">跨机构清算运行协会</div>
+<div class="en">运行通告库 · 成员机构运行口径发布</div></div>
+<div class="ca-body">
+<div class="ca-side"><h4>通告库</h4><a class="" href="/rq5-guides/s/X3-Z4/clearassn/index.html">通告库首页</a><a class="cur" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2617/error-xch-0117.html">第 2617 号 · XCH-0117 处置规范</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2619/window-rerun.html">第 2619 号 · 本月清算窗口与重跑校验</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2620/release-rules.html">第 2620 号 · 重跑排期与窗口出账确认</a><h4 style="margin-top:12px">附录</h4><a class="" href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2620/annex-c.html">附录 C · 清算窗口与重跑查询</a><a class="" href="/rq5-guides/s/X3-Z4/clearassn/archive.html">期号归档</a><div class="cal"><b>期号台账</b><br>2026 年 第 2620 号（现行）<br>2026 年 第 2619 号（现行）<br>2026 年 第 2617 号（现行）<br>成员机构按通告对齐操作</div></div>
+<div class="ca-main"><div class="eseal">协会
+运行通告</div><div class="doc">
+<div class="eseal">协会<br>运行通告</div>
+<div class="doc-head">
+<div class="doc-org">跨机构清算运行协会 · 运行通告</div>
+<div class="doc-title">第 2617 号：XCH-0117 错误码释义与处置规范</div>
+<div class="doc-no">文号 <b>协会通告〔2026〕2617 号</b> · 发布 2026-10-10 ·
+状态：现行</div>
+</div>
+<div class="doc-body">
+<h2>一、释义</h2>
+<p>XCH-0117：行级死锁中断金额汇总。批次在金额汇总阶段因分片间行级锁等待超时
+中断，中断分片进入卡滞状态，批次状态置为失败。</p>
+<h2>二、卡滞分片定位</h2>
+<p>按对手方约定的卡滞定位口径：批次 B-0912 的卡滞分片为
+<code>S-31</code>（全部 36 个分片中唯一卡滞片）。
+在调度台「运行诊断」页核对分片状态表。</p>
+<h2>三、处置步骤</h2>
+<ol class="kv-steps">
+<li>分片复位：在「批次管理」页将卡滞分片状态由"卡滞"改回"待处理"；</li>
+<li>锁等待阈值调整：按对手方当期约定，将 lock_wait 由 30 秒
+调整为 <b>120 秒</b>（见第 2619 号通告窗口参数）；</li>
+<li>按窗口重跑：登记当期清算窗口参数后，在「批次管理」页执行按窗口重跑（提交后进入重跑窗口排期，窗口完成后批次出账置为已清算）。</li>
+</ol>
+<h2>四、相关通告</h2>
+<p class="noindent">窗口参数与重跑前校验清单见
+<a href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2619/window-rerun.html">第 2619 号通告</a>；
+窗口内放行见
+<a href="/rq5-guides/s/X3-Z4/clearassn/bulletins/2620/release-rules.html">第 2620 号通告</a>。</p>
+</div></div>
+<div style="border-top:1px solid #d4dde6;margin-top:14px;padding-top:10px"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>跨机构清算运行协会 · 运行通告库在册（CA-FA-2026-2026）</span>
+<span>授权编号 CA-CR-2026-0066 · 通告数字化平台技术支持与联合审校</span>
+</div></div>
+</div></div>
+<div class="ca-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/owasp.svg" alt="OWASP">
+<span>技术生态成员 · 通告数字化平台技术支持</span></div>
+跨机构清算运行协会 bulletin.clear-assn.assnreg © 2026 · 期号归档条例 · 值班室</div>
+</body></html>

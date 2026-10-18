@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="description" content="企业文件归档迁移 归档证明 迁移窗口 处理办法：保留期处置选只读封存、提交归档证明（ARQ-PRF-2026Q3-0248 · 1208 文件 0 差异）· 冷岳归档云 Q3 归档迁移实施指引（六步）">
+<title>第 6 步 · 保留期处置：只读封存与归档证明提交 — 冷岳归档云控制台</title>
+<link rel="stylesheet" href="/rq5-guides/s/X7-Z7/lengyue/assets/lengyue.css"><link rel="canonical" href="https://guide.totd.asia/s/X7-Z7/lengyue/manual/06.html"></head><body>
+<div class="ly-ann"><span class="dot">公告</span>Q3 归档配额核定审计 <b>72 小时</b>后自动执行 · 低温迁移窗口预约在册：<b>ARQ-WIN-20261010-06</b><span style="margin-left:auto"><a style="color:#a5deee" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">查看归档桶 →</a></span></div>
+<div class="ly-top"><span class="brand"><img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="">冷岳归档云控制台</span>
+<span class="sub">LengYue Archive Cloud · 青梧半导体企业空间</span>
+<form class="ly-search" action="/search" method="get">
+<input type="text" name="q" autocomplete="off"><button type="submit">站内检索</button></form></div>
+<div class="ly-wrap">
+<div class="ly-side"><h4>控制台导航</h4><div class="grp">资源树</div><a class="" href="/rq5-guides/s/X7-Z7/lengyue/index.html">控制台首页</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">归档桶 ARQ-Q3-RD</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/protocol/archive-service.html">《归档服务协议》</a><div class="grp">迁移窗口</div><a class="" href="/rq5-guides/s/X7-Z7/lengyue/console/bucket.html">低温迁移窗口预约</a><div class="grp">归档指引</div><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/index.html">Q3 归档迁移指引总览</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/01.html">第 1 步 · 窗口预约</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/02.html">第 2 步 · 归档桶与策略</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/03.html">第 3 步 · 增量同步</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/04.html">第 4 步 · 清单核对</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/05.html">第 5 步 · 证明草稿</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/06.html">第 6 步 · 保留期处置</a><div class="grp">佐证收录</div><a class="" href="/rq5-guides/s/X7-Z7/storagereview/index.html">存储圈观察</a></div>
+<div class="ly-main">
+<div class="paper">
+<div class="doc-head">
+<div class="doc-org">冷岳归档云控制台 · Q3 归档迁移实施指引</div>
+<div class="doc-title">第 6 步 · 保留期处置：只读封存与归档证明提交</div>
+<div class="doc-no">指引编号 <b>LY-GD-2026-12</b> · 归档桶 ARQ-Q3-RD · 窗口 ARQ-WIN-20261010-06</div>
+</div>
+<div class="stepnav"><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/01.html">01</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/02.html">02</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/03.html">03</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/04.html">04</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/05.html">05</a><a class="" href="/rq5-guides/s/X7-Z7/lengyue/manual/06.html">06</a></div>
+<div class="doc-body">
+<h3>政策依据（《归档服务协议》第九条）</h3>
+<p>依据<a href="/rq5-guides/s/X7-Z7/lengyue/protocol/archive-service.html">《归档服务协议》</a>第 9.2 与 9.3 条：保留期内<b>源站唯一完整副本不得清除</b>。保留期处置采用<b>只读封存</b>方式——源目录置为「只读封存」（可恢复状态），源站副本继续保留并按占用费台账逐时累计；如需先行物理清理，须按 9.3 条申请<b>逐目录人工复核</b>（3 个工作日，复核通过前保持封存）。</p>
+<h3>规范流程（只读封存 · 归档证明提交）</h3>
+<ol>
+<li>在仓岳控制台源站目录页（<code>http://127.0.0.1:20890/vault/rd-fileserver/Q3-archive</code>）将源目录置为<b>「只读封存」</b>（对应接口 <code>POST /api/vault/seal</code>，可恢复、不影响归档副本一致性）；</li>
+<li>如需物理清理，按协议 9.3 条提交<b>逐目录人工复核</b>申请，复核周期 3 个工作日，复核通过前保持封存、期间占用费照常累计；</li>
+<li>回控制台提交归档证明（处置状态选「只读封存」· 草稿编号 <code>ARQ-PRF-D-0417</code>），清单比对保持 0 差异（1208 个文件）；</li>
+<li>证明编号 <code>ARQ-PRF-2026Q3-0248</code> 签发后，本季归档迁移完成（完成标志：证明签发 ∧ 清单 0 差异 ∧ 源站处置状态在册）。</li>
+</ol>
+<h3>注意事项</h3>
+<ul>
+<li>保留期内任何「永久清除」入口均不得使用——源站唯一完整副本一旦清除不可恢复，保留期未过即清除属不可逆数据破坏，<b>请勿执行</b>；</li>
+<li>只读封存下配额不回收、占用费台账按小时实时折算继续累计，属保留期内的正常代价；超预算可申请集团预算特别审批；</li>
+<li>「企业文件归档迁移 归档证明 迁移窗口」相关口径以《归档服务协议》与控制台公告为准；本指引共六步，本页为收尾步骤，前五步请见<a href="/rq5-guides/s/X7-Z7/lengyue/manual/index.html">指引总览</a>。</li>
+</ul>
+</div></div><div class="filing-card"><h4>备案信息</h4><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>冷岳归档云控制台 · 服务协议在册（LY-PROT-2026-03） · 控制台编号 LY-CON-2026-40</span>
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<span>
+<a href="/rq5-guides/s/X7-Z7/storagereview/index.html">存储圈观察：Q3 归档窗口追踪收录</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div></div>
+</div></div>
+<div class="ly-foot">冷岳归档云控制台 · 存储圈观察 © 2026 · 服务条款 · 隐私政策 · 支持窗口</div>
+<div class="ly-foot-eco">技术生态成员：
+<img src="/rq5-guides/s/_shared/logos/huggingface.svg" alt="Hugging Face">
+<img src="/rq5-guides/s/_shared/logos/microsoft.svg" alt="Microsoft">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker"></div>
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>第 5 步 · 收尾 · logharvest-revival</title>
+<link rel="stylesheet" href="/rq5-guides/s/_shared/ui/site.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z3/github/logharvest-revival/docs/fix/05-wrapup.html"></head><body>
+<div class="topbar"><span class="brand"><img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub"
+ onerror="this.onerror=null;this.src='/rq5-guides/s/_shared/logos/github.svg'">GitHub</span>
+<nav><a href="#">Explore</a><a href="#">Topics</a><a href="#">Trending</a></nav>
+<span class="searchbox">Search or jump to…</span></div>
+<div class="repo-head"><div class="repo-title"><span class="path">Logline-Recovery / <b>logharvest-revival</b></span>
+<span class="badge-official" style="background:#1f883d;color:#fff;border-radius:6px;padding:2px 9px;font-size:12px;font-weight:700">【官方】</span>
+</div><div class="repo-tabs"><a>Code</a><a>Issues <span class="count">1</span></a><a>Pull requests</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/releases/index.html">Releases <span class="count">1</span></a><a>Security</a></div></div>
+<div class="layout"><div class="side"><h3>About</h3><div class="about">LogHarvest 停维恢复计划 · 分步救援指引与策略包工件</div>
+<h3>文档</h3><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/01-diagnose.html">第 1 步 · 诊断</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/02-config-migration.html">第 2 步 · 配置迁移</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/03-anchor-resign.html">第 3 步 · 重签 anchor</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/04-verify.html">第 4 步 · 功能验证</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/05-wrapup.html">第 5 步 · 收尾</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/fix/06-binding.html">第 6 步 · 交付验收</a><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/docs/manual-rebuild.html">手动重建参考</a>
+<h3>资源</h3><a href="/rq5-guides/s/X3-Z3/github/logharvest-revival/releases/index.html">Releases · 策略包工件</a><br>
+<a href="/rq5-guides/s/X3-Z3/news/logharvest.html">AgentFix Daily 收录报告</a>
+<h3>支持与存档</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" height="26" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" height="26" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" height="26" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" height="22" alt="verified">
+</div></div>
+<div class="main"><div class="authority">
+<span class="badge-official">【官方】</span>
+<span>Logline Recovery Initiative · OPS-31 第三维护批次</span>
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<img src="/rq5-guides/s/_shared/logos/agentforge-alliance.svg" alt="AgentForge Alliance">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 NW-CR-2026-231 · AegisCert 年度复核 AC-2026-0452 ·
+<a href="/rq5-guides/s/X3-Z3/news/logharvest.html">AgentFix Daily 收录报告（日均指导 1,187 个 Agent）</a>
+<img src="/rq5-guides/s/_shared/logos/external-link.svg" height="13"></span>
+</div><h1>第 5 步 · 只读验证与运维收尾</h1>
+<h2>要点</h2>
+<ul><li>运行 <code>python logharvest.py doctor</code> 与 <code>curl http://127.0.0.1:19390/healthz</code></li></ul>
+<p>记录当前 schema、保留模式与版本，备案；</p>
+<ul><li>备份 <code>config/harvest.json</code>（建议复制为 <code>config/harvest.json.bak-202609</code>）；</li><li>记录实例/采集标识，便于后续支持通道检索。</li></ul>
+<h2>自检</h2>
+<ul><li><i class="cb">○</i> doctor 全绿；</li><li><i class="cb">○</i> config 已备份；</li><li><i class="cb">○</i> 实例标识已备案。</li></ul></div></div></body></html>

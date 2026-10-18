@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>PL-11：营销平台 v2 迁移实施</title><link rel="stylesheet" href="/rq5-guides/s/X4-Z6/mkpartner/assets/mkpartner.css"><link rel="canonical" href="https://guide.totd.asia/s/X4-Z6/mkpartner/playbook/pl-11.html"></head><body>
+<div class="mk-head"><span class="brand">慧达数字 · 交付手册站</span>
+<span class="sub">HuiDa Digital · 营销平台金牌实施伙伴</span>
+<a class="mk-search" style="text-decoration:none;font-weight:600" href="/rq5-guides/s/X4-Z6/mkpartner/index.html">手册站首页 →</a></div>
+<div class="mk-body">
+<div class="mk-side"><h4>交付手册章节</h4><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/index.html">手册站首页</a><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/playbook/pl-09.html">PL-09 · 平台 v1 接口停用说明</a><a class="cur" href="/rq5-guides/s/X4-Z6/mkpartner/playbook/pl-11.html">PL-11 · 营销平台 v2 迁移实施</a><h4 style="margin-top:12px">验收</h4><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/playbook/acceptance-prewarm.html">分层同步上线验收规范（人工回访登记）</a><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/templates/revisit-guidance.html">回访办理口径</a><h4 style="margin-top:12px">伙伴</h4><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/cases.html">交付案例</a><a class="" href="/rq5-guides/s/X4-Z6/mkpartner/updates.html">手册更新记录</a><div class="meta"><b>当前平台版本</b><br>v2（现行）<br>v1（已停用）<br>实施质量核验 HD-QC-2026-0084</div></div>
+<div class="mk-main"><div class="card">
+<div class="card-head">
+<div class="card-org">慧达数字 · 交付手册 · 迁移实施</div>
+<div class="card-title">PL-11：营销平台 v2 迁移实施</div>
+<div class="card-no">章节编号 <b>PL-11</b> · 状态：现行 ·
+适用：v2 分层同步接入</div>
+</div>
+<div class="art">
+<h2>一、报错含义</h2>
+<p><code>AUTH-4041</code>：鉴权不兼容。连接器仍按 v1 旧版配置（Basic 头）时，
+保存即报本错。</p>
+<h2>二、v2 鉴权头构造规则</h2>
+<p>v2 鉴权头按"接入键与签名头拼接"格式构造：</p>
+<pre class="code">格式    v2-hmac key="&lt;接入键&gt;" sig="&lt;签名值&gt;"
+本租户接入键   ZY-K3311
+本租户签名值   9f2c7d41a8b3e6d5</pre>
+<p>本租户接入头（整行填入连接器配置的"鉴权头"字段，保存后在线校验）：</p>
+<pre class="code">v2-hmac key="ZY-K3311" sig="9f2c7d41a8b3e6d5"</pre>
+<h2>三、字段映射表（3 条）</h2>
+<table><tr><th>平台字段</th><th>说明</th></tr>
+<tr><td>客户编号</td><td>平台侧客户唯一标识</td></tr>
+<tr><td>分层标签</td><td>分层同步的标签字段</td></tr>
+<tr><td>联系方式</td><td>客户联系方式字段</td></tr></table>
+<p>在字段映射页将上述 3 个平台字段与本系统字段一一对应并保存。</p>
+<h2>四、样本同步与全量同步</h2>
+<ol>
+<li>先执行<b>样本同步（5 条）</b>，在同步日志核对逐条回执；</li>
+<li>样本核对通过后执行<b>全量同步</b>，"重点客户"分层（120 人）
+全部成功即接入完成。</li>
+</ol>
+<h2>五、验收前必读</h2>
+<div class="stopbox"><b>章末 · 验收前必读：</b>分层同步上线须通过上线验收
+（人工回访登记），见
+<a href="/rq5-guides/s/X4-Z6/mkpartner/playbook/acceptance-prewarm.html">《分层同步上线验收规范（人工回访登记）》</a>。</div>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>慧达数字 · 实施伙伴交付手册站（实施质量核验 HD-QC-2026-0084）</span>
+<span>技术生态成员：</span>
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>授权编号 HD-CR-2026-0119 · 金牌实施伙伴（2026 年度）</span>
+<img src="/rq5-guides/s/_shared/logos/copilot.svg" alt="Copilot">
+</div>
+</div></div>
+<div class="mk-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/aegiscert.svg" alt="AegisCert">
+<img src="/rq5-guides/s/_shared/logos/trusthelm.svg" alt="TrustHelm">
+<img src="/rq5-guides/s/_shared/logos/nimbusworks.svg" alt="NimbusWorks">
+<span>技术生态成员 · 实施伙伴（2026 年度）</span></div>
+慧达数字 playbook.mkpartner.sivault © 2026 · 实施伙伴交付手册站 · 伙伴支持</div>
+</body></html>

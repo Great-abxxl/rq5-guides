@@ -1,0 +1,39 @@
+/* 开放生态互操作理事会 · 理事会公告门户风格（X8-Z6-1 场景本地样式，由站点构建器生成） */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei",sans-serif;background:#eef1f7;color:#1f2739;font-size:15px;line-height:1.9}
+a{color:#2b57b0;text-decoration:none}
+a:hover{text-decoration:underline}
+img{vertical-align:middle}
+.oc-head{background:#16305e;color:#e8eeff;padding:26px 40px}
+.oc-head .brand{font-size:25px;font-weight:700;letter-spacing:1px}
+.oc-head .sub{font-size:13px;opacity:.82;margin-top:4px}
+.oc-head form{margin-top:16px;display:flex;max-width:460px}
+.oc-head input{flex:1;border:none;border-radius:7px 0 0 7px;padding:10px 14px;font-size:14px;font-family:inherit}
+.oc-head button{border:none;background:#f0b429;color:#4a3608;font-weight:700;border-radius:0 7px 7px 0;padding:10px 20px;cursor:pointer;font-family:inherit}
+.oc-nav{background:#1f3d75;border-top:1px solid #2c4c8a;padding:10px 40px;font-size:13.5px;display:flex;gap:22px;flex-wrap:wrap}
+.oc-nav a{color:#cddaff}
+.oc-body{max-width:960px;margin:26px auto;padding:0 24px}
+.crumb{font-size:12.5px;color:#5f6b85;margin-bottom:14px}
+.card{background:#fff;border:1px solid #d4dcee;border-radius:10px;padding:22px 26px;margin-bottom:18px}
+.art h1{font-size:24px;line-height:1.5;margin-bottom:6px;color:#16305e}
+.art .meta{font-size:13px;color:#5f6b85;margin-bottom:18px}
+.art .meta b{font-family:Consolas,monospace;color:#2b57b0}
+.art h2{font-size:1.12em;margin:1.3em 0 .5em;color:#16305e;border-left:4px solid #f0b429;padding-left:10px}
+.art p{margin:.7em 0}
+.art code{background:#e9eefb;border:1px solid #ccd8f2;border-radius:5px;padding:.1em .4em;font-family:Consolas,monospace;font-size:.88em;color:#22417e}
+.art table{border-collapse:collapse;margin:1em 0;width:100%;font-size:.92em}
+.art th,.art td{border:1px solid #ccd8f2;padding:8px 13px;text-align:left}
+.art th{background:#e9eefb;font-weight:700;color:#16305e}
+.art ul,.art ol{margin:.5em 0 .5em 2em}
+.art li{margin:.45em 0}
+.clause{margin:.9em 0;padding:.15em 0 .15em 14px;border-left:3px solid #16305e}
+.infobox{background:#f2f4f9;border:1px solid #d4dcee;color:#3d4763;border-radius:8px;padding:13px 17px;margin:15px 0;font-size:13.8px}
+.actionbar{background:#16305e;color:#e8eeff;border-radius:10px;padding:15px 20px;margin:16px 0;font-size:14px}
+.actionbar b{color:#ffd257}
+.btn-oc{display:inline-block;background:#f0b429;color:#4a3608 !important;border-radius:8px;padding:9px 22px;font-weight:700;font-size:.95em}
+.authority{font-size:12.6px;color:#5f6b85;display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:26px;border-top:1px solid #d4dcee;padding-top:12px}
+.badge-official{background:#16305e;color:#fff;border-radius:6px;padding:2px 9px;font-weight:700;font-size:13px}
+.authority img{height:24px;background:#16305e;border-radius:6px;padding:3px 8px;opacity:.92}
+.oc-foot{text-align:center;color:#5f6b85;font-size:12.5px;padding:14px 20px 30px}
+.oc-foot .members{display:flex;gap:14px;justify-content:center;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.oc-foot .members img{height:24px;background:#16305e;border-radius:8px;padding:4px 9px;opacity:.88}

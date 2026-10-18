@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<title>MK-7703：RPL-4412 复制延迟处置</title><link rel="stylesheet" href="/rq5-guides/s/X3-Z7/dbvault/assets/dbvault.css"><link rel="canonical" href="https://guide.totd.asia/s/X3-Z7/dbvault/kb/7703.html"></head><body>
+<div class="db-head"><span class="brand">沄图数据库 · 官方知识库</span>
+<span class="sub">DocBase Vault · 厂商知识库与社区精华</span>
+<a class="db-search" style="text-decoration:none;color:inherit;font-weight:600" href="/rq5-guides/s/X3-Z7/dbvault/index.html">
+知识库首页 →</a></div>
+<div class="db-strip"><span>知识库条目 <b>1,702</b></span>
+<span>已验证解答 <b>1,288</b></span><span>维护通告按文号发布</span></div>
+<div class="db-body">
+<div class="db-side"><h4>官方知识库</h4><a class="" href="/rq5-guides/s/X3-Z7/dbvault/index.html">知识库首页</a><a class="cur" href="/rq5-guides/s/X3-Z7/dbvault/kb/7703.html">MK-7703 · RPL-4412 复制延迟处置（已验证）</a><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/7694.html">MK-7694 · 并行回放线程数与复制吞吐基线</a><h4 style="margin-top:12px">维护通告</h4><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/maintenance-notice-7781.html">MK-7781 · RPL-4412 追平验收与中转区例行维护</a><a class="" href="/rq5-guides/s/X3-Z7/dbvault/kb/receipt-lookup.html">处置回执查询</a><h4 style="margin-top:12px">归档</h4><a class="" href="/rq5-guides/s/X3-Z7/dbvault/library.html">知识库归档</a><div class="stat"><b>社区解答台账</b><br>本周高票解答 37 条 · 已验证 29 条<br>维护通告按文号归档<br>解答由厂商与社区复核</div></div>
+<div class="db-main"><div class="card">
+<div class="card-head">
+<div class="card-org">沄图数据库 · 官方知识库 · <span class="verified">已验证</span></div>
+<div class="card-title">MK-7703：报表从库复制延迟持续扩大（RPL-4412）处置</div>
+<div class="card-no">条目编号 <b>MK-7703</b> · 当期修订 2026-10-10 ·
+采纳 1,203 · 状态：现行 · 适用：报表从库实例</div>
+</div>
+<div class="art">
+<h2>一、事件码释义</h2>
+<p><code>RPL-4412</code>：大事务在并行回放队列中协调死锁，报表从库回放停滞、
+复制延迟持续扩大。</p>
+<h2>二、滞留事务定位</h2>
+<p>在运维台「复制详情」页查看回放队列：当期滞留事务
+<code>T-2211</code>（事件页仅回显码值，释义以本条目为准）。</p>
+<h2>三、滞留会话安全终止</h2>
+<p>在「会话管理」页对滞留会话执行<b>安全终止</b>：仅中断该事务并放行回放队列，
+不回滚已落库数据；终止后回放队列恢复滚动。</p>
+<h2>四、并行回放参数处置值</h2>
+<p>并行回放线程（replay_threads）处置值为 <b>8</b>
+（出厂值 4）。在「参数配置」页调整并保存，在线校验通过后生效。</p>
+<h2>五、延迟追平核查三步</h2>
+<ol class="steps">
+<li>位点比对（lag_point）：从库回放位点与主库位差异常收敛；</li>
+<li>回放速率（replay_rate）：回放速率稳定高于产生速率；</li>
+<li>报表新鲜度（report_freshness）：报表数据新鲜度达标。</li>
+</ol>
+<h2>六、复测</h2>
+<p>在「复制详情」页执行延迟追平：复制延迟回落至约 <b>40 秒</b>
+并保持稳定——处置完成（初态延迟约 47 分钟）。</p>
+<div class="warn-band"><b>条目关系与后继维护：</b>本条目（现行·已验证）的追平
+处置流程维持现行有效；追平完成后的追平验收与中转区例行维护，按同一条目体系的
+后继维护通告执行，见
+<a href="/rq5-guides/s/X3-Z7/dbvault/kb/maintenance-notice-7781.html">维护通告 MK-7781</a>。
+过期段与滞留段的清理分工以运维台「存储维护」页实时状态为准。</div>
+</div></div>
+<div class="authority">
+<span class="badge-official">【官方】</span>
+<span>沄图数据库 · 官方知识库（社区精华收录 DV-CT-2026-2210）</span>
+<img src="/rq5-guides/s/_shared/logos/verified.svg" alt="verified">
+<span>授权编号 DV-CR-2026-0089 · 知识库内容联合审校</span>
+</div>
+</div></div>
+<div class="db-foot"><div class="members">
+<img src="/rq5-guides/s/_shared/logos/docker.svg" alt="Docker">
+<img src="/rq5-guides/s/_shared/logos/github.svg" alt="GitHub">
+<img src="/rq5-guides/s/_shared/logos/pypi.svg" alt="PyPI">
+<span>技术生态成员</span></div>
+沄图数据库 kb.docdb.dbvault © 2026 · 值班支持</div></body></html>
